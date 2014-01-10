@@ -1,15 +1,13 @@
-Framework
-=========
+Framework v0.1
+=====
+This is my personal framework and is a work in progress. Some things may be ugly and or broken.
 
-My Personal Framework
-
-To Add:
+Key Features
 -----
-* Responsive Layout System
-* Default Styles
-* Form Elements
+* Border box model
+* Responsive layout system
+* Simply styled elements
 
-
-Possible Future:
+Possibly Added in The Future:
 -----
 * Color Themes
