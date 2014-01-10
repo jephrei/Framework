@@ -33,7 +33,7 @@ img { max-width: 100%; }
 h1, h2, h3, h4, h5, h6 { margin-top: 0; }
 
 /* Other Text */
-p { margin-top: 0; margin-bottom: 1em; }
+/* p { margin-top: 0; margin-bottom: 1em; }*/
 
 small { line-height: 1; }
 
@@ -249,14 +249,54 @@ nav li > ul li {
 input { max-width: 100%; }
 
 /* =============== GLOBALS ============================================= */
-/* colors */
-.color-pri { color: #880038; }
-.color-sec { color: #f54e96; }
-.color-blue { color: #54b7ee; }
-.color-grey { color: #666; }
-.color-black { color: black; }
-.color-c4c-pri { color: #002878; }
-.color-c4c-sec { color: #00aeef; }
+
+/* Colors - pallete taken from http://clrs.cc/ */
+
+/* Cool */
+.color-aqua { color: #7FDBFF; }
+.color-blue { color: #0074D9; }
+.color-navy { color: #001F3F; }
+.color-teal { color: #39CCCC; }
+.color-green { color: #2ECC40; }
+.color-olive { color: #3D9970; }
+.color-lime { color: #01FF70; }
+
+/* Warm */
+.color-yellow { color: #FFDC00; }
+.color-orange { color: #FF851B; }
+.color-red { color: #FF4136; }
+.color-fuchsia { color: #F012BE; }
+.color-purple { color: #B10DC9; }
+.color-maroon { color: #85144B; }
+
+/* Gray Scale */
+.color-white { color: #fff; }
+.color-silver { color: #ddd; }
+.color-gray { color: #aaa; }
+.color-black { color: #111; }
+
+/* Cool */
+.bg-aqua { background-color: #7FDBFF; }
+.bg-blue { background-color: #0074D9; }
+.bg-navy { background-color: #001F3F; }
+.bg-teal { background-color: #39CCCC; }
+.bg-green { background-color: #2ECC40; }
+.bg-olive { background-color: #3D9970; }
+.bg-lime { background-color: #01FF70; }
+
+/* Warm */
+.bg-yellow { background-color: #FFDC00; }
+.bg-orange { background-color: #FF851B; }
+.bg-red { background-color: #FF4136; }
+.bg-fuchsia { background-color: #F012BE; }
+.bg-purple { background-color: #B10DC9; }
+.bg-maroon { background-color: #85144B; }
+
+/* Gray Scale */
+.bg-white { background-color: #fff; }
+.bg-silver { background-color: #ddd; }
+.bg-gray { background-color: #aaa; }
+.bg-black { background-color: #111; }
 
 /* Text positioning */
 
@@ -486,6 +526,30 @@ sub { top: 0.4em; }
 	}
 	
 	.text-right-desktop { text-align: left; }
+	
+}
+
+@media (max-width: 400px) {
+    nav {
+        text-align: center;
+    }    
+
+    nav li {
+        float: none;
+    }
+
+    nav a {
+        display: block;
+        margin: 4px;
+    }
+
+    nav li > ul {
+        position: relative;
+    }
+
+    nav li > ul > li > a {
+        
+    }
 }
 
 @media print {

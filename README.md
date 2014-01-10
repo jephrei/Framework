@@ -8,6 +8,8 @@ Key Features
 * Responsive layout system
 * Simply styled elements
 
-Possibly Added in The Future:
+Possible Future Additions:
 -----
-* Color Themes
+* Basic Color Themes
+* Animations! Woah!
+* LESS version
