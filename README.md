@@ -13,3 +13,4 @@ Possible Future Additions:
 * Basic Color Themes
 * Animations! Woah!
 * LESS version
+* Print styles
