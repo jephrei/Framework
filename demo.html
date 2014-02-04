@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" style="background-color: #e6e6e6;">
+<html lang="en">
     
 <head>
 <meta charset="utf-8" />
 <title></title>
-<link href="css/normalize.css" rel="stylesheet" type="text/css" />
 <link href="css/main.css" rel="stylesheet" type="text/css" />
-<link href="css/demo.css" rel="stylesheet" type="text/css" />
+<link href="css/demo.css" rel="stylesheet" type="text/css" /><!-- styles in demo.css not part of the framework and specific to this page only -->
 </head>
 
 <body>
@@ -17,17 +16,15 @@
 
 <p>This is a demo/doc/template page for it. Not meant for public consumption, but if you do partake...enjoy.</p>
 
-<hr />
-
 <h1>Text Elements</h1>
 
 
-<h1>Heading 1</h1>
-<h2>Heading 2</h2>
-<h3>Heading 3</h3>
-<h4>Heading 4</h4>
-<h5>Heading 5</h5>
-<h6>Heading 6</h6>
+<h1>Heading 1 <code>H1</code></h1>
+<h2>Heading 2 <code>H2</code></h2>
+<h3>Heading 3 <code>H3</code></h3>
+<h4>Heading 4 <code>H4</code></h4>
+<h5>Heading 5 <code>H5</code></h5>
+<h6>Heading 6 <code>H6</code></h6>
 
 <h3>Paragraph</h3>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque viverra sodales massa eu feugiat. Duis nisi nibh, lacinia a ultrices commodo, mattis et dui. Fusce fermentum elit a mauris commodo ac iaculis mi porta. Nullam facilisis cursus ornare. Donec erat tellus, semper sed hendrerit eget, aliquam euismod quam. Cras ac turpis orci, sed interdum sapien. Duis pulvinar fermentum pulvinar. Aenean commodo laoreet vulputate. Nam euismod erat pulvinar arcu tincidunt in elementum diam interdum.</p>
@@ -64,10 +61,14 @@
 	</li>
 </ul>
 
-<div class="text-right"><a href="#" class="color-gray" style="text-decoration: none;">&#9650;</a></div>
-<hr />
+<p>Lorem ipsum <code>dolor sit amet</code> consectetur adipiscing elit.</p>
 
+<h3>Links</h3>
+<p><a href="#0">A normal link</a></p>
+<!--<p><a href="#0">A visited link</a></p>
+<p><a href="#0">A hovered link</a></p>-->
 
+<!--
 <h1>Form Elements</h1>
 
 <h3>Buttons</h3>
@@ -91,17 +92,14 @@
 <p>Button Group</p>
     
 <div class="button-group">
-    <button>One</button><!--
- --><button>Two</button><!--
- --><button>Three</button>
+    <button>One</button><button>Two</button><button>Three</button>
 </div>
 
 <p>Button Group with Textbox</p>
 
 <div class="button-group">
     <label for="name">Text Input:</label>
-    <input type="text" name="name" id="name" placeholder="Search Term" /><!--
- --><button>Go</button>
+    <input type="text" name="name" id="name" placeholder="Search Term" /><button>Go</button>
 </div>
 
 <p>Double Line Button</p>
@@ -113,9 +111,8 @@
 <button class="button-medium">Medium Button</button>
 <button>Normal Button</button>
 <button class="button-small">Small Button</button>
-
-
-
+-->
+<!--
 <fieldset>
 	<legend>Legend</legend>
 	
@@ -172,8 +169,8 @@
 </fieldset>
 
 <div class="text-right"><a href="#" class="color-gray" style="text-decoration: none;">&#9650;</a></div>
-<hr />
-
+-->
+<!--
 <h1 id="tables">Tables</h1>
 
 <table cellspacing="0" cellpadding="0">
@@ -193,8 +190,8 @@
 </table>
 
 <div class="text-right"><a href="#" class="color-gray" style="text-decoration: none;">&#9650;</a></div>
-<hr />
-
+-->
+<!--
 <h1 id="misc">Misc Stuff - abbr, acronym, pre, code, sub, sup, etc.</h1>
 
 <p>Lorem <sup>superscript</sup> dolor <sub>subscript</sub> amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. <cite>cite</cite>. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. <acronym title="National Basketball Association">NBA</acronym> Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.  <abbr title="Avenue">AVE</abbr></p>
@@ -206,9 +203,10 @@
 </blockquote>
 
 <div class="text-right"><a href="#" class="color-gray" style="text-decoration: none;">&#9650;</a></div>
-
-<hr />
+-->
+<!--
 <h1>Custom Elements and Combinations</h1>
+
 
 <h3>Unordered List in NAV</h3>
 <nav>
@@ -229,32 +227,68 @@
                 <li><a href="#nowhere" title="Lorum ipsum dolor sit amet">Lorem</a></li>
                 <li><a href="#nowhere" title="Aliquam tincidunt mauris eu risus">Aliquam</a></li>
                 <li><a href="#nowhere" title="Morbi in sem quis dui placerat ornare">Morbi</a></li>
-                <li><a href="#nowhere" title="Praesent dapibus, neque id cursus faucibus">Praesent</a>
-<!--                    <ul>
-                        <li><a href="#nowhere" title="Lorum ipsum dolor sit amet">Lorem</a></li>
-                        <li><a href="#nowhere" title="Aliquam tincidunt mauris eu risus">Aliquam</a></li>
-                        <li><a href="#nowhere" title="Morbi in sem quis dui placerat ornare">Morbi</a></li>
-                        <li><a href="#nowhere" title="Praesent dapibus, neque id cursus faucibus">Praesent</a></li>
-                        <li><a href="#nowhere" title="Pellentesque fermentum dolor">Pellentesque</a></li>
-                    </ul> -->
-                </li>
+                <li><a href="#nowhere" title="Praesent dapibus, neque id cursus faucibus">Praesent</a></li>
                 <li><a href="#nowhere" title="Pellentesque fermentum dolor">Pellentesque</a></li>
             </ul>      
         </li>
 		<li><a href="#nowhere" title="Pellentesque fermentum dolor">Pellentesque</a></li>
 	</ul>
 </nav>
-    
-<hr />
+-->
+
+
 <h1>Responsive Grid Layout</h1>
 
-<div class="row text-center" style="background-color: #eee;">
-	<div class="clear">.row</div>
-	<div class="col span-1-2" style="background-color: #ddd;">.col.span-1-2</div>
-	<div class="col span-1-2" style="background-color: #ccc;">.col.span-1-2</div>
+<div class="row demo-grid-unit">
+	<div class="col span-1-6">.col.span-1-6</div>
 </div>
-	
-<hr />
+<div class="row demo-grid-unit">
+	<div class="col span-1-5">.col.span-1-5</div>
+</div>
+<div class="row demo-grid-unit">
+	<div class="col span-1-4">.col.span-1-4</div>
+</div>
+<div class="row demo-grid-unit">
+	<div class="col span-1-3">.col.span-1-3</div>
+</div>
+<div class="row demo-grid-unit">
+	<div class="col span-1-2">.col.span-1-2</div>
+</div>
+<div class="row demo-grid-unit">
+	<div class="col">.col</div>
+</div>
+<div class="row demo-grid-unit">
+	<div class="col span-1-2">.col.span-1-2</div>
+	<div class="col span-1-2">.col.span-1-2</div>
+</div>
+<div class="row demo-grid-unit">
+	<div class="col span-1-3">.col.span-1-3</div>
+	<div class="col span-1-3">.col.span-1-3</div>
+	<div class="col span-1-3">.col.span-1-3</div>
+</div>
+<div class="row demo-grid-unit">
+	<div class="col span-1-4">.col.span-1-4</div>
+	<div class="col span-1-4">.col.span-1-4</div>
+	<div class="col span-1-4">.col.span-1-4</div>
+	<div class="col span-1-4">.col.span-1-4</div>
+</div>
+<div class="row demo-grid-unit">
+	<div class="col span-1-5">.col.span-1-5</div>
+	<div class="col span-1-5">.col.span-1-5</div>
+	<div class="col span-1-5">.col.span-1-5</div>
+	<div class="col span-1-5">.col.span-1-5</div>
+	<div class="col span-1-5">.col.span-1-5</div>
+</div>
+<div class="row demo-grid-unit">
+	<div class="col span-1-6">.col.span-1-6</div>
+	<div class="col span-1-6">.col.span-1-6</div>
+	<div class="col span-1-6">.col.span-1-6</div>
+	<div class="col span-1-6">.col.span-1-6</div>
+	<div class="col span-1-6">.col.span-1-6</div>
+	<div class="col span-1-6">.col.span-1-6</div>
+</div>
+
+<!--
 <h1>Colors</h1>
 <p>The following color pallette is taken from <a href="http://clrs.cc/">clrs.cc</a> ...for now.</p>
 	 
@@ -286,9 +320,9 @@
 		<div class="bg-black" style="text-transform: uppercase; padding: 8px; color: white;">black #111</div>	
 	</div>
 </div>	 
- 
+-->
+
 <br />	 
-<hr />
 <div class="text-center color-gray">mixed by jephrei with &#9829;</div>
 	 
 </div>

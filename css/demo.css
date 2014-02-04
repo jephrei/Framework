@@ -1,3 +1,22 @@
+body {
+	background-color: #e6e6e6
+}
+
 #demo-page {
 	margin: 8%; padding: 4%; background-color: white; box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.demo-grid-unit {
+	color: #666;
+	background-color: #eee;
+	margin-bottom: 0.25em;
+}
+
+.demo-grid-unit .col {
+	padding: 2px 4px;
+	background-color: #ddd;
+}
+
+.demo-grid-unit .col + .col {
+	border-left: solid 1px #bbb;
 }
