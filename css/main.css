@@ -4,9 +4,7 @@
  *
  */
 
-
 @import "normalize.css";
-@import "fineprint.css";
 @import "print.css" print;
 
 
@@ -19,7 +17,7 @@
 
 
 html {
-	font-family: Helvetica, sans-serif;
+	font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 16px;
 	line-height: 1.5;
 
@@ -29,6 +27,7 @@ html {
 }
 
 body {
+	font-size:100%;
 	margin: 0;
 }
 
@@ -54,10 +53,33 @@ h1, h2, h3, h4, h5, h6 {
 	border-bottom: solid 1px #ddd;
 }
 
+h1 { font-size:2.25em;  /* 16x2.25	=36 */ }
+h2 { font-size:1.75em;  /* 16x1.75	=28 */ }
+h3 { font-size:1.5em;   /* 16x1.5	=24 */ }
+h4 { font-size:1.25em;  /* 16x1.25	=20 */ }
+h5 { font-size:1.125em; /* 16x1.125	=18 */ }
+h6 { font-size:1em;  	/* 16x1		=16 */ }
+p  { font-size:1em;  	/* 16x1		=16 */ }
+
+h1 {  }
+
 h1 small { color: silver; font-weight: normal; }
 
 /* Other Text */
-code, kbd, pre, samp { font-family: Menlo, Monaco, Consolas, "Courier New", monospace; }
+
+p {
+	orphans: 3;
+	widows: 3;
+}
+
+code, kbd, pre, samp {
+	font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+	white-space: pre-wrap;
+	white-space: -moz-pre-wrap;
+	white-space: -pre-wrap;
+	white-space: -o-pre-wrap;
+	word-wrap: break-word;
+}
 
 code {
 	padding: 2px 4px;
@@ -68,12 +90,10 @@ code {
 	border-radius: 4px;
 }
 
-p {
-	orphans: 3;
-	widows: 3;
-}
-
 small { line-height: 1; }
+
+.serif { font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif; }
+.mono { font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace; }
 
 hr {
 	border: 0;

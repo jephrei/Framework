@@ -20,3 +20,6 @@ body {
 .demo-grid-unit .col + .col {
 	border-left: solid 1px #bbb;
 }
+
+a.visited { color: #B10DC9; }
+a.hovered { text-decoration: underline; }
