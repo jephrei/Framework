@@ -12,8 +12,8 @@ Implemented
 To Be Done
 * Responsive layout system
 * Simply styled elements
-** Buttons/button groups and other form elements
-** Navigation types
+ * Buttons/button groups and other form elements
+ * Navigation types
 * Basic Color Themes
 * Animations! Woah! (minimal)
 * LESS version (a recode when my LESS knowledge is better)
