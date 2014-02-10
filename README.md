@@ -14,7 +14,11 @@ To Be Done
 * Simply styled elements
  * Buttons/button groups and other form elements
  * Navigation types
-* Basic Color Themes
+ * Tables
+* Print styles
+
+Maybe
+* Basic color themes
+* Basic icon integration
 * Animations! Woah! (minimal)
 * LESS version (a recode when my LESS knowledge is better)
-* Print styles
