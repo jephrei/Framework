@@ -41,39 +41,44 @@ a.activated { color: #FF851B; }
 
 <div class="container">
 
+<!-- todo: sub-page links by headers -->
 <h1>framework <small>a simple CSS framework made by a simple man.</small></h1>
 
 <p>This is a demo/doc/template page for it. Not meant for public consumption, but if you do partake...enjoy.</p>
 
-<div class="row bg-gray add-bot-sm">
-	<div class="col span-1-6 bg-black color-white text-pad">.col.span-1-6</div>
-</div>
-<div class="row bg-gray add-bot-sm">
-	<div class="col span-1-5 bg-black color-white text-pad">.col.span-1-5</div>
-</div>
-<div class="row bg-gray add-bot-sm">
-	<div class="col span-1-4 bg-black color-white text-pad">.col.span-1-4</div>
-</div>
-<div class="row bg-gray add-bot-sm">
-	<div class="col span-1-3 bg-black color-white text-pad">.col.span-1-3</div>
-</div>
-<div class="row bg-gray add-bot-sm">
-	<div class="col span-1-2 bg-black color-white text-pad">.col.span-1-2</div>
-</div>
-<div class="row bg-gray add-bot-sm">
-	<div class="col bg-black color-white text-pad">.col</div>
+<h6 class="code">.row</h6>
+
+<div class="row bg-silver add-bot-sm">
+	<div class="col span-1-6 bg-gray text-pad">.col.span-1-6</div>
 </div>
 <div class="row bg-silver add-bot-sm">
-	<div class="text-pad">.row</div>
+	<div class="col span-1-5 bg-gray text-pad">.col.span-1-5</div>
+</div>
+<div class="row bg-silver add-bot-sm">
+	<div class="col span-1-4 bg-gray text-pad">.col.span-1-4</div>
+</div>
+<div class="row bg-silver add-bot-sm">
+	<div class="col span-1-3 bg-gray text-pad">.col.span-1-3</div>
+</div>
+<div class="row bg-silver add-bot-sm">
 	<div class="col span-1-2 bg-gray text-pad">.col.span-1-2</div>
-	<div class="col span-1-2 bg-black color-white text-pad">.col.span-1-2</div>
+</div>
+<div class="row bg-silver add-bot-sm">
+	<div class="col bg-gray text-pad">.col</div>
+</div>
+<div class="row bg-silver add-bot-sm">
+	<div class="col span-2-3 skip-1-6 bg-gray text-pad">.col.span-2-3.skip-1-6</div>
 </div>
 
-<h6><code>.row.spaced</code></h6>
-<div class="row spaced add-bot-sm">
-	<div class="col span-1-3"><div class="bg-silver text-pad">.col.span-1-3</div></div>
-	<div class="col span-1-3"><div class="bg-silver text-pad">.col.span-1-3</div></div>
-	<div class="col span-1-3"><div class="bg-silver text-pad">.col.span-1-3</div></div>
+<h6 class="code">.row.spaced</h6>
+<div class="row spaced">
+	<div class="col span-1-3 add-bot-sm"><div class="bg-silver text-pad">.col.span-1-3</div></div>
+	<div class="col span-1-3 add-bot-sm"><div class="bg-silver text-pad">.col.span-1-3</div></div>
+	<div class="col span-1-3 add-bot-sm"><div class="bg-silver text-pad">.col.span-1-3</div></div>
+</div>
+<div class="row spaced">
+	<div class="col span-1-4 add-bot-sm"><div class="bg-silver text-pad">.col.span-1-4</div></div>
+	<div class="col span-3-4 add-bot-sm"><div class="bg-silver text-pad">.col.span-3-4</div></div>
 </div>
 <!--
 <div class="row">
@@ -113,63 +118,90 @@ a.activated { color: #FF851B; }
 <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
 
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque viverra sodales massa eu feugiat. Duis nisi nibh, lacinia a ultrices commodo, mattis et dui. Fusce fermentum elit a mauris commodo ac iaculis mi porta. Nullam facilisis cursus ornare. Donec erat tellus, semper sed hendrerit eget, aliquam euismod quam. Cras ac turpis orci, sed interdum sapien. Duis pulvinar fermentum pulvinar. Aenean commodo laoreet vulputate. Nam euismod erat pulvinar arcu tincidunt in elementum diam interdum.</p>
-
-<ul>
-	<li>List Item 1</li>
-	<li>List Item 2</li>
-	<li>List Item 3
+<div class="row">
+	<div class="col span-1-3">
+		<h6 class="code">ul</h6>
 		<ul>
 			<li>List Item 1</li>
 			<li>List Item 2</li>
-			<li>List Item 3</li>
-		</ul>	
-	</li>
-</ul>
-
-<ol>
-	<li>List Item 1</li>
-	<li>List Item 2</li>
-	<li>List Item 3
+			<li>List Item 3
+				<ul>
+					<li>List Item 1</li>
+					<li>List Item 2</li>
+					<li>List Item 3</li>
+				</ul>	
+			</li>
+		</ul>
+	</div>
+	<div class="col span-1-3">
+		<h6 class="code">ol</h6>
 		<ol>
 			<li>List Item 1</li>
 			<li>List Item 2</li>
-			<li>List Item 3</li>
+			<li>List Item 3
+				<ol>
+					<li>List Item 1</li>
+					<li>List Item 2</li>
+					<li>List Item 3</li>
+				</ol>
+			</li>
 		</ol>
-	</li>
-</ol>
-<h6><code>ol.long</code></h6>
-<ol class="long" start="99">
-	<li>List Item 1</li>
-	<li>List Item 2</li>
-	<li>List Item 3
-		<ol>
+	</div>
+	<div class="col span-1-3">
+		<h6 class="code">ol.long</h6>
+		<ol class="long" start="99">
 			<li>List Item 1</li>
 			<li>List Item 2</li>
-			<li>List Item 3</li>
+			<li>List Item 3
+				<ol>
+					<li>List Item 1</li>
+					<li>List Item 2</li>
+					<li>List Item 3</li>
+				</ol>
+			</li>
 		</ol>
-	</li>
-</ol>
+	</div>
+</div>
 
-<pre class="color-gray">blockquote</pre>
+
+
+
+<h6 class="code">blockquote</h6>
 <blockquote>
 	<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
 </blockquote>
 
-<!-- todo: pull quotes -->
+<blockquote cite="http://example.com/">
+	<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+	<footer>&mdash; <a href="http://example.com/">someone latin</a></footer>
+</blockquote>
 
+<h6 class="code">.pull-quote-right</h6>
+<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. <span class="pull-quote-right">Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est.</span> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+
+
+
+<!-- todo: pull quotes -->
+<h6 class="code">dl</h6>
 <dl>
 	<dt>dt Definition List Title</dt>
 	<dd>dd This is a definition list division.</dd>
 </dl>
 
-<p>Lorem ipsum <code>code</code> dolor sit amet consectetur adipiscing elit.</p>
-
+<h6 class="code">a</h6>
 <!-- The 'visited' and 'hovered' classes are not part of the framework. they are for demo page display only -->
 <p><a href="#0" class="normal">A normal link</a></p>
 <p><a href="#0" class="visited">A visited link</a></p>
 <p><a href="#0" class="hovered">A hovered link</a></p>
 <p><a href="#0" class="activated">An activated link</a></p>
 
+<h6 class="code">misc</h6>
+<p>Lorem ipsum <code>code</code> dolor sit amet consectetur adipiscing elit.</p>
+<p><em>em</em> / <i>i</i></p>
+<p><strong>strong</strong> / <b>b</b></p>
+
+
+<h6 class="code">button, .button, etc</h6>
 <div class="add-bot">
 	<button>button</button>
 	<a href="#" class="button">a.button</a>
@@ -191,8 +223,9 @@ a.activated { color: #FF851B; }
 </div>
 
 <div class="button-group add-bot">
-    <label for="name">Label</label>
-    <input type="text" name="name" id="name" placeholder="input" /><button>Action</button>
+    <!--<label for="name">Label</label>-->
+    <input type="text" name="name" id="name" placeholder="input" /><!--
+	--><button>Action</button>
 </div>
 
 <div class="add-bot">
@@ -206,36 +239,65 @@ a.activated { color: #FF851B; }
 	<button class="button-small">Small Button</button>
 </div>
 
-<div class="well add-bot">.well</div>
+<h6 class="code">.well</h6>
+<div class="well add-bot">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</div>
 
-<div class="alert add-bot">.alert</div>
+<h6 class="code">.alert</h6>
+<div class="alert add-bot">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</div>
 
-<!--<div class="alert">.alert.bg-red</div>-->
+<div class="alert bg-red add-bot">.alert.bg-red</div>
 
+<h6 class="code">table</h6>
+<table class="default">
+	<thead>
+		<tr>
+			<th>Table Header 1</th>
+			<th>Table Header 2</th>
+			<th>Table Header 3</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Division 1</td>
+			<td>Division 2</td>
+			<td>Division 3</td>
+		</tr>
+		<tr>
+			<td>Division 1</td>
+			<td>Division 2</td>
+			<td>Division 3</td>
+		</tr>
+		<tr>
+			<td>Division 1</td>
+			<td>Division 2</td>
+			<td>Division 3</td>
+		</tr>
+	</tbody>
+</table>
 
 <div class="row">
 	<div class="col span-1-3">
-		<div class="bg-aqua text-pad">aqua #7FDBFF</div>
-		<div class="bg-blue color-white text-pad">blue #0074D9</div>
-		<div class="bg-navy color-white text-pad">navy #001F3F</div>
-		<div class="bg-teal text-pad">teal #39CCCC</div>
-		<div class="bg-green text-pad">green #2ECC40</div>
-		<div class="bg-olive text-pad">olive #3D9970</div>
-		<div class="bg-lime text-pad">lime #01FF70</div>
+		<div class="bg-aqua text-pad">Aqua <span class="float-right">#7FDBFF</span></div>
+		<div class="bg-blue color-white text-pad">Blue <span class="float-right">#0074D9</span></div>
+		<div class="bg-navy color-white text-pad">Navy <span class="float-right">#001F3F</span></div>
+		<div class="bg-teal text-pad">Teal <span class="float-right">#39CCCC</span></div>
+		<div class="bg-green text-pad">Green <span class="float-right">#2ECC40</span></div>
+		<div class="bg-olive text-pad">Olive <span class="float-right">#3D9970</span></div>
+		<div class="bg-lime text-pad">Lime <span class="float-right">#01FF70</span></div>
 	</div>
 	<div class="col span-1-3">
-		<div class="bg-yellow text-pad">yellow #FFDC00</div>
-		<div class="bg-orange color-white text-pad">orange #FF851B</div>
-		<div class="bg-red color-white text-pad">red #FF4136</div>
-		<div class="bg-fuchsia color-white text-pad">fuchsia #F012BE</div>
-		<div class="bg-purple color-white text-pad">purple #B10DC9</div>
-		<div class="bg-maroon color-white text-pad">maroon #85144B</div>
+		<div class="bg-yellow text-pad">yellow <span class="float-right">#FFDC00</span></div>
+		<div class="bg-orange color-white text-pad">Orange <span class="float-right">#FF851B</span></div>
+		<div class="bg-red color-white text-pad">Red <span class="float-right">#FF4136</span></div>
+		<div class="bg-fuchsia color-white text-pad">Fuchsia <span class="float-right">#F012BE</span></div>
+		<div class="bg-purple color-white text-pad">Purple <span class="float-right">#B10DC9</span></div>
+		<div class="bg-maroon color-white text-pad">Maroon <span class="float-right">#85144B</span></div>
 	</div>
 	<div class="col span-1-3">
-		<div class="bg-white text-pad">white #fff</div>
-		<div class="bg-silver text-pad">silver #ddd</div>
-		<div class="bg-gray text-pad">gray #aaa</div>
-		<div class="bg-black color-white text-pad">black #111</div>	
+		<div class="bg-white text-pad">White <span class="float-right">#FFF</span></div>
+		<div class="bg-silver text-pad">Silver <span class="float-right">#DDD</span></div>
+		<div class="bg-gray text-pad">Gray <span class="float-right">#AAA</span></div>
+		<div class="bg-black color-white text-pad">Black <span class="float-right">#111</span></div>	
 	</div>
 </div>
 <p>color pallette choices taken from <a href="http://clrs.cc/">clrs.cc</a></p>
@@ -298,25 +360,8 @@ a.activated { color: #FF851B; }
 
 <div class="text-right"><a href="#" class="color-gray" style="text-decoration: none;">&#9650;</a></div>
 -->
+
 <!--
-<h1 id="tables">Tables</h1>
-
-<table cellspacing="0" cellpadding="0">
-	<tr>
-		<th>Table Header 1</th><th>Table Header 2</th><th>Table Header 3</th>
-	</tr>
-	<tr>
-		<td>Division 1</td><td>Division 2</td><td>Division 3</td>
-	</tr>
-	<tr class="even">
-		<td>Division 1</td><td>Division 2</td><td>Division 3</td>
-	</tr>
-	<tr>
-		<td>Division 1</td><td>Division 2</td><td>Division 3</td>
-	</tr>
-
-</table>
-
 <div class="text-right"><a href="#" class="color-gray" style="text-decoration: none;">&#9650;</a></div>
 -->
 <!--
