@@ -5,57 +5,115 @@
 <meta charset="utf-8" />
 <title></title>
 <link href="css/main.css" rel="stylesheet" type="text/css" />
-<!-- styles in demo.css not part of the framework and specific to this page only -->
-<link href="css/demo.css" rel="stylesheet" type="text/css" />
+<style>
+/*
+ * these embedded styles are not part of framework
+ * and are specific to this demo page only
+ * 
+ */
+a.normal { color: #0074D9; }
+a.visited { color: #B10DC9; }
+a.hovered { color: #0074D9; text-decoration: underline; }
+a.activated { color: #FF851B; }
+
+</style>
 </head>
 
 <body>
-<!-- any element with an id or class that starts with 'demo-' is not part of the framework and specific to this page only -->
-<div id="demo-page">
+<!--
+<header class="sticky bg-silver color-white">
+	<div class="container">
+		<nav>
+			<ul>
+				<li class="flush"><a>framework</a></li>
+				<li class="sep"></li>
+				<li><a href="#nowhere" title="Lorum ipsum dolor sit amet">Lorem</a></li>
+				<li><a href="#nowhere" title="Aliquam tincidunt mauris eu risus">Aliquam</a></li>
+				<li><a href="#nowhere" title="Morbi in sem quis dui placerat ornare">Morbi</a></li>
+				<li><a href="#nowhere" title="Praesent dapibus, neque id cursus faucibus">Praesent</a></li>
+				<li><a href="#nowhere" title="Pellentesque fermentum dolor">Pellentesque</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
 
-<h1>Framework <small>A simple CSS framework made by a simple man.</small></h1>
+<br />--><!-- lazy -->
+
+<div class="container">
+
+<h1>framework <small>a simple CSS framework made by a simple man.</small></h1>
 
 <p>This is a demo/doc/template page for it. Not meant for public consumption, but if you do partake...enjoy.</p>
 
-<h2>Text Elements</h2>
+<div class="row bg-gray add-bot-sm">
+	<div class="col span-1-6 bg-black color-white text-pad">.col.span-1-6</div>
+</div>
+<div class="row bg-gray add-bot-sm">
+	<div class="col span-1-5 bg-black color-white text-pad">.col.span-1-5</div>
+</div>
+<div class="row bg-gray add-bot-sm">
+	<div class="col span-1-4 bg-black color-white text-pad">.col.span-1-4</div>
+</div>
+<div class="row bg-gray add-bot-sm">
+	<div class="col span-1-3 bg-black color-white text-pad">.col.span-1-3</div>
+</div>
+<div class="row bg-gray add-bot-sm">
+	<div class="col span-1-2 bg-black color-white text-pad">.col.span-1-2</div>
+</div>
+<div class="row bg-gray add-bot-sm">
+	<div class="col bg-black color-white text-pad">.col</div>
+</div>
+<div class="row bg-silver add-bot-sm">
+	<div class="text-pad">.row</div>
+	<div class="col span-1-2 bg-gray text-pad">.col.span-1-2</div>
+	<div class="col span-1-2 bg-black color-white text-pad">.col.span-1-2</div>
+</div>
 
-<h3>Paragraph</h3>
+<h6><code>.row.spaced</code></h6>
+<div class="row spaced add-bot-sm">
+	<div class="col span-1-3"><div class="bg-silver text-pad">.col.span-1-3</div></div>
+	<div class="col span-1-3"><div class="bg-silver text-pad">.col.span-1-3</div></div>
+	<div class="col span-1-3"><div class="bg-silver text-pad">.col.span-1-3</div></div>
+</div>
+<!--
+<div class="row">
+	<div class="col span-1-4">.col.span-1-4</div>
+	<div class="col span-1-4">.col.span-1-4</div>
+	<div class="col span-1-4">.col.span-1-4</div>
+	<div class="col span-1-4">.col.span-1-4</div>
+</div>
+<div class="row">
+	<div class="col span-1-5">.col.span-1-5</div>
+	<div class="col span-1-5">.col.span-1-5</div>
+	<div class="col span-1-5">.col.span-1-5</div>
+	<div class="col span-1-5">.col.span-1-5</div>
+	<div class="col span-1-5">.col.span-1-5</div>
+</div>
+<div class="row">
+	<div class="col span-1-6">.col.span-1-6</div>
+	<div class="col span-1-6">.col.span-1-6</div>
+	<div class="col span-1-6">.col.span-1-6</div>
+	<div class="col span-1-6">.col.span-1-6</div>
+	<div class="col span-1-6">.col.span-1-6</div>
+	<div class="col span-1-6">.col.span-1-6</div>
+</div>
+-->
+
+<h1>h1 <small>small</small></h1>
+<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+<h2>h2 <small>small</small></h2>
+<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+<h3>h3</h3>
+<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+<h4>h4</h4>
+<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+<h5>h5</h5>
+<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+<h6>h6</h6>
+<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque viverra sodales massa eu feugiat. Duis nisi nibh, lacinia a ultrices commodo, mattis et dui. Fusce fermentum elit a mauris commodo ac iaculis mi porta. Nullam facilisis cursus ornare. Donec erat tellus, semper sed hendrerit eget, aliquam euismod quam. Cras ac turpis orci, sed interdum sapien. Duis pulvinar fermentum pulvinar. Aenean commodo laoreet vulputate. Nam euismod erat pulvinar arcu tincidunt in elementum diam interdum.</p>
 
-<h3>Headings</h3>
-<h1>Heading 1 <!--<small>sub-header text</small>--></h1>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque viverra sodales massa eu feugiat. Duis nisi nibh, lacinia a ultrices commodo, mattis et dui. Fusce fermentum elit a mauris commodo ac iaculis mi porta.</p>
-<h2>Heading 2</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque viverra sodales massa eu feugiat. Duis nisi nibh, lacinia a ultrices commodo, mattis et dui. Fusce fermentum elit a mauris commodo ac iaculis mi porta.</p>
-<h3>Heading 3</h3>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque viverra sodales massa eu feugiat. Duis nisi nibh, lacinia a ultrices commodo, mattis et dui. Fusce fermentum elit a mauris commodo ac iaculis mi porta.</p>
-<h4>Heading 4</h4>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque viverra sodales massa eu feugiat. Duis nisi nibh, lacinia a ultrices commodo, mattis et dui. Fusce fermentum elit a mauris commodo ac iaculis mi porta.</p>
-<h5>Heading 5</h5>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque viverra sodales massa eu feugiat. Duis nisi nibh, lacinia a ultrices commodo, mattis et dui. Fusce fermentum elit a mauris commodo ac iaculis mi porta.</p>
-<h6>Heading 6</h6>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque viverra sodales massa eu feugiat. Duis nisi nibh, lacinia a ultrices commodo, mattis et dui. Fusce fermentum elit a mauris commodo ac iaculis mi porta.</p>
-
-<h3>Definition List</h3>
-<dl>
-	<dt>Definition List Title</dt>
-	<dd>This is a definition list division.</dd>
-</dl>
-
-<h3>Ordered List</h3>
-<ol>
-	<li>List Item 1</li>
-	<li>List Item 2</li>
-	<li>List Item 3
-		<ol>
-			<li>List Item 1</li>
-			<li>List Item 2</li>
-			<li>List Item 3</li>
-		</ol>
-	</li>
-</ol>
-
-<h3>Unordered List</h3>
 <ul>
 	<li>List Item 1</li>
 	<li>List Item 2</li>
@@ -68,110 +126,120 @@
 	</li>
 </ul>
 
-<p>Lorem ipsum <code>dolor sit amet</code> consectetur adipiscing elit.</p>
+<ol>
+	<li>List Item 1</li>
+	<li>List Item 2</li>
+	<li>List Item 3
+		<ol>
+			<li>List Item 1</li>
+			<li>List Item 2</li>
+			<li>List Item 3</li>
+		</ol>
+	</li>
+</ol>
+<h6><code>ol.long</code></h6>
+<ol class="long" start="99">
+	<li>List Item 1</li>
+	<li>List Item 2</li>
+	<li>List Item 3
+		<ol>
+			<li>List Item 1</li>
+			<li>List Item 2</li>
+			<li>List Item 3</li>
+		</ol>
+	</li>
+</ol>
 
-<h3>Links</h3>
+<pre class="color-gray">blockquote</pre>
+<blockquote>
+	<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+</blockquote>
+
+<!-- todo: pull quotes -->
+
+<dl>
+	<dt>dt Definition List Title</dt>
+	<dd>dd This is a definition list division.</dd>
+</dl>
+
+<p>Lorem ipsum <code>code</code> dolor sit amet consectetur adipiscing elit.</p>
+
 <!-- The 'visited' and 'hovered' classes are not part of the framework. they are for demo page display only -->
-<p><a href="#0">A normal link</a></p>
+<p><a href="#0" class="normal">A normal link</a></p>
 <p><a href="#0" class="visited">A visited link</a></p>
 <p><a href="#0" class="hovered">A hovered link</a></p>
+<p><a href="#0" class="activated">An activated link</a></p>
 
-<h2>Responsive Grid Layout</h2>
-
-<div class="row demo-grid-unit">
-	<div class="col span-1-6">.col.span-1-6</div>
-</div>
-<div class="row demo-grid-unit">
-	<div class="col span-1-5">.col.span-1-5</div>
-</div>
-<div class="row demo-grid-unit">
-	<div class="col span-1-4">.col.span-1-4</div>
-</div>
-<div class="row demo-grid-unit">
-	<div class="col span-1-3">.col.span-1-3</div>
-</div>
-<div class="row demo-grid-unit">
-	<div class="col span-1-2">.col.span-1-2</div>
-</div>
-<div class="row demo-grid-unit">
-	<div class="col">.col</div>
-</div>
-<div class="row demo-grid-unit">
-	<div class="col span-1-2">.col.span-1-2</div>
-	<div class="col span-1-2">.col.span-1-2</div>
-</div>
-<div class="row demo-grid-unit">
-	<div class="col span-1-3">.col.span-1-3</div>
-	<div class="col span-1-3">.col.span-1-3</div>
-	<div class="col span-1-3">.col.span-1-3</div>
-</div>
-<div class="row demo-grid-unit">
-	<div class="col span-1-4">.col.span-1-4</div>
-	<div class="col span-1-4">.col.span-1-4</div>
-	<div class="col span-1-4">.col.span-1-4</div>
-	<div class="col span-1-4">.col.span-1-4</div>
-</div>
-<div class="row demo-grid-unit">
-	<div class="col span-1-5">.col.span-1-5</div>
-	<div class="col span-1-5">.col.span-1-5</div>
-	<div class="col span-1-5">.col.span-1-5</div>
-	<div class="col span-1-5">.col.span-1-5</div>
-	<div class="col span-1-5">.col.span-1-5</div>
-</div>
-<div class="row demo-grid-unit">
-	<div class="col span-1-6">.col.span-1-6</div>
-	<div class="col span-1-6">.col.span-1-6</div>
-	<div class="col span-1-6">.col.span-1-6</div>
-	<div class="col span-1-6">.col.span-1-6</div>
-	<div class="col span-1-6">.col.span-1-6</div>
-	<div class="col span-1-6">.col.span-1-6</div>
+<div class="add-bot">
+	<button>button</button>
+	<a href="#" class="button">a.button</a>
+	<div class="button">div.button</div>
+	<input type="button" value="input" />
+	<!--<input type="submit" value="input[type='submit']" />-->
 </div>
 
+<div class="add-bot">
+	<button class="disabled">button</button>
+	<a href="#" class="button disabled">a.button</a>
+	<div class="button disabled">div.button</div>
+	<input type="button" value="input" class="disabled" />
+	<!--<input type="submit" value="Submit Button" class="disabled" />	-->
+</div>
 
-<!--
-<h2>Form Elements</h2>
-
-<h3>Buttons</h3>
-
-<p>Normal</p>
-
-<button>Button</button>
-<a href="#" class="button">Anchor link</a>
-<div class="button">class="button"</div>
-<input type="button" value="Input Button" />
-<input type="submit" value="Submit Button" />
-
-<p>Disabled</p>
-    
-<button class="disabled">Button</button>
-<a href="#" class="button disabled">Anchor link</a>
-<div class="button disabled">class="button"</div>
-<input type="button" value="Input Button" class="disabled" />
-<input type="submit" value="Submit Button" class="disabled" />
-
-<p>Button Group</p>
-    
-<div class="button-group">
+<div class="button-group add-bot">
     <button>One</button><button>Two</button><button>Three</button>
 </div>
 
-<p>Button Group with Textbox</p>
-
-<div class="button-group">
-    <label for="name">Text Input:</label>
-    <input type="text" name="name" id="name" placeholder="Search Term" /><button>Go</button>
+<div class="button-group add-bot">
+    <label for="name">Label</label>
+    <input type="text" name="name" id="name" placeholder="input" /><button>Action</button>
 </div>
 
-<p>Double Line Button</p>
+<div class="add-bot">
+	<button>Double<br />Line</button>
+</div>
 
-<button>Hello,<br />World!</button>
+<div class="add-bot">
+	<button class="button-large">.button-large</button>
+	<button class="button-medium">.button-medium</button>
+	<button>button</button>
+	<button class="button-small">Small Button</button>
+</div>
 
-<p>Sizes</p>
-<button class="button-large">Large Button</button>
-<button class="button-medium">Medium Button</button>
-<button>Normal Button</button>
-<button class="button-small">Small Button</button>
--->
+<div class="well add-bot">.well</div>
+
+<div class="alert add-bot">.alert</div>
+
+<!--<div class="alert">.alert.bg-red</div>-->
+
+
+<div class="row">
+	<div class="col span-1-3">
+		<div class="bg-aqua text-pad">aqua #7FDBFF</div>
+		<div class="bg-blue color-white text-pad">blue #0074D9</div>
+		<div class="bg-navy color-white text-pad">navy #001F3F</div>
+		<div class="bg-teal text-pad">teal #39CCCC</div>
+		<div class="bg-green text-pad">green #2ECC40</div>
+		<div class="bg-olive text-pad">olive #3D9970</div>
+		<div class="bg-lime text-pad">lime #01FF70</div>
+	</div>
+	<div class="col span-1-3">
+		<div class="bg-yellow text-pad">yellow #FFDC00</div>
+		<div class="bg-orange color-white text-pad">orange #FF851B</div>
+		<div class="bg-red color-white text-pad">red #FF4136</div>
+		<div class="bg-fuchsia color-white text-pad">fuchsia #F012BE</div>
+		<div class="bg-purple color-white text-pad">purple #B10DC9</div>
+		<div class="bg-maroon color-white text-pad">maroon #85144B</div>
+	</div>
+	<div class="col span-1-3">
+		<div class="bg-white text-pad">white #fff</div>
+		<div class="bg-silver text-pad">silver #ddd</div>
+		<div class="bg-gray text-pad">gray #aaa</div>
+		<div class="bg-black color-white text-pad">black #111</div>	
+	</div>
+</div>
+<p>color pallette choices taken from <a href="http://clrs.cc/">clrs.cc</a></p>
+
 <!--
 <fieldset>
 	<legend>Legend</legend>
@@ -258,12 +326,9 @@
 
 <pre><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. <acronym title="National Basketball Association">NBA</acronym> Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.  <abbr title="Avenue">AVE</abbr></p></pre>
 
-<blockquote>
-	"This stylesheet is going to help so freaking much." <br />-Blockquote
-</blockquote>
-
 <div class="text-right"><a href="#" class="color-gray" style="text-decoration: none;">&#9650;</a></div>
 -->
+
 <!--
 <h1>Custom Elements and Combinations</h1>
 
@@ -296,40 +361,10 @@
 </nav>
 -->
 
+<!-- hover show and toggle show -->
 
-<h2>Colors</h2>
-<p>The following color pallette is taken from <a href="http://clrs.cc/">clrs.cc</a> ...for now.</p>
-<div class="row">
-	<div class="col span-1-3">
-		<h3>Cool</h3>
-		<div class="bg-aqua" style="text-transform: uppercase; padding: 8px;">aqua #7FDBFF</div>
-		<div class="bg-blue" style="text-transform: uppercase; padding: 8px; color: white;">blue #0074D9</div>
-		<div class="bg-navy" style="text-transform: uppercase; padding: 8px; color: white;">navy #001F3F</div>
-		<div class="bg-teal" style="text-transform: uppercase; padding: 8px;">teal #39CCCC</div>
-		<div class="bg-green" style="text-transform: uppercase; padding: 8px;">green #2ECC40</div>
-		<div class="bg-olive" style="text-transform: uppercase; padding: 8px;">olive #3D9970</div>
-		<div class="bg-lime" style="text-transform: uppercase; padding: 8px;">lime #01FF70</div>
-	</div>
-	<div class="col span-1-3">
-		<h3>Warm</h3>
-		<div class="bg-yellow" style="text-transform: uppercase; padding: 8px;">yellow #FFDC00</div>
-		<div class="bg-orange" style="text-transform: uppercase; padding: 8px; color: white;">orange #FF851B</div>
-		<div class="bg-red" style="text-transform: uppercase; padding: 8px; color: white;">red #FF4136</div>
-		<div class="bg-fuchsia" style="text-transform: uppercase; padding: 8px; color: white;">fuchsia #F012BE</div>
-		<div class="bg-purple" style="text-transform: uppercase; padding: 8px; color: white;">purple #B10DC9</div>
-		<div class="bg-maroon" style="text-transform: uppercase; padding: 8px; color: white;">maroon #85144B</div>
-	</div>
-	<div class="col span-1-3">
-		<h3>Grey</h3>
-		<div class="bg-white" style="text-transform: uppercase; padding: 8px;">white #fff</div>
-		<div class="bg-silver" style="text-transform: uppercase; padding: 8px;">silver #ddd</div>
-		<div class="bg-gray" style="text-transform: uppercase; padding: 8px;">gray #aaa</div>
-		<div class="bg-black" style="text-transform: uppercase; padding: 8px; color: white;">black #111</div>	
-	</div>
-</div>
 
-<br />	 
-<div class="text-center color-gray">mixed by jephrei with &#9829;</div>
+<p class="text-center color-gray">mixed by jephrei with &#9829;</p>
 	 
 </div>
 </body>
