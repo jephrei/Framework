@@ -3,11 +3,13 @@
  * Framework v0.1 alpha by jephrei
  *
  * TODO:
- * full page/element bg
- * button minimizing
+ * full page/element bg (also non-scrollable)
+ * button style minimizing (old code to be smoothed out)
  * form elements
  * details/summary element
  * color theme rehaul
+ * make non-bulleted lists default
+ * element-less size classes
  * 
  */
 
@@ -22,9 +24,7 @@
 }
 
 html {
-	font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-size: 16px;
-	line-height: 1.5;
+
 
 	-webkit-text-size-adjust: none;
 	-moz-text-size-adjust: none;
@@ -32,9 +32,13 @@ html {
 }
 
 body {
+	font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+	
 	font-size:100%;
 	margin: 0;
-	color: #333; /* default black */
+	color: #333;
 }
 
 /* Links */
@@ -59,57 +63,69 @@ h1 { border-bottom: solid 2px #ddd; }
 h2 { border-bottom: solid 1px #ddd; }
 
 h1, h2, h3, h4, h5, h6 {
-	line-height: 1.25;
+	line-height: 1.1;
+	margin-top: 0;
 	margin-bottom: .5em;
 }
 
 h1, .h1 {
 	font-size:2.25em;  /* 16x2.25	=36 */
-	margin-top: 1.125em;
+	/*margin-top: 1.125em;*/
 }
 h2, .h2 {
 	font-size:1.75em;  /* 16x1.75	=28 */
-	margin-top: 0.875em;
+	/*margin-top: 0.875em;*/
 }
 h3, .h3 {
 	font-size:1.5em;   /* 16x1.5	=24 */
-	margin-top: 0.75em;
+	/*margin-top: 0.75em;*/
 }
 h4, .h4 {
 	font-size:1.25em;  /* 16x1.25	=20 */
-	margin-top: 0.625em;
+	/*margin-top: 0.625em;*/
 }
 h5, .h5 {
 	font-size:1.125em; /* 16x1.125	=18 */
-	margin-top: 0.5625em;
+	/*margin-top: 0.5625em;*/
 }
 h6, .h6 {
 	font-size:1em;  	/* 16x1		=16 */
-	margin-top: 0.5em;
+	/*margin-top: 0.5em;*/
 }
 
-p { font-size:1em;  	/* 16x1		=16 */ }
+p { font-size:1em;  	/* 16x1		=16 */
+	margin-top: 0;
+}
 
-h1 + p,
+/*h1 + p,
 h2 + p,
 h3 + p,
 h4 + p,
 h5 + p,
-h6 + p { margin-top: .5em; }
+h6 + p { margin-top: .5em; }*/
+
+h1 img,
+h2 img,
+h3 img,
+h4 img,
+h5 img,
+h6 img {
+  margin: 0;
+}
 
 h1 small,
-h2 small { color: silver; font-weight: normal; }
+h2 small { color: #bbb; font-weight: normal; }
 
 /* experiment time! */
 /*h1:first-child,*/
-h2:first-child,
+/*h2:first-child,
 h3:first-child,
 h4:first-child,
 h5:first-child,
 h6:first-child,
 p:first-child {
 	margin-top: 0.125em;
-}
+}*/
 
 .lrg {
 	font-size:3em;  /* 16x2.25	=36 */
@@ -199,7 +215,7 @@ table.default {
 	border-left: solid 1px #ccc;
 }
 
-.default caption {
+.default > caption {
 	/*text-align: left;*/
 	font-size: 120%;
 	color: #999;
@@ -260,7 +276,7 @@ button:hover,
 .button:hover,
 input[type="button"]:hover,
 input[type="submit"]:hover {
-    background-color: #e1e1e1;
+    background-color: #eee;
 	text-decoration: none;
 }
 
@@ -280,11 +296,11 @@ input[type="submit"].disabled,
 input[type="button"][disabled],
 input[type="submit"][disabled]{
     cursor: not-allowed;
-    background-color: #e9e9e9;
+    background-color: #eee;
     color: #bbb;
     text-shadow: none;
 }
-
+/*
 .button-group > button,
 .button-group > .button,
 .button-group > input[type="button"],
@@ -319,6 +335,7 @@ input[type="submit"][disabled]{
     border: 0;
     vertical-align: middle;
 }
+*/
 
 .button-large { font-size: 2em; }
 .button-medium { font-size: 1.5em; }
@@ -552,7 +569,7 @@ nav li > ul li {
 
 .text-pad { padding: .15em .4em; }
 
-/* borders */ /* todo: x-compat this */
+/* borders */
 .chisel {
 	-webkit-border-radius: .18em;
 	-moz-border-radius: .18em;
