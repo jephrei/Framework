@@ -16,6 +16,7 @@
 <link href="css/main.css" rel="stylesheet" type="text/css" />
 
 <!--[if lt IE 9]>
+<link href="css/old.css" rel="stylesheet" type="text/css" /><!-- a foolish attempt to play nice */
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 <style>
@@ -59,9 +60,8 @@ a.activated { color: #FF851B; }
 
 <p>This is a demo/doc/template page for something that isn't meant nor ready for public consumption, but if you do partake...enjoy.</p>
 
-<h6 class="code">.row</h6>
-
 <div class="row bg-silver add-bot">
+	<div class="text-pad code">.row</div>
 	<div class="col span-1-6 bg-gray text-pad code">.col.span-1-6</div>
 </div>
 <div class="row bg-silver add-bot">
@@ -83,39 +83,19 @@ a.activated { color: #FF851B; }
 	<div class="col span-2-3 skip-1-6 bg-gray text-pad code">.col.span-2-3.skip-1-6</div>
 </div>
 
-<h6 class="code">.row.spaced</h6>
-<div class="row spaced">
-	<div class="col span-1-3 add-bot code"><div class="bg-silver text-pad">.col.span-1-3</div></div>
-	<div class="col span-1-3 add-bot code"><div class="bg-silver text-pad">.col.span-1-3</div></div>
-	<div class="col span-1-3 add-bot code"><div class="bg-silver text-pad">.col.span-1-3</div></div>
+
+<div class="bg-silver add-bot">
+	<h6 class="text-pad code">.row.spaced</h6>
+	<div class="row spaced">
+		<div class="col span-1-3 code"><div class="bg-gray text-pad">.col.span-1-3</div></div>
+		<div class="col span-1-3 code"><div class="bg-gray text-pad">.col.span-1-3</div></div>
+		<div class="col span-1-3 code"><div class="bg-gray text-pad">.col.span-1-3</div></div>
+	</div>
 </div>
 <div class="row spaced">
-	<div class="col span-1-4 add-bot code"><div class="bg-silver text-pad">.col.span-1-4</div></div>
-	<div class="col span-3-4 add-bot code"><div class="bg-silver text-pad">.col.span-3-4</div></div>
+	<div class="col span-1-4 add-bot code"><div class="bg-gray text-pad">.col.span-1-4</div></div>
+	<div class="col span-3-4 add-bot code"><div class="bg-gray text-pad">.col.span-3-4</div></div>
 </div>
-<!--
-<div class="row">
-	<div class="col span-1-4">.col.span-1-4</div>
-	<div class="col span-1-4">.col.span-1-4</div>
-	<div class="col span-1-4">.col.span-1-4</div>
-	<div class="col span-1-4">.col.span-1-4</div>
-</div>
-<div class="row">
-	<div class="col span-1-5">.col.span-1-5</div>
-	<div class="col span-1-5">.col.span-1-5</div>
-	<div class="col span-1-5">.col.span-1-5</div>
-	<div class="col span-1-5">.col.span-1-5</div>
-	<div class="col span-1-5">.col.span-1-5</div>
-</div>
-<div class="row">
-	<div class="col span-1-6">.col.span-1-6</div>
-	<div class="col span-1-6">.col.span-1-6</div>
-	<div class="col span-1-6">.col.span-1-6</div>
-	<div class="col span-1-6">.col.span-1-6</div>
-	<div class="col span-1-6">.col.span-1-6</div>
-	<div class="col span-1-6">.col.span-1-6</div>
-</div>
--->
 
 <h1>h1 <small>small</small></h1>
 <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
@@ -187,9 +167,6 @@ a.activated { color: #FF851B; }
 	</div>
 </div>
 
-
-
-
 <h6 class="code">blockquote</h6>
 <blockquote>
 	<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
@@ -224,6 +201,15 @@ a.activated { color: #FF851B; }
 <p><em>em</em> / <i>i</i></p>
 <p><strong>strong</strong> / <b>b</b></p>
 
+<h6 class="code">.crop-stacked img</h6>
+<div class="crop-stacked add-bot">
+	<img src="http://www.placehold.it/420&text=image" />
+</div>
+
+<h6 class="code">img.flush-stacked</h6>
+<div class="flush-stacked add-bot">
+	<img src="http://www.placehold.it/420&text=image" />
+</div>
 
 <h6 class="code">button, .button, etc</h6>
 <div class="add-bot">
@@ -412,7 +398,7 @@ a.activated { color: #FF851B; }
 </div>
 <p>color pallette choices taken from <a href="http://clrs.cc/">clrs.cc</a></p>
 
-<!--
+
 <fieldset>
 	<legend>Legend</legend>
 	
@@ -467,7 +453,7 @@ a.activated { color: #FF851B; }
 	</form>
 	
 </fieldset>
-
+<!--
 <div class="text-right"><a href="#" class="color-gray" style="text-decoration: none;">&#9650;</a></div>
 -->
 

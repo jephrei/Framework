@@ -1,42 +1,43 @@
 #Framework v0.1 alpha
-This is my personal framework and is a work in progress. The final scope isn't fully realized yet, but I'd like it to function well as a stepping stone yet be as minimal as posible. [We tend to break things](http://motherfuckingwebsite.com) and i want to try to avoid that.
-This is in early development so things will be ugly and/or broken.
+This is a personal framework. Things will be ugly and/or [broken](http://motherfuckingwebsite.com). The final scope isn't fully realized yet, but I have my principles. I'll probably get distracted.
 
 ##Another framework?
 Yes. It's an unorganized pile of foo but it's mine and I'm enjoying myself. You should make one too.
+
+##Basics Ideas
+* Consitency rather than resets
+* Modular design for multiple use cases
+* Semantic classes
+* Less is more
+* also trying to make zero top margins work in practice
 
 ##Key Features
 ###Implemented
 * Includes normalize.css v3.0.0
 * Border box model
 * Responsive grid layout
-* Modular design
 * Basic element styles
 
 ###To Do
 * Form Elements
 * Split CSS to multiple files
+ * base
+ * grid
+ * typography
+ * button/form elements
+ * colors
 * Cross-browser testing
 
 ###Maybe
 * Color themes
 * Icons
 * Minimal animations
+* Minified version
 * Flexbox (when something more final is decided on)
 * LESS (when/if my LESS knowledge gets better)
-* Minified version
-* JS excuses - Things ya just can't do with CSS
- * Loading page
- * Other stuff i can't think of right now
 
 ##Compatibility
-Browser compatibility hasn't been tested but it's likely to work with modern browsers. Things may get funky in IE 8 and below.
-
-##Basic Principles
-* less is more
-* consitency rather than resets
-* modular design for multiple use cases
-* semantic classes
+I noticed that IE8 and below sucks but you probably knew that.
 
 ##Credits
 * normalize.css http://necolas.github.io/normalize.css/

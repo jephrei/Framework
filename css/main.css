@@ -24,21 +24,24 @@
 }
 
 html {
-
-
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 1.5;
+	
 	-webkit-text-size-adjust: none;
 	-moz-text-size-adjust: none;
 	-ms-text-size-adjust: none;
 }
 
 body {
-	font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-size: 16px;
-	line-height: 1.5;
-	
 	font-size:100%;
 	margin: 0;
 	color: #333;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote {
+	margin: 0 0 1em 0;
 }
 
 /* Links */
@@ -53,48 +56,34 @@ a img {
 	vertical-align: middle;
 }
 
-img { max-width: 100%; }
+img, video { max-width: 100%; } /* video? */
 
 .crop-stacked { overflow: auto; }
 .crop-stacked img { margin: auto; }
+
+.flush-stacked {}
 
 /* Headers */
 h1 { border-bottom: solid 2px #ddd; }
 h2 { border-bottom: solid 1px #ddd; }
 
+h4, h6 { /* need to figure out some differentiation of headers */ }
+
 h1, h2, h3, h4, h5, h6 {
 	line-height: 1.1;
-	margin-top: 0;
 	margin-bottom: .5em;
 }
 
-h1, .h1 {
-	font-size:2.25em;  /* 16x2.25	=36 */
-	/*margin-top: 1.125em;*/
-}
-h2, .h2 {
-	font-size:1.75em;  /* 16x1.75	=28 */
-	/*margin-top: 0.875em;*/
-}
-h3, .h3 {
-	font-size:1.5em;   /* 16x1.5	=24 */
-	/*margin-top: 0.75em;*/
-}
-h4, .h4 {
-	font-size:1.25em;  /* 16x1.25	=20 */
-	/*margin-top: 0.625em;*/
-}
-h5, .h5 {
-	font-size:1.125em; /* 16x1.125	=18 */
-	/*margin-top: 0.5625em;*/
-}
-h6, .h6 {
+h1, .h1 { font-size:2.25em;  /* 16x2.25	=36 */ }
+h2, .h2 { font-size:1.75em;  /* 16x1.75	=28 */ }
+h3, .h3 { font-size:1.5em;   /* 16x1.5	=24 */ }
+h4, .h4 { font-size:1.25em;  /* 16x1.25	=20 */ }
+h5, .h5 { font-size:1.125em; /* 16x1.125=18 */ }
+h6, .h6 { font-size:1em;  	/* 16x1		=16 */ }
+p {
 	font-size:1em;  	/* 16x1		=16 */
-	/*margin-top: 0.5em;*/
-}
-
-p { font-size:1em;  	/* 16x1		=16 */
-	margin-top: 0;
+	orphans: 3;
+	widows: 3;
 }
 
 /*h1 + p,
@@ -133,16 +122,17 @@ p:first-child {
 }
 
 /* Other Text */
-p {
-	orphans: 3;
-	widows: 3;
-}
 
 /* lists */
 ul { padding-left: 1em; }
 ol { padding-left: 1.3em; }
 
 ol.long { padding-left: 2.4em; }
+
+.blank {
+	list-style-type: none;
+	padding-left: 0;
+}
 
 /* code */
 .code, code, kbd, pre, samp, var {
@@ -184,8 +174,8 @@ blockquote footer {
 
 small { line-height: 1; }
 
-.serif { font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif; }
-.mono { font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace; }
+.serif { font-family: Georgia, Times, "Times New Roman", serif; }
+.mono { font-family: Monaco, Consolas, "Lucida Console", monospace; }
 
 hr {
 	border: 0;
@@ -207,7 +197,6 @@ td, th { padding: .15em .4em; }
 
 tfoot {
 	font-size: 80%;
-	color: #999;
 }
 
 table.default {
@@ -217,7 +206,7 @@ table.default {
 
 .default > caption {
 	/*text-align: left;*/
-	font-size: 120%;
+	font-size: 1.25em;
 	color: #999;
 }
 
@@ -238,6 +227,11 @@ table.default {
 .default tbody tr:hover,
 .default tbody tr:hover {
 	background-color: #ddd;
+}
+
+.default tfoot {
+	color: #999;
+	font-style: italic;
 }
 
 /* inputs */
@@ -386,6 +380,21 @@ progress::-moz-progress-bar {
 
 }
 */
+fieldset {
+	padding: 0.5em 0 0 0;
+	margin-bottom: 0;
+	border: 0;
+	border-top: solid 1px #ddd;	
+}
+
+fieldset legend {
+	font-size: 1.25em;
+	color: #999;
+	display: block;
+	width: 100%;
+	/*border-bottom: solid 1px #ddd;*/
+}
+
 /*== Custom Elements ==*/
 /* shadows */
 .shadow { box-shadow: 0 2px 4px rgba(0,0,0,0.3); }
@@ -448,7 +457,7 @@ nav a:not([href]) {
 nav li > ul {
     display: none;
     position: absolute;
-	background-color: rgba(255,255,255,0.);
+	background-color: rgba(255,255,255,0.8);
 }
 
 nav li:hover > ul {
@@ -725,13 +734,11 @@ nav ul,
 	.add-bot-sm-stacked { margin-bottom: 0.5em; }
 	.add-bot-lrg-stacked { margin-bottom: 2em; }
 	
-	.crop-stacked {
-		overflow: hidden;
-	}
+	.crop-stacked {	overflow: hidden; }
+	.crop-stacked img { margin: -25% 0; }
 	
-	.crop-stacked img {
-		margin: -25% 0;
-	}
+	.flush-stacked { margin: 0 -1.4em; /* container margin * -1 */ }
+	.flush-stacked img { width: 100%; }
 
 	.hideMobile { display: none; }
 
