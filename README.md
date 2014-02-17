@@ -29,6 +29,7 @@ Yes. It's an unorganized pile of foo but it's mine and I'm enjoying myself. You 
 * Cross-browser testing
 
 ###Maybe
+* Grid increments (like 4 columns for desktop and 2 for mobile)
 * Color themes
 * Icons
 * Minimal animations
