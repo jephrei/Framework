@@ -13,13 +13,13 @@
  * commented explanations
  * add square, roman, and colored options
  * notification labels
+ * hover show and/or toggle show
  * 
  */
 
 @import "normalize.css";
 @import "print.css" print;
 
-/* almighty border-box */
 *, *:before, *:after {
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
@@ -30,20 +30,20 @@ html {
 	font-family: /*Calibri, Candara, Segoe, "Segoe UI", Optima, Arial,*/ sans-serif;
 	font-weight: normal;
 	font-size: 16px;
-	line-height: 1.5;
-	
+	line-height: 1.5;	
 	-webkit-text-size-adjust: none;
 	-moz-text-size-adjust: none;
 	-ms-text-size-adjust: none;
+	
+	color: #333;
 }
 
 body {
 	font-size:100%;
 	margin: 0;
-	color: #333;
 }
 
-h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote {
+h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote, fieldset, table { /* no top margin experiment */
 	margin: 0 0 1em 0;
 }
 
@@ -64,8 +64,6 @@ img, video { max-width: 100%; } /* video? */
 .crop-stacked { overflow: auto; }
 .crop-stacked img { margin: auto; }
 
-.flush-stacked {}
-
 /* Headers */
 h1 { border-bottom: solid 2px #ddd; }
 h2 { border-bottom: solid 1px #ddd; }
@@ -74,15 +72,14 @@ h4, h6 { /* need to figure out some differentiation of headers */ }
 
 h1, h2, h3, h4, h5, h6 {
 	line-height: 1.1;
-	margin-bottom: .5em;
 }
 
-h1, .h1 { font-size:2.25em;  /* 16x2.25	=36 */ }
-h2, .h2 { font-size:1.75em;  /* 16x1.75	=28 */ }
-h3, .h3 { font-size:1.5em;   /* 16x1.5	=24 */ }
-h4, .h4 { font-size:1.25em;  /* 16x1.25	=20 */ }
-h5, .h5 { font-size:1.125em; /* 16x1.125=18 */ }
-h6, .h6 { font-size:1em;  	/* 16x1		=16 */ }
+h1, .h1 { font-size:2.25em; 	/* 16 * 2.25	=36 */ }
+h2, .h2 { font-size:1.75em; 	/* 16 * 1.75	=28 */ }
+h3, .h3 { font-size:1.5em;  	/* 16 * 1.5		=24 */ }
+h4, .h4 { font-size:1.25em; 	/* 16 * 1.25	=20 */ }
+h5, .h5 { font-size:1.125em;	/* 16 * 1.125	=18 */ }
+h6, .h6 { font-size:1em;		/* 16 * 1		=16 */ }
 
 p {
 	font-size: 1em;  	/* 16x1		=16 */
@@ -115,7 +112,8 @@ ol { padding-left: 1.3em; }
 
 ol.long { padding-left: 2.4em; }
 
-.blank {
+ul.blank,
+ol.blank {
 	list-style-type: none;
 	padding-left: 0;
 }
@@ -123,6 +121,7 @@ ol.long { padding-left: 2.4em; }
 /* code */
 .code, code, kbd, pre, samp, var {
 	font-family: /*Menlo, Monaco, Consolas, "Courier New",*/ monospace;
+	font-style: normal;
 	white-space: pre-wrap;
 	white-space: -moz-pre-wrap;
 	white-space: -pre-wrap;
@@ -139,6 +138,10 @@ code {
 	border-radius: 4px;
 }
 
+pre code {
+	display: block;
+}
+
 blockquote {
 	margin-left: 0;
 	padding-left: 1em;
@@ -150,7 +153,7 @@ blockquote footer {
 }
 
 .pull-quote-right { /* not perfectly implmented yet */
-	/* content: attr(title) ": "; */
+	/* content: attr(title) ": "; */ /* to use content of title attribute for pull quote */
     display: inline-block;
     font-size: 150%;
     float: right;
@@ -223,15 +226,16 @@ table.default {
 /* inputs */
 input { max-width: 100%; }
 
-
 /* Buttons */
 button,
 .button,
 input[type="button"],
-input[type="submit"] {
+input[type="submit"],
+input[type="reset"] {
 	display: inline-block;
-    font-family: Helvetica, sans-serif;
+    font-family: /*Helvetica, */sans-serif;
 	/*border-radius: .15em;*/
+	border: none;
     background-color: #ddd;
 	margin-bottom: 0.25em;
     padding: .2em 1em;
@@ -242,7 +246,6 @@ input[type="submit"] {
     text-decoration: none;
     cursor: pointer;
     text-align: center;
-    border: none;
     vertical-align: middle;  
 
     -webkit-user-select: none;
@@ -264,9 +267,9 @@ button:not(.disabled):active,
 .button:not(.disabled):active,
 input[type="button"]:not(.disabled):active,
 input[type="submit"]:not(.disabled):active {
+	outline: none;
     background-color: #ddd;
     box-shadow: inset 0 .1em .1em rgba(0,0,0,0.1);
-	/* outline: none; */
 }
 
 button.disabled,

@@ -5,11 +5,11 @@ This is a personal framework. Things will be ugly and/or [broken](http://motherf
 Yes. It's an unorganized pile of foo but it's mine and I'm enjoying myself. You should make one too.
 
 ##Basics Ideas
+* Less is more
+* Semantic classes
 * Consitency rather than resets
 * Modular design for multiple use cases
-* Semantic classes
-* Less is more
-* also trying to make zero top margins work in practice
+* Trying an experiment to make zero top margins work in practice
 
 ##Key Features
 ###Implemented
