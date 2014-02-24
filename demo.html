@@ -16,7 +16,7 @@
 <link href="css/main.css" rel="stylesheet" type="text/css" />
 
 <!--[if lt IE 9]>
-<link href="css/old.css" rel="stylesheet" type="text/css" /><!-- a foolish attempt to play nice */
+<link href="css/old.css" rel="stylesheet" type="text/css" /><!-- a foolish attempt to play nice -->
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 <style>
@@ -34,30 +34,11 @@ a.activated { color: #FF851B; }
 </head>
 
 <body>
-<!--
-<header class="sticky bg-silver color-white">
-	<div class="container">
-		<nav>
-			<ul>
-				<li class="flush"><a>framework</a></li>
-				<li class="sep"></li>
-				<li><a href="#nowhere" title="Lorum ipsum dolor sit amet">Lorem</a></li>
-				<li><a href="#nowhere" title="Aliquam tincidunt mauris eu risus">Aliquam</a></li>
-				<li><a href="#nowhere" title="Morbi in sem quis dui placerat ornare">Morbi</a></li>
-				<li><a href="#nowhere" title="Praesent dapibus, neque id cursus faucibus">Praesent</a></li>
-				<li><a href="#nowhere" title="Pellentesque fermentum dolor">Pellentesque</a></li>
-			</ul>
-		</nav>
-	</div>
-</header>
-
-<br />--><!-- lazy -->
 
 <div class="container">
+<h1 class="lrg add-top-lrg">framework <small class="light">a minimal, modular web dev template.</small></h1>
 
-<h1 class="lrg">framework <small>another CSS template.</small></h1>
-
-<p>This is a demo/doc/template page for something that isn't meant nor ready for public consumption, but if you do partake...enjoy.</p>
+<p class="add-bot-lrg">This is a demo/doc/template page for something that isn't meant nor ready for public consumption, but if you do partake...enjoy.</p>
 
 <div class="row bg-silver add-bot">
 	<div class="text-pad code">.row</div>
@@ -79,7 +60,7 @@ a.activated { color: #FF851B; }
 	<div class="col bg-gray text-pad code">.col</div>
 </div>
 <div class="row bg-silver add-bot">
-	<div class="col span-2-3 skip-1-6 bg-gray text-pad code">.col.span-2-3.skip-1-6</div>
+	<div class="col span-4-6 skip-1-6 bg-gray text-pad code">.col.span-4-6.skip-1-6</div>
 </div>
 
 <div class="bg-silver add-bot">
@@ -111,6 +92,11 @@ a.activated { color: #FF851B; }
 <h6>h6</h6>
 <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
 
+<h6 class="code">.heavy</h6>
+<p class="heavy">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+
+<h6 class="code">.light</h6>
+<p class="light">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
 <!--
 <div class="row spaced">
 	<div class="col span-3-4">
@@ -190,7 +176,7 @@ a.activated { color: #FF851B; }
 </dl>
 
 <h6 class="code">a</h6>
-<!-- The 'visited' and 'hovered' classes are not part of the framework. they are for demo page display only -->
+<!-- The 'visited' and 'hovered' classes are not part of the framework. they force the styles for demo page viewing only -->
 <p><a href="#0" class="normal">A normal link</a></p>
 <p><a href="#0" class="visited">A visited link</a></p>
 <p><a href="#0" class="hovered">A hovered link</a></p>
@@ -202,57 +188,37 @@ a.activated { color: #FF851B; }
 <p><em>em</em> / <i>i</i></p>
 <p><strong>strong</strong> / <b>b</b></p>
 
-<pre><code class="language-html">
-<ul>
-	<li>Lorem ipsum</li>
-	<li>Dolor sit amet</li>
-	<li>Consectetur adipiscing elit
-		<ul>
-			<li>Fusce vitae interdum mi</li>
-			<li>Pellentesque tristique</li>
-			<li>Tellus nec eleifend molestie</li>
-		</ul>	
-	</li>
-</ul>
-</code></pre>
-
-<h6 class="code">.crop-stacked img</h6>
-<div class="crop-stacked add-bot">
-	<img src="http://www.placehold.it/420&text=image" />
-</div>
-
-<h6 class="code">img.flush-stacked</h6>
-<div class="flush-stacked add-bot">
-	<img src="http://www.placehold.it/420&text=image" />
+<div class="row spaced">
+	<div class="col span-1-2">
+		<h6 class="code">.crop-stacked img</h6>
+		<div class="crop-stacked add-bot">
+			<img src="http://www.placehold.it/420&text=image" />
+		</div>		
+	</div>
+	<div class="col span-1-2">
+		<h6 class="code">.flush-stacked img</h6>
+		<div class="flush-stacked add-bot">
+			<img src="http://www.placehold.it/420&text=image" />
+		</div>
+	</div>
 </div>
 
 <h6 class="code">button, .button, etc</h6>
 <div class="add-bot">
 	<button>button</button>
-	<a href="#" class="button">a.button</a>
+	<a href="#0" class="button">a.button</a>
 	<div class="button">div.button</div>
-	<input type="button" value="input" />
+	<input class="button" type="button" value="input.button" />
 	<!--<input type="submit" value="input[type='submit']" />-->
 </div>
 
 <div class="add-bot">
 	<button class="disabled">button</button>
-	<a href="#" class="button disabled">a.button</a>
+	<a href="#0" class="button disabled">a.button</a>
 	<div class="button disabled">div.button</div>
-	<input type="button" value="input" class="disabled" />
+	<input type="button" value="input.button" class="button disabled" />
 	<!--<input type="submit" value="Submit Button" class="disabled" />	-->
 </div>
-<!--
-<div class="button-group add-bot">
-    <button>One</button><button>Two</button><button>Three</button>
-</div>
--->
-<!--
-<div class="button-group add-bot">
-    <label for="name">Label</label>
-    <input type="text" name="name" id="name" placeholder="input" /><button>Action</button>
-</div>
--->
 
 <div class="add-bot">
 	<button>Double<br />Line</button>
@@ -278,6 +244,15 @@ a.activated { color: #FF851B; }
 </div>
 
 <button class="full-width add-bot">.full-width</button>
+
+<div class="button-group add-bot">
+    <button>One</button><button>Two</button><button>Three</button>
+</div>
+
+<div class="button-group add-bot">
+    <!--<label for="name">Label</label>-->
+    <input type="text" name="name" id="name" placeholder="Text Box" /><button>Action</button>
+</div>
 
 <!--
 <div class="add-bot">
@@ -411,6 +386,31 @@ a.activated { color: #FF851B; }
 	</div>
 </div>
 <p>color pallette choices taken from <a href="http://clrs.cc/">clrs.cc</a></p>
+
+<h6 class="code">.add-bot</h6>
+<div class="row add-bot">
+	<div class="col span-1-3 bg-yellow">
+		<div class="text-pad code bg-light add-bot-sm">.add-bot-sm</div>
+	</div>
+	<div class="col span-1-3 bg-yellow">
+		<div class="text-pad code bg-light add-bot">.add-bot</div>
+	</div>
+	<div class="col span-1-3 bg-yellow">
+		<div class="text-pad code bg-light add-bot-lrg">.add-bot-lrg</div>
+	</div>
+</div>
+<h6><span class="code">.add-bot</span> is relative too!</h6>
+<div class="row add-bot">
+	<div class="col span-1-3 bg-yellow">
+		<div class="h1 text-pad code bg-light add-bot-sm">.h1</div>
+	</div>
+	<div class="col span-1-3 bg-yellow">
+		<div class="h1 text-pad code bg-light add-bot">.h1</div>
+	</div>
+	<div class="col span-1-3 bg-yellow">
+		<div class="h1 text-pad code bg-light add-bot-lrg">.h1</div>
+	</div>
+</div>
 
 <form>		
 	<fieldset>
