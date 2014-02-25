@@ -10,7 +10,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 <!--<link rel="shortcut icon" href="favicon.ico">-->
 
-<!-- temporary test of the ionicon icon font set -->
+<!-- test of the ionicon icon font set -->
 <!--<link href="http://code.ionicframework.com/ionicons/1.4.1/css/ionicons.min.css" rel="stylesheet" type="text/css" />-->
 
 <link href="css/main.css" rel="stylesheet" type="text/css" />
@@ -30,487 +30,582 @@ a.normal { color: #0074D9; }
 a.visited { color: #B10DC9; }
 a.hovered { color: #0074D9; text-decoration: underline; }
 a.activated { color: #FF851B; }
+
+.syntaxhighlighter code {
+	padding: 0;
+	color: black;
+	border: none;
+	border-radius: 0;
+	background: none;
+}
 </style>
+
+<!--
+The following lines in the HEAD are not part of the framework and 
+are for syntax highlighting on this demo page only
+-->
+<!--
+<link href="http://alexgorbatchev.com/pub/sh/current/styles/shThemeDefault.css" rel="stylesheet" type="text/css" />
+<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shCore.js" type="text/javascript"></script>
+<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shAutoloader.js" type="text/javascript"></script>
+<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushXml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+     SyntaxHighlighter.all()
+</script>
+-->
 </head>
 
 <body>
 
 <div class="container">
-<h1 class="lrg add-top-lrg">framework <small class="light">a minimal, modular web dev template.</small></h1>
-
-<p class="add-bot-lrg">This is a demo/doc/template page for something that isn't meant nor ready for public consumption, but if you do partake...enjoy.</p>
-
-<div class="row bg-silver add-bot">
-	<div class="text-pad code">.row</div>
-	<div class="col span-1-6 bg-gray text-pad code">.col.span-1-6</div>
-</div>
-<div class="row bg-silver add-bot">
-	<div class="col span-1-5 bg-gray text-pad code">.col.span-1-5</div>
-</div>
-<div class="row bg-silver add-bot">
-	<div class="col span-1-4 bg-gray text-pad code">.col.span-1-4</div>
-</div>
-<div class="row bg-silver add-bot">
-	<div class="col span-1-3 bg-gray text-pad code">.col.span-1-3</div>
-</div>
-<div class="row bg-silver add-bot">
-	<div class="col span-1-2 bg-gray text-pad code">.col.span-1-2</div>
-</div>
-<div class="row bg-silver add-bot">
-	<div class="col bg-gray text-pad code">.col</div>
-</div>
-<div class="row bg-silver add-bot">
-	<div class="col span-4-6 skip-1-6 bg-gray text-pad code">.col.span-4-6.skip-1-6</div>
-</div>
-
-<div class="bg-silver add-bot">
-	<div class="text-pad code">.row.spaced</div>
-	<div class="row spaced">
-		<div class="col span-1-3 code"><div class="bg-gray text-pad">.col.span-1-3</div></div>
-		<div class="col span-1-3 code"><div class="bg-gray text-pad">.col.span-1-3</div></div>
-		<div class="col span-1-3 code"><div class="bg-gray text-pad">.col.span-1-3</div></div>
-	</div>
-</div>
-<div class="bg-silver add-bot">
-	<div class="text-pad code">.row.reverse</div>
-	<div class="row reverse spaced">
-		<div class="col span-1-2"><div class="bg-gray text-pad">2nd in desktop, 1st in mobile</div></div>
-		<div class="col span-1-2"><div class="bg-gray text-pad">1st in desktop, 2nd in mobile</div></div>
-	</div>
-</div>
-
-<h1>h1 <small>small</small></h1>
-<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-<h2>h2 <small>small</small></h2>
-<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-<h3>h3</h3>
-<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-<h4>h4</h4>
-<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-<h5>h5</h5>
-<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-<h6>h6</h6>
-<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-
-<h6 class="code">.heavy</h6>
-<p class="heavy">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-
-<h6 class="code">.light</h6>
-<p class="light">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+	<section>
+		<h1 class="lrg add-top-lrg">framework <small class="light">a minimal, modular web dev template.</small></h1>
+		<p>This is a demo/doc/template page for something that isn't meant nor ready for public consumption, but if you do partake...enjoy.</p>
+	</section>
+	<section>
+		<h2 class="light">Grid</h2>
 <!--
-<div class="row spaced">
-	<div class="col span-3-4">
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque viverra sodales massa eu feugiat. Duis nisi nibh, lacinia a ultrices commodo, mattis et dui. Fusce fermentum elit a mauris commodo ac iaculis mi porta. Nullam facilisis cursus ornare. Donec erat tellus, semper sed hendrerit eget, aliquam euismod quam. Cras ac turpis orci, sed interdum sapien. Duis pulvinar fermentum pulvinar. Aenean commodo laoreet vulputate. Nam euismod erat pulvinar arcu tincidunt in elementum diam interdum.</p>
-		<p>Fusce ut augue consectetur, consectetur tellus ac, facilisis enim. Nunc nec dictum est, vitae ultrices nisl. Quisque placerat dolor sit amet nisi tincidunt, a dictum velit imperdiet. Nullam rhoncus sagittis elit, vitae consequat nulla convallis eu. Integer urna sem, placerat ac erat eget, sagittis vestibulum ipsum. Nulla elit leo, facilisis eget mi non, sagittis ornare nulla. Aliquam quam orci, consequat eget feugiat in, pulvinar sit amet nisi. Phasellus dui augue, elementum egestas commodo quis, gravida sed turpis. Quisque non diam ultrices, eleifend dolor et, dignissim ligula.</p>
-	</div>
-	<div class="col span-1-4">
-		<div class="crop-stacked add-bot">
-			<img src="http://www.placehold.it/420&text=image" alt="Placeholder image"  />
-		</div>
-	</div>
-</div>
+<pre class="brush: html; toolbar: false;"><div class="row">
+	<div class="col">&nbsp;</div>
+</div></pre>
 -->
-
-<div class="row">
-	<div class="col span-1-3">
-		<h6 class="code">ul</h6>
-		<ul>
-			<li>Lorem ipsum</li>
-			<li>Dolor sit amet</li>
-			<li>Consectetur adipiscing elit
+		<p><code>.row > .col</code></p>
+		<div class="row bg-silver add-bot">
+			<div class="col span-1-6 bg-gray text-pad code">.col.span-1-6</div>
+		</div>
+		<div class="row bg-silver add-bot">
+			<div class="col span-1-5 bg-gray text-pad code">.col.span-1-5</div>
+		</div>
+		<div class="row bg-silver add-bot">
+			<div class="col span-1-4 bg-gray text-pad code">.col.span-1-4</div>
+		</div>
+		<div class="row bg-silver add-bot">
+			<div class="col span-1-3 bg-gray text-pad code">.col.span-1-3</div>
+		</div>
+		<div class="row bg-silver add-bot">
+			<div class="col span-1-2 bg-gray text-pad code">.col.span-1-2</div>
+		</div>
+		<div class="row bg-silver add-bot">
+			<div class="col bg-gray text-pad code">.col</div>
+		</div>
+		<div class="row bg-silver add-bot">
+			<div class="col span-4-6 skip-1-6 bg-gray text-pad code">.col.span-4-6.skip-1-6</div>
+		</div>
+		
+		<p><code>.row.spaced > .col</code></p>
+		<div class="row spaced add-bot">
+			<div class="col span-1-3 code"><div class="bg-gray text-pad">.col.span-1-3</div></div>
+			<div class="col span-1-3 code"><div class="bg-gray text-pad">.col.span-1-3</div></div>
+			<div class="col span-1-3 code"><div class="bg-gray text-pad">.col.span-1-3</div></div>
+		</div>
+		<p><code>.row.reverse > .col</code></p>
+		<div class="row reverse spaced add-bot">
+			<div class="col span-1-2"><div class="bg-gray text-pad">2nd in desktop, 1st in mobile</div></div>
+			<div class="col span-1-2"><div class="bg-gray text-pad">1st in desktop, 2nd in mobile</div></div>
+		</div>
+	</section>
+	
+	<section>
+		<h2 class="light">Typography</h2>
+		<h3 class="light color-gray">Headers</h3>
+		<p>I reorganized the sizing so that <code>h6</code> is equal in size to <code>p</code>.</p>
+		<h1>Lorem ipsum dolor <small>sit amet consectetur adipiscing elit</small></h1>
+		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+		<h2>Lorem ipsum dolor <small>sit amet consectetur adipiscing elit</small></h2>
+		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+		<h3>Lorem ipsum dolor</h3>
+		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+		<h4>Lorem ipsum dolor</h4>
+		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+		<h5>Lorem ipsum dolor</h5>
+		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+		<h6>Lorem ipsum dolor</h6>
+		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+		
+		<h3 class="light color-gray">Font Weight</h3>
+		<p class="code">.heavy</p>
+		<p class="heavy">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+		
+		<p class="code">.light</p>
+		<p class="light">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+		<!--
+		<div class="row spaced">
+			<div class="col span-3-4">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque viverra sodales massa eu feugiat. Duis nisi nibh, lacinia a ultrices commodo, mattis et dui. Fusce fermentum elit a mauris commodo ac iaculis mi porta. Nullam facilisis cursus ornare. Donec erat tellus, semper sed hendrerit eget, aliquam euismod quam. Cras ac turpis orci, sed interdum sapien. Duis pulvinar fermentum pulvinar. Aenean commodo laoreet vulputate. Nam euismod erat pulvinar arcu tincidunt in elementum diam interdum.</p>
+				<p>Fusce ut augue consectetur, consectetur tellus ac, facilisis enim. Nunc nec dictum est, vitae ultrices nisl. Quisque placerat dolor sit amet nisi tincidunt, a dictum velit imperdiet. Nullam rhoncus sagittis elit, vitae consequat nulla convallis eu. Integer urna sem, placerat ac erat eget, sagittis vestibulum ipsum. Nulla elit leo, facilisis eget mi non, sagittis ornare nulla. Aliquam quam orci, consequat eget feugiat in, pulvinar sit amet nisi. Phasellus dui augue, elementum egestas commodo quis, gravida sed turpis. Quisque non diam ultrices, eleifend dolor et, dignissim ligula.</p>
+			</div>
+			<div class="col span-1-4">
+				<div class="crop-stacked add-bot">
+					<img src="http://www.placehold.it/420&text=image" alt="Placeholder image"  />
+				</div>
+			</div>
+		</div>
+		-->
+		
+		<h3 class="light color-gray">Lists</h3>
+		
+		<div class="row">
+			<div class="col span-1-3">
+				<p class="code">ul</p>
 				<ul>
-					<li>Fusce vitae interdum mi</li>
-					<li>Pellentesque tristique</li>
-					<li>Tellus nec eleifend molestie</li>
-				</ul>	
-			</li>
-		</ul>
-	</div>
-	<div class="col span-1-3">
-		<h6 class="code">ol</h6>
-		<ol>
-			<li>Lorem ipsum</li>
-			<li>Dolor sit amet</li>
-			<li>Consectetur adipiscing elit
+					<li>Lorem ipsum</li>
+					<li>Dolor sit amet</li>
+					<li>Consectetur adipiscing elit
+						<ul>
+							<li>Fusce vitae interdum mi</li>
+							<li>Pellentesque tristique</li>
+							<li>Tellus nec eleifend molestie</li>
+						</ul>	
+					</li>
+				</ul>
+			</div>
+			<div class="col span-1-3">
+				<p class="code">ol</p>
 				<ol>
-					<li>Fusce vitae interdum mi</li>
-					<li>Pellentesque tristique</li>
-					<li>Tellus nec eleifend molestie</li>
-				</ol>	
-			</li>
-		</ol>
-	</div>
-	<div class="col span-1-3">
-		<h6 class="code">ol.long</h6>
-		<ol class="long" start="99">
-			<li>Lorem ipsum</li>
-			<li>Dolor sit amet</li>
-			<li>Consectetur adipiscing elit
-				<ol>
-					<li>Fusce vitae interdum mi</li>
-					<li>Pellentesque tristique</li>
-					<li>Tellus nec eleifend molestie</li>
-				</ol>	
-			</li>
-		</ol>
-	</div>
-</div>
-
-<h6 class="code">blockquote</h6>
-<blockquote>
-	<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-</blockquote>
-
-<blockquote cite="http://example.com/">
-	<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-	<footer>&mdash; <a href="http://example.com/">someone latin</a></footer>
-</blockquote>
-
-<h6 class="code">.pull-quote-right</h6>
-<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. <span class="pull-quote-right">Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est.</span> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
-
-<h6 class="code">dl</h6>
-<dl>
-	<dt>dt Definition List Title</dt>
-	<dd>dd This is a definition list division.</dd>
-</dl>
-
-<h6 class="code">a</h6>
-<!-- The 'visited' and 'hovered' classes are not part of the framework. they force the styles for demo page viewing only -->
-<p><a href="#0" class="normal">A normal link</a></p>
-<p><a href="#0" class="visited">A visited link</a></p>
-<p><a href="#0" class="hovered">A hovered link</a></p>
-<p><a href="#0" class="activated">An activated link</a></p>
-
-<h6 class="code">misc</h6>
-<p>Lorem ipsum <code>code</code> dolor sit amet consectetur adipiscing elit.</p>
-<p class="serif">Lorem ipsum <code>code</code> dolor sit amet consectetur adipiscing elit.</p>
-<p><em>em</em> / <i>i</i></p>
-<p><strong>strong</strong> / <b>b</b></p>
-
-<div class="row spaced">
-	<div class="col span-1-2">
-		<h6 class="code">.crop-stacked img</h6>
-		<div class="crop-stacked add-bot">
-			<img src="http://www.placehold.it/420&text=image" />
-		</div>		
-	</div>
-	<div class="col span-1-2">
-		<h6 class="code">.flush-stacked img</h6>
-		<div class="flush-stacked add-bot">
-			<img src="http://www.placehold.it/420&text=image" />
+					<li>Lorem ipsum</li>
+					<li>Dolor sit amet</li>
+					<li>Consectetur adipiscing elit
+						<ol>
+							<li>Fusce vitae interdum mi</li>
+							<li>Pellentesque tristique</li>
+							<li>Tellus nec eleifend molestie</li>
+						</ol>	
+					</li>
+				</ol>
+			</div>
+			<div class="col span-1-3">
+				<p class="code">ol.long</p>
+				<ol class="long" start="99">
+					<li>Lorem ipsum</li>
+					<li>Dolor sit amet</li>
+					<li>Consectetur adipiscing elit
+						<ol>
+							<li>Fusce vitae interdum mi</li>
+							<li>Pellentesque tristique</li>
+							<li>Tellus nec eleifend molestie</li>
+						</ol>	
+					</li>
+				</ol>
+			</div>
 		</div>
-	</div>
-</div>
-
-<h6 class="code">button, .button, etc</h6>
-<div class="add-bot">
-	<button>button</button>
-	<a href="#0" class="button">a.button</a>
-	<div class="button">div.button</div>
-	<input class="button" type="button" value="input.button" />
-	<!--<input type="submit" value="input[type='submit']" />-->
-</div>
-
-<div class="add-bot">
-	<button class="disabled">button</button>
-	<a href="#0" class="button disabled">a.button</a>
-	<div class="button disabled">div.button</div>
-	<input type="button" value="input.button" class="button disabled" />
-	<!--<input type="submit" value="Submit Button" class="disabled" />	-->
-</div>
-
-<div class="add-bot">
-	<button>Double<br />Line</button>
-</div>
-
-<div class="add-bot">
-	<button class="button-large">.button-large</button>
-	<button class="button-medium">.button-medium</button>
-	<button>button</button>
-	<button class="button-small">.button-small</button>
-</div>
-
-<div class="add-bot">
-	<button class="chisel">.chisel</button>
-	<button class="curve">.curve</button>
-	<button class="round">.round</button>
-</div>
-
-<div class="add-bot">
-	<button class="chisel button-medium">.chisel</button>
-	<button class="curve button-medium">.curve</button>
-	<button class="round button-medium">.round</button>
-</div>
-
-<button class="full-width add-bot">.full-width</button>
-
-<div class="button-group add-bot">
-    <button>One</button><button>Two</button><button>Three</button>
-</div>
-
-<div class="button-group add-bot">
-    <!--<label for="name">Label</label>-->
-    <input type="text" name="name" id="name" placeholder="Text Box" /><button>Action</button>
-</div>
-
-<!--
-<div class="add-bot">
-	<button class="bg-red">button</button>
-	<button class="bg-orange">button</button>
-	<button class="bg-yellow">button</button>
-	<button class="bg-green">button</button>
-	<button class="bg-blue">button</button>
-	<button class="bg-purple">button</button>
-</div>
--->
-
-<h6 class="code">table.default</h6>
-<table class="default">
-	<caption>Table caption</caption>
-	<thead>
-		<tr>
-			<th>Table Header 1</th>
-			<th>Table Header 2</th>
-			<th>Table Header 3</th>
-		</tr>
-	</thead>
-	<tfoot>
-		<tr>
-			<td colspan="3">Table footer</td>
-		</tr>
-	</tfoot>
-	<tbody>
-		<tr>
-			<td>Division 1</td>
-			<td>Division 2</td>
-			<td>Division 3</td>
-		</tr>
-		<tr>
-			<td>Division 1</td>
-			<td>Division 2</td>
-			<td>Division 3</td>
-		</tr>
-		<tr>
-			<td>Division 1</td>
-			<td>Division 2</td>
-			<td>Division 3</td>
-		</tr>
-	</tbody>
-</table>
-
-<h6 class="code">table</h6>
-<table>
-	<caption>Table caption</caption>
-	<thead>
-		<tr>
-			<th>Table Header 1</th>
-			<th>Table Header 2</th>
-			<th>Table Header 3</th>
-		</tr>
-	</thead>
-	<tfoot>
-		<tr>
-			<td colspan="3">Table footer</td>
-		</tr>
-	</tfoot>
-	<tbody>
-		<tr>
-			<td>Division 1</td>
-			<td>Division 2</td>
-			<td>Division 3</td>
-		</tr>
-		<tr>
-			<td>Division 1</td>
-			<td>Division 2</td>
-			<td>Division 3</td>
-		</tr>
-		<tr>
-			<td>Division 1</td>
-			<td>Division 2</td>
-			<td>Division 3</td>
-		</tr>
-	</tbody>	
-</table>
-
-<h6 class="code">.shadow</h6>
-<div class="shadow bg-light text-pad add-bot">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</div>
-
-<h6 class="code">.well</h6>
-<div class="well bg-light text-pad add-bot">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</div>
-
-<h6 class="code">.alert</h6>
-<div class="alert add-bot">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</div>
-
-<!--
-<div class="alert bg-red add-bot code">.alert.bg-red</div>
-<div class="alert bg-aqua add-bot code">.alert.bg-aqua</div>
-<div class="alert bg-blue color-white add-bot code">.alert.bg-blue</div>
-<div class="alert bg-navy color-white add-bot code">.alert.bg-navy</div>
-<div class="alert bg-teal add-bot code">.alert.bg-teal</div>
-<div class="alert bg-green add-bot code">.alert.bg-green</div>
-<div class="alert bg-olive add-bot code">.alert.bg-olive</div>
-<div class="alert bg-lime add-bot code">.alert.bg-lime</div>
-<div class="alert bg-yellow add-bot code">.alert.bg-yellow</div>
-<div class="alert bg-orange color-white add-bot code">.alert.bg-Orange</div>
-<div class="alert bg-red color-white add-bot code">.alert.bg-Red</div>
-<div class="alert bg-fuchsia color-white add-bot code">.alert.bg-Fuchsia</div>
-<div class="alert bg-purple color-white add-bot code">.alert.bg-Purple</div>
-<div class="alert bg-maroon color-white add-bot code">.alert.bg-Maroon</div>
--->
-
-<h6>Colors</h6>
-<div class="row add-bot">
-	<div class="col span-1-3">
-		<div class="bg-aqua text-pad">Aqua <span class="float-right">#7FDBFF</span></div>
-		<div class="bg-blue color-white text-pad">Blue <span class="float-right">#0074D9</span></div>
-		<div class="bg-navy color-white text-pad">Navy <span class="float-right">#001F3F</span></div>
-		<div class="bg-teal text-pad">Teal <span class="float-right">#39CCCC</span></div>
-		<div class="bg-green text-pad">Green <span class="float-right">#2ECC40</span></div>
-		<div class="bg-olive text-pad">Olive <span class="float-right">#3D9970</span></div>
-		<div class="bg-lime text-pad">Lime <span class="float-right">#01FF70</span></div>
-	</div>
-	<div class="col span-1-3">
-		<div class="bg-yellow text-pad">Yellow <span class="float-right">#FFDC00</span></div>
-		<div class="bg-orange color-white text-pad">Orange <span class="float-right">#FF851B</span></div>
-		<div class="bg-red color-white text-pad">Red <span class="float-right">#FF4136</span></div>
-		<div class="bg-fuchsia color-white text-pad">Fuchsia <span class="float-right">#F012BE</span></div>
-		<div class="bg-purple color-white text-pad">Purple <span class="float-right">#B10DC9</span></div>
-		<div class="bg-maroon color-white text-pad">Maroon <span class="float-right">#85144B</span></div>
-	</div>
-	<div class="col span-1-3">
-		<div class="bg-white text-pad">White <span class="float-right">#FFF</span></div>
-		<div class="bg-silver text-pad">Silver <span class="float-right">#DDD</span></div>
-		<div class="bg-gray text-pad">Gray <span class="float-right">#AAA</span></div>
-		<div class="bg-black color-white text-pad">Black <span class="float-right">#111</span></div>	
-	</div>
-</div>
-<p>color pallette choices taken from <a href="http://clrs.cc/">clrs.cc</a></p>
-
-<h6 class="code">.add-bot</h6>
-<div class="row add-bot">
-	<div class="col span-1-3 bg-yellow">
-		<div class="text-pad code bg-light add-bot-sm">.add-bot-sm</div>
-	</div>
-	<div class="col span-1-3 bg-yellow">
-		<div class="text-pad code bg-light add-bot">.add-bot</div>
-	</div>
-	<div class="col span-1-3 bg-yellow">
-		<div class="text-pad code bg-light add-bot-lrg">.add-bot-lrg</div>
-	</div>
-</div>
-<h6><span class="code">.add-bot</span> is relative too!</h6>
-<div class="row add-bot">
-	<div class="col span-1-3 bg-yellow">
-		<div class="h1 text-pad code bg-light add-bot-sm">.h1</div>
-	</div>
-	<div class="col span-1-3 bg-yellow">
-		<div class="h1 text-pad code bg-light add-bot">.h1</div>
-	</div>
-	<div class="col span-1-3 bg-yellow">
-		<div class="h1 text-pad code bg-light add-bot-lrg">.h1</div>
-	</div>
-</div>
-
-<form>		
-	<fieldset>
-		<legend>Fieldset Legend</legend>		
+		
+		
+		
+		<h3 class="light color-gray">Blockquotes & Pull Quotes</h3>
+		<p class="code">blockquote</p>
+		<blockquote>
+			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+		</blockquote>
+		
+		<blockquote cite="http://example.com/">
+			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+			<footer>&mdash; <a href="http://example.com/">someone latin</a></footer>
+		</blockquote>
+		
+		<p class="code">.pull-quote-right</p>
+		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. <span class="pull-quote-right">Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est.</span> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+		
+		<h3 class="light color-gray">Definition Lists</h3>
+		<dl>
+			<dt>dt Definition List Title</dt>
+			<dd>dd This is a definition list division.</dd>
+		</dl>
+		
+		<h3 class="light color-gray">Links</h3>
+		<!-- The 'visited' and 'hovered' classes are not part of the framework. they force the styles for demo page viewing only -->
+		<p><a href="#0" class="normal">A normal link</a></p>
+		<p><a href="#0" class="visited">A visited link</a></p>
+		<p><a href="#0" class="hovered">A hovered link</a></p>
+		<p><a href="#0" class="activated">An activated link</a></p>
+		
+		<h3 class="light color-gray">Misc</h3>
+		<p>Lorem ipsum <code>code</code> dolor sit amet consectetur adipiscing elit.</p>
+		<p class="serif">Lorem ipsum <code>code</code> dolor sit amet consectetur adipiscing elit.</p>
+		<p><em>em</em> / <i>i</i></p>
+		<p><strong>strong</strong> / <b>b</b></p>
+	</section>
 	
-		<p><label for="text_field">Text Field:</label><br />
-		<input type="text" id="text_field" /></p>
+	<section>
+		<h2 class="light">Images</h2>
 		
-		<p><label for="text_area">Text Area:</label><br />
-		<textarea id="text_area"></textarea></p>
-		
-		<p><label for="select_element">Select Element:</label><br />
-			<select name="select_element">
-			<optgroup label="Option Group 1">
-				<option value="1">Option 1</option>
-				<option value="2">Option 2</option>
-				<option value="3">Option 3</option>
-			</optgroup>
-			<optgroup label="Option Group 2">
-				<option value="1">Option 1</option>
-				<option value="2">Option 2</option>
-				<option value="3">Option 3</option>
-			</optgroup>
-		</select></p>
-		
-		<p><label for="radio_buttons">Radio Buttons:</label><br />
-			<input type="radio" class="radio" name="radio_button" value="radio_1" /> Radio 1<br/>
-			<input type="radio" class="radio" name="radio_button" value="radio_2" /> Radio 2<br/>
-			<input type="radio" class="radio" name="radio_button" value="radio_3" /> Radio 3<br/>
-		</p>
-		
-		<p><label for="checkboxes">Checkboxes:</label><br />
-			<input type="checkbox" class="checkbox" name="checkboxes" value="check_1" /> Radio 1<br/>
-			<input type="checkbox" class="checkbox" name="checkboxes" value="check_2" /> Radio 2<br/>
-			<input type="checkbox" class="checkbox" name="checkboxes" value="check_3" /> Radio 3<br/>
-		</p>
-		
-		<p><label for="password">Password:</label><br />
-			<input type="password" class="password" name="password" id="password" />
-		</p>
-		
-		<p><label for="file">File Input:</label><br />
-			<input type="file" class="file" name="file" id="file" />
-		</p>
-		
-		<p><input class="button" type="reset" value="Clear" /> <input class="button" type="submit" value="Submit" />
-		</p>
-		
-	</fieldset>
+		<div class="row spaced">
+			<div class="col span-1-2">
+				<p class="code">.crop-stacked img</p>
+				<div class="crop-stacked add-bot">
+					<img src="http://www.placehold.it/420&text=image" />
+				</div>		
+			</div>
+			<div class="col span-1-2">
+				<p class="code">.flush-stacked img</p>
+				<div class="flush-stacked add-bot">
+					<img src="http://www.placehold.it/420&text=image" />
+				</div>
+			</div>
+		</div>
+	</section>
 	
-</form>
+	<section>
+		<h2 class="light">Tables</h2>
+		
+		<p class="code">table</p>
+		<table>
+			<caption>Table caption</caption>
+			<thead>
+				<tr>
+					<th>Table Header 1</th>
+					<th>Table Header 2</th>
+					<th>Table Header 3</th>
+				</tr>
+			</thead>
+			<tfoot>
+				<tr>
+					<td colspan="3">Table footer</td>
+				</tr>
+			</tfoot>
+			<tbody>
+				<tr>
+					<td>Division 1</td>
+					<td>Division 2</td>
+					<td>Division 3</td>
+				</tr>
+				<tr>
+					<td>Division 1</td>
+					<td>Division 2</td>
+					<td>Division 3</td>
+				</tr>
+				<tr>
+					<td>Division 1</td>
+					<td>Division 2</td>
+					<td>Division 3</td>
+				</tr>
+			</tbody>	
+		</table>
+		
+		<p class="code">table.default</p>
+		<table class="default">
+			<caption>Table caption</caption>
+			<thead>
+				<tr>
+					<th>Table Header 1</th>
+					<th>Table Header 2</th>
+					<th>Table Header 3</th>
+				</tr>
+			</thead>
+			<tfoot>
+				<tr>
+					<td colspan="3">Table footer</td>
+				</tr>
+			</tfoot>
+			<tbody>
+				<tr>
+					<td>Division 1</td>
+					<td>Division 2</td>
+					<td>Division 3</td>
+				</tr>
+				<tr>
+					<td>Division 1</td>
+					<td>Division 2</td>
+					<td>Division 3</td>
+				</tr>
+				<tr>
+					<td>Division 1</td>
+					<td>Division 2</td>
+					<td>Division 3</td>
+				</tr>
+			</tbody>
+		</table>
+		
+		<p class="code">table.default.striped</p>
+		<table class="default striped">
+			<caption>Table caption</caption>
+			<thead>
+				<tr>
+					<th>Table Header 1</th>
+					<th>Table Header 2</th>
+					<th>Table Header 3</th>
+				</tr>
+			</thead>
+			<tfoot>
+				<tr>
+					<td colspan="3">Table footer</td>
+				</tr>
+			</tfoot>
+			<tbody>
+				<tr>
+					<td>Division 1</td>
+					<td>Division 2</td>
+					<td>Division 3</td>
+				</tr>
+				<tr>
+					<td>Division 1</td>
+					<td>Division 2</td>
+					<td>Division 3</td>
+				</tr>
+				<tr>
+					<td>Division 1</td>
+					<td>Division 2</td>
+					<td>Division 3</td>
+				</tr>
+			</tbody>
+		</table>
+	</section>
 	
-<!--
-<div class="text-right"><a href="#" class="color-gray" style="text-decoration: none;">&#9650;</a></div>
--->
-<!--
-<h1 id="misc">Misc Stuff - abbr, acronym, pre, code, sub, sup, etc.</h1>
+	<section>
+		<h2 class="light">Colors <small>pallette taken from <a href="http://clrs.cc/">clrs.cc</a></small></h2>
 
-<p>Lorem <sup>superscript</sup> dolor <sub>subscript</sub> amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. <cite>cite</cite>. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. <acronym title="National Basketball Association">NBA</acronym> Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.  <abbr title="Avenue">AVE</abbr></p>
-
-<pre><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. <acronym title="National Basketball Association">NBA</acronym> Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.  <abbr title="Avenue">AVE</abbr></p></pre>
-
-<div class="text-right"><a href="#" class="color-gray" style="text-decoration: none;">&#9650;</a></div>
--->
-
-<!--
-<h1>Custom Elements and Combinations</h1>
-
-
-<h3>Unordered List in NAV</h3>
-<nav>
-	<ul>
-		<li><a href="#nowhere" title="Lorum ipsum dolor sit amet">Lorem</a></li>
-		<li><a href="#nowhere" title="Aliquam tincidunt mauris eu risus">Aliquam</a>
-        	<ul>
-                <li><a href="#nowhere" title="Lorum ipsum dolor sit amet">Lorem</a></li>
-                <li><a href="#nowhere" title="Aliquam tincidunt mauris eu risus">Aliquam</a></li>
-                <li><a href="#nowhere" title="Morbi in sem quis dui placerat ornare">Morbi</a></li>
-                <li><a href="#nowhere" title="Praesent dapibus, neque id cursus faucibus">Praesent</a></li>
-                <li><a href="#nowhere" title="Pellentesque fermentum dolor">Pellentesque</a></li>
-            </ul>
-        </li>
-		<li><a href="#nowhere" title="Morbi in sem quis dui placerat ornare">Morbi</a></li>
-		<li><a href="#nowhere" title="Praesent dapibus, neque id cursus faucibus">Praesent</a>
-            <ul>
-                <li><a href="#nowhere" title="Lorum ipsum dolor sit amet">Lorem</a></li>
-                <li><a href="#nowhere" title="Aliquam tincidunt mauris eu risus">Aliquam</a></li>
-                <li><a href="#nowhere" title="Morbi in sem quis dui placerat ornare">Morbi</a></li>
-                <li><a href="#nowhere" title="Praesent dapibus, neque id cursus faucibus">Praesent</a></li>
-                <li><a href="#nowhere" title="Pellentesque fermentum dolor">Pellentesque</a></li>
-            </ul>      
-        </li>
-		<li><a href="#nowhere" title="Pellentesque fermentum dolor">Pellentesque</a></li>
-	</ul>
-</nav>
--->
-
-
-<p class="text-center color-gray">mixed by jephrei with &#9829;</p>
-	 
+		<div class="row add-bot">
+			<div class="col span-1-3">
+				<div class="bg-aqua text-pad">Aqua <span class="float-right">#7FDBFF</span></div>
+				<div class="bg-blue color-white text-pad">Blue <span class="float-right">#0074D9</span></div>
+				<div class="bg-navy color-white text-pad">Navy <span class="float-right">#001F3F</span></div>
+				<div class="bg-teal text-pad">Teal <span class="float-right">#39CCCC</span></div>
+				<div class="bg-green text-pad">Green <span class="float-right">#2ECC40</span></div>
+				<div class="bg-olive text-pad">Olive <span class="float-right">#3D9970</span></div>
+				<div class="bg-lime text-pad">Lime <span class="float-right">#01FF70</span></div>
+			</div>
+			<div class="col span-1-3">
+				<div class="bg-yellow text-pad">Yellow <span class="float-right">#FFDC00</span></div>
+				<div class="bg-orange color-white text-pad">Orange <span class="float-right">#FF851B</span></div>
+				<div class="bg-red color-white text-pad">Red <span class="float-right">#FF4136</span></div>
+				<div class="bg-fuchsia color-white text-pad">Fuchsia <span class="float-right">#F012BE</span></div>
+				<div class="bg-purple color-white text-pad">Purple <span class="float-right">#B10DC9</span></div>
+				<div class="bg-maroon color-white text-pad">Maroon <span class="float-right">#85144B</span></div>
+			</div>
+			<div class="col span-1-3">
+				<div class="bg-white text-pad">White <span class="float-right">#FFF</span></div>
+				<div class="bg-silver text-pad">Silver <span class="float-right">#DDD</span></div>
+				<div class="bg-gray text-pad">Gray <span class="float-right">#AAA</span></div>
+				<div class="bg-black color-white text-pad">Black <span class="float-right">#111</span></div>	
+			</div>
+		</div>
+	</section>
+	
+	<section>
+		<h2 class="light">DIV Styles</h2>
+		
+		<p class="code">.shadow</p>
+		<div class="shadow bg-light text-pad add-bot">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</div>
+		
+		<p class="code">.well</p>
+		<div class="well bg-light text-pad add-bot">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</div>
+		
+		<p class="code">.alert</p>
+		<div class="alert add-bot">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</div>
+		
+		<!--
+		<div class="alert bg-red add-bot code">.alert.bg-red</div>
+		<div class="alert bg-aqua add-bot code">.alert.bg-aqua</div>
+		<div class="alert bg-blue color-white add-bot code">.alert.bg-blue</div>
+		<div class="alert bg-navy color-white add-bot code">.alert.bg-navy</div>
+		<div class="alert bg-teal add-bot code">.alert.bg-teal</div>
+		<div class="alert bg-green add-bot code">.alert.bg-green</div>
+		<div class="alert bg-olive add-bot code">.alert.bg-olive</div>
+		<div class="alert bg-lime add-bot code">.alert.bg-lime</div>
+		<div class="alert bg-yellow add-bot code">.alert.bg-yellow</div>
+		<div class="alert bg-orange color-white add-bot code">.alert.bg-Orange</div>
+		<div class="alert bg-red color-white add-bot code">.alert.bg-Red</div>
+		<div class="alert bg-fuchsia color-white add-bot code">.alert.bg-Fuchsia</div>
+		<div class="alert bg-purple color-white add-bot code">.alert.bg-Purple</div>
+		<div class="alert bg-maroon color-white add-bot code">.alert.bg-Maroon</div>
+		-->
+	</section>
+	
+	<section>
+		<h2 class="light">Element Positioning</h2>
+		
+		<p class="code">.add-bot</p>
+		<div class="row add-bot">
+			<div class="col span-1-3 bg-gray">
+				<div class="text-pad code bg-light add-bot-sm">.add-bot-sm</div>
+			</div>
+			<div class="col span-1-3 bg-gray">
+				<div class="text-pad code bg-light add-bot">.add-bot</div>
+			</div>
+			<div class="col span-1-3 bg-gray">
+				<div class="text-pad code bg-light add-bot-lrg">.add-bot-lrg</div>
+			</div>
+		</div>
+		<h6><span class="code">.add-bot</span> is relative too!</p>
+		<div class="row add-bot">
+			<div class="col span-1-3 bg-gray">
+				<div class="h1 text-pad code bg-light add-bot-sm">.h1</div>
+			</div>
+			<div class="col span-1-3 bg-gray">
+				<div class="h1 text-pad code bg-light add-bot">.h1</div>
+			</div>
+			<div class="col span-1-3 bg-gray">
+				<div class="h1 text-pad code bg-light add-bot-lrg">.h1</div>
+			</div>
+		</div>
+	</section>
+	
+	<section>
+		<h2 class="light">Form Elements</h2>
+		
+		<p class="code">button, .button, etc</p>
+		<div class="add-bot">
+			<button>button</button>
+			<a href="#0" class="button">a.button</a>
+			<div class="button">div.button</div>
+			<input class="button" type="button" value="input.button" />
+			<!--<input type="submit" value="input[type='submit']" />-->
+		</div>
+		
+		<div class="add-bot">
+			<button class="disabled">button</button>
+			<a href="#0" class="button disabled">a.button</a>
+			<div class="button disabled">div.button</div>
+			<input type="button" value="input.button" class="button disabled" />
+			<!--<input type="submit" value="Submit Button" class="disabled" />	-->
+		</div>
+		
+		<div class="add-bot">
+			<button>Double<br />Line</button>
+		</div>
+		
+		<div class="add-bot">
+			<button class="button-large">.button-large</button>
+			<button class="button-medium">.button-medium</button>
+			<button>button</button>
+			<button class="button-small">.button-small</button>
+		</div>
+		
+		<div class="add-bot">
+			<button class="chisel">.chisel</button>
+			<button class="curve">.curve</button>
+			<button class="round">.round</button>
+		</div>
+		
+		<div class="add-bot">
+			<button class="chisel button-medium">.chisel</button>
+			<button class="curve button-medium">.curve</button>
+			<button class="round button-medium">.round</button>
+		</div>
+		
+		<button class="full-width add-bot">.full-width</button>
+		
+		<div class="button-group add-bot">
+			<button>One</button><button>Two</button><button>Three</button>
+		</div>
+		
+		<div class="button-group add-bot">
+			<!--<label for="name">Label</label>-->
+			<input type="text" name="name" id="name" placeholder="Text Box" /><button>Action</button>
+		</div>
+		
+		<!--
+		<div class="add-bot">
+			<button class="bg-red">button</button>
+			<button class="bg-orange">button</button>
+			<button class="bg-yellow">button</button>
+			<button class="bg-green">button</button>
+			<button class="bg-blue">button</button>
+			<button class="bg-purple">button</button>
+		</div>
+		-->
+		
+		<form>		
+			<fieldset>
+				<legend>Fieldset Legend</legend>		
+			
+				<p><label for="text_field">Text Field:</label><br />
+				<input type="text" id="text_field" /></p>
+				
+				<p><label for="text_area">Text Area:</label><br />
+				<textarea id="text_area"></textarea></p>
+				
+				<p><label for="select_element">Select Element:</label><br />
+					<select name="select_element">
+					<optgroup label="Option Group 1">
+						<option value="1">Option 1</option>
+						<option value="2">Option 2</option>
+						<option value="3">Option 3</option>
+					</optgroup>
+					<optgroup label="Option Group 2">
+						<option value="1">Option 1</option>
+						<option value="2">Option 2</option>
+						<option value="3">Option 3</option>
+					</optgroup>
+				</select></p>
+				
+				<p><label for="radio_buttons">Radio Buttons:</label><br />
+					<input type="radio" class="radio" name="radio_button" value="radio_1" /> Radio 1<br/>
+					<input type="radio" class="radio" name="radio_button" value="radio_2" /> Radio 2<br/>
+					<input type="radio" class="radio" name="radio_button" value="radio_3" /> Radio 3<br/>
+				</p>
+				
+				<p><label for="checkboxes">Checkboxes:</label><br />
+					<input type="checkbox" class="checkbox" name="checkboxes" value="check_1" /> Radio 1<br/>
+					<input type="checkbox" class="checkbox" name="checkboxes" value="check_2" /> Radio 2<br/>
+					<input type="checkbox" class="checkbox" name="checkboxes" value="check_3" /> Radio 3<br/>
+				</p>
+				
+				<p><label for="password">Password:</label><br />
+					<input type="password" class="password" name="password" id="password" />
+				</p>
+				
+				<p><label for="file">File Input:</label><br />
+					<input type="file" class="file" name="file" id="file" />
+				</p>
+				
+				<p><input class="button" type="reset" value="Clear" /> <input class="button" type="submit" value="Submit" />
+				</p>
+				
+			</fieldset>
+			
+		</form>		
+		
+	</section>
+		
+	<!--
+	<div class="text-right"><a href="#" class="color-gray" style="text-decoration: none;">&#9650;</a></div>
+	-->
+	<!--
+	<h1 id="misc">Misc Stuff - abbr, acronym, pre, code, sub, sup, etc.</h1>
+	
+	<p>Lorem <sup>superscript</sup> dolor <sub>subscript</sub> amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. <cite>cite</cite>. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. <acronym title="National Basketball Association">NBA</acronym> Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.  <abbr title="Avenue">AVE</abbr></p>
+	
+	<pre><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. <acronym title="National Basketball Association">NBA</acronym> Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.  <abbr title="Avenue">AVE</abbr></p></pre>
+	
+	<div class="text-right"><a href="#" class="color-gray" style="text-decoration: none;">&#9650;</a></div>
+	-->
+	
+	<!--
+	<h1>Custom Elements and Combinations</h1>
+	
+	
+	<h3>Unordered List in NAV</h3>
+	<nav>
+		<ul>
+			<li><a href="#nowhere" title="Lorum ipsum dolor sit amet">Lorem</a></li>
+			<li><a href="#nowhere" title="Aliquam tincidunt mauris eu risus">Aliquam</a>
+				<ul>
+					<li><a href="#nowhere" title="Lorum ipsum dolor sit amet">Lorem</a></li>
+					<li><a href="#nowhere" title="Aliquam tincidunt mauris eu risus">Aliquam</a></li>
+					<li><a href="#nowhere" title="Morbi in sem quis dui placerat ornare">Morbi</a></li>
+					<li><a href="#nowhere" title="Praesent dapibus, neque id cursus faucibus">Praesent</a></li>
+					<li><a href="#nowhere" title="Pellentesque fermentum dolor">Pellentesque</a></li>
+				</ul>
+			</li>
+			<li><a href="#nowhere" title="Morbi in sem quis dui placerat ornare">Morbi</a></li>
+			<li><a href="#nowhere" title="Praesent dapibus, neque id cursus faucibus">Praesent</a>
+				<ul>
+					<li><a href="#nowhere" title="Lorum ipsum dolor sit amet">Lorem</a></li>
+					<li><a href="#nowhere" title="Aliquam tincidunt mauris eu risus">Aliquam</a></li>
+					<li><a href="#nowhere" title="Morbi in sem quis dui placerat ornare">Morbi</a></li>
+					<li><a href="#nowhere" title="Praesent dapibus, neque id cursus faucibus">Praesent</a></li>
+					<li><a href="#nowhere" title="Pellentesque fermentum dolor">Pellentesque</a></li>
+				</ul>      
+			</li>
+			<li><a href="#nowhere" title="Pellentesque fermentum dolor">Pellentesque</a></li>
+		</ul>
+	</nav>
+	-->
+	
+	
+	<p class="text-center color-gray">mixed by jephrei with &#9829;</p>
+		 
 </div>
 </body>
 
