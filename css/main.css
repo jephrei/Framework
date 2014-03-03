@@ -27,7 +27,7 @@
 }
 
 html {
-	font-family: /*Calibri, Candara, Segoe, "Segoe UI", Optima, Arial,*/ sans-serif;
+	font-family: /*Georgia, Times, "Times New Roman",*/ serif;
 	font-weight: normal;
 	font-size: 16px;
 	line-height: 1.5;	
@@ -78,6 +78,7 @@ h2 { border-bottom: solid 1px #ddd; }
 h4, h6 { /* need to figure out some differentiation of headers */ }
 
 h1, h2, h3, h4, h5, h6 {
+	font-family: /*Calibri, Candara, Segoe, "Segoe UI", Optima, Arial,*/ sans-serif;
 	line-height: 1.1;
 	margin-bottom: 0.5em;
 }
@@ -178,6 +179,7 @@ blockquote footer {
 
 small { line-height: 1; }
 
+.sans-serif { font-family: /*Calibri, Candara, Segoe, "Segoe UI", Optima, Arial,*/ sans-serif; }
 .serif { font-family: /*Georgia, Times, "Times New Roman",*/ serif; }
 .mono { font-family: /*Menlo, Monaco, Consolas, "Courier New",*/ monospace; }
 
@@ -313,7 +315,8 @@ button.disabled,
     line-height: normal;
     font-weight: normal;
     text-decoration: none;
-    border: 0;
+    /*border: 0;*/
+	border: solid 1px #ddd;
     vertical-align: middle;
 }
 

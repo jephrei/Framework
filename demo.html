@@ -30,30 +30,8 @@ a.normal { color: #0074D9; }
 a.visited { color: #B10DC9; }
 a.hovered { color: #0074D9; text-decoration: underline; }
 a.activated { color: #FF851B; }
-
-.syntaxhighlighter code {
-	padding: 0;
-	color: black;
-	border: none;
-	border-radius: 0;
-	background: none;
-}
 </style>
 
-<!--
-The following lines in the HEAD are not part of the framework and 
-are for syntax highlighting on this demo page only
--->
-<!--
-<link href="http://alexgorbatchev.com/pub/sh/current/styles/shThemeDefault.css" rel="stylesheet" type="text/css" />
-<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shCore.js" type="text/javascript"></script>
-<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shAutoloader.js" type="text/javascript"></script>
-<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushXml.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-     SyntaxHighlighter.all()
-</script>
--->
 </head>
 
 <body>
@@ -65,11 +43,6 @@ are for syntax highlighting on this demo page only
 	</section>
 	<section>
 		<h2 class="light">Grid</h2>
-<!--
-<pre class="brush: html; toolbar: false;"><div class="row">
-	<div class="col">&nbsp;</div>
-</div></pre>
--->
 		<p><code>.row > .col</code></p>
 		<div class="row bg-silver add-bot">
 			<div class="col span-1-6 bg-gray text-pad code">.col.span-1-6</div>
@@ -129,19 +102,6 @@ are for syntax highlighting on this demo page only
 		
 		<p class="code">.light</p>
 		<p class="light">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-		<!--
-		<div class="row spaced">
-			<div class="col span-3-4">
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque viverra sodales massa eu feugiat. Duis nisi nibh, lacinia a ultrices commodo, mattis et dui. Fusce fermentum elit a mauris commodo ac iaculis mi porta. Nullam facilisis cursus ornare. Donec erat tellus, semper sed hendrerit eget, aliquam euismod quam. Cras ac turpis orci, sed interdum sapien. Duis pulvinar fermentum pulvinar. Aenean commodo laoreet vulputate. Nam euismod erat pulvinar arcu tincidunt in elementum diam interdum.</p>
-				<p>Fusce ut augue consectetur, consectetur tellus ac, facilisis enim. Nunc nec dictum est, vitae ultrices nisl. Quisque placerat dolor sit amet nisi tincidunt, a dictum velit imperdiet. Nullam rhoncus sagittis elit, vitae consequat nulla convallis eu. Integer urna sem, placerat ac erat eget, sagittis vestibulum ipsum. Nulla elit leo, facilisis eget mi non, sagittis ornare nulla. Aliquam quam orci, consequat eget feugiat in, pulvinar sit amet nisi. Phasellus dui augue, elementum egestas commodo quis, gravida sed turpis. Quisque non diam ultrices, eleifend dolor et, dignissim ligula.</p>
-			</div>
-			<div class="col span-1-4">
-				<div class="crop-stacked add-bot">
-					<img src="http://www.placehold.it/420&text=image" alt="Placeholder image"  />
-				</div>
-			</div>
-		</div>
-		-->
 		
 		<h3 class="light color-gray">Lists</h3>
 		
@@ -190,8 +150,6 @@ are for syntax highlighting on this demo page only
 			</div>
 		</div>
 		
-		
-		
 		<h3 class="light color-gray">Blockquotes & Pull Quotes</h3>
 		<p class="code">blockquote</p>
 		<blockquote>
@@ -220,7 +178,7 @@ are for syntax highlighting on this demo page only
 		<p><a href="#0" class="activated">An activated link</a></p>
 		
 		<h3 class="light color-gray">Misc</h3>
-		<p>Lorem ipsum <code>code</code> dolor sit amet consectetur adipiscing elit.</p>
+		<p class="sans-serif">Lorem ipsum <code>code</code> dolor sit amet consectetur adipiscing elit.</p>
 		<p class="serif">Lorem ipsum <code>code</code> dolor sit amet consectetur adipiscing elit.</p>
 		<p><em>em</em> / <i>i</i></p>
 		<p><strong>strong</strong> / <b>b</b></p>
@@ -230,15 +188,21 @@ are for syntax highlighting on this demo page only
 		<h2 class="light">Images</h2>
 		
 		<div class="row spaced">
-			<div class="col span-1-2">
+			<div class="col span-1-3">
 				<p class="code">.crop-stacked img</p>
 				<div class="crop-stacked add-bot">
 					<img src="http://www.placehold.it/420&text=image" />
 				</div>		
 			</div>
-			<div class="col span-1-2">
+			<div class="col span-1-3">
 				<p class="code">.flush-stacked img</p>
 				<div class="flush-stacked add-bot">
+					<img src="http://www.placehold.it/420&text=image" />
+				</div>
+			</div>
+			<div class="col span-1-3">
+				<p class="code">.flush-stacked.crop-stacked img</p>
+				<div class="flush-stacked crop-stacked add-bot">
 					<img src="http://www.placehold.it/420&text=image" />
 				</div>
 			</div>
@@ -393,6 +357,13 @@ are for syntax highlighting on this demo page only
 		<p class="code">.alert</p>
 		<div class="alert add-bot">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</div>
 		
+		<div class="alert bg-red add-bot code">.alert.bg-red</div>
+		<div class="alert bg-orange color-white add-bot code">.alert.bg-Orange</div>
+		<div class="alert bg-yellow add-bot code">.alert.bg-yellow</div>	
+		<div class="alert bg-green add-bot code">.alert.bg-green</div>
+		<div class="alert bg-blue color-white add-bot code">.alert.bg-blue</div>
+		<div class="alert bg-purple color-white add-bot code">.alert.bg-Purple</div>
+		
 		<!--
 		<div class="alert bg-red add-bot code">.alert.bg-red</div>
 		<div class="alert bg-aqua add-bot code">.alert.bg-aqua</div>
@@ -426,7 +397,7 @@ are for syntax highlighting on this demo page only
 				<div class="text-pad code bg-light add-bot-lrg">.add-bot-lrg</div>
 			</div>
 		</div>
-		<h6><span class="code">.add-bot</span> is relative too!</p>
+		<p><span class="code">.add-bot</span> is relative too!</p>
 		<div class="row add-bot">
 			<div class="col span-1-3 bg-gray">
 				<div class="h1 text-pad code bg-light add-bot-sm">.h1</div>
@@ -508,9 +479,25 @@ are for syntax highlighting on this demo page only
 		<form>		
 			<fieldset>
 				<legend>Fieldset Legend</legend>		
-			
-				<p><label for="text_field">Text Field:</label><br />
-				<input type="text" id="text_field" /></p>
+				
+				<div class="row spaced">
+					<div class="col span-1-2 add-bot">
+						<input type="text" class="full-width" id="input-text" placeholder="First blood" />
+					</div>
+					<div class="col span-1-2 add-bot">
+						<input type="text" class="full-width" id="input-text-2" placeholder="Final legacy" />
+					</div>
+				</div>
+				
+				<div class="row spaced">
+					<div class="col span-1-2 add-bot">
+						<input type="password" class="full-width" name="password" id="password" placeholder="Squidward" />
+					</div>
+					<div class="col span-1-2 add-bot">
+						<input type="password" class="full-width" name="password" id="password" placeholder="Confirm squidward" />
+					</div>
+				</div>
+						
 				
 				<p><label for="text_area">Text Area:</label><br />
 				<textarea id="text_area"></textarea></p>
@@ -530,15 +517,15 @@ are for syntax highlighting on this demo page only
 				</select></p>
 				
 				<p><label for="radio_buttons">Radio Buttons:</label><br />
-					<input type="radio" class="radio" name="radio_button" value="radio_1" /> Radio 1<br/>
-					<input type="radio" class="radio" name="radio_button" value="radio_2" /> Radio 2<br/>
-					<input type="radio" class="radio" name="radio_button" value="radio_3" /> Radio 3<br/>
+					<input type="radio" class="radio" name="radio_button" value="radio_1" id="radio_1" /> <label for="radio_1">Radio 1</label><br/>
+					<input type="radio" class="radio" name="radio_button" value="radio_2" id="radio_2" /> <label for="radio_2">Radio 2</label><br/>
+					<input type="radio" class="radio" name="radio_button" value="radio_3" id="radio_3" /> <label for="radio_3">Radio 3</label><br/>
 				</p>
 				
 				<p><label for="checkboxes">Checkboxes:</label><br />
-					<input type="checkbox" class="checkbox" name="checkboxes" value="check_1" /> Radio 1<br/>
-					<input type="checkbox" class="checkbox" name="checkboxes" value="check_2" /> Radio 2<br/>
-					<input type="checkbox" class="checkbox" name="checkboxes" value="check_3" /> Radio 3<br/>
+					<input type="checkbox" class="checkbox" name="checkboxes" value="check_1" id="check_1" /> <label for="check_1">Check 1</label><br/>
+					<input type="checkbox" class="checkbox" name="checkboxes" value="check_2" id="check_2" /> <label for="check_2">Check 2</label><br/>
+					<input type="checkbox" class="checkbox" name="checkboxes" value="check_3" id="check_3" /> <label for="check_3">Check 3</label><br/>
 				</p>
 				
 				<p><label for="password">Password:</label><br />
