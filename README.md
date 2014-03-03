@@ -20,16 +20,13 @@ Yes. It's an unorganized pile of foo but it's mine and I'm enjoying myself. You 
 
 ###To Do
 * Form Elements
+* Basic Form validation
 * Split CSS to multiple files
- * base
- * grid
- * typography
- * button/form elements
- * colors
 * Cross-browser testing
 
 ###Maybe
 * Grid increments (like 4 columns for desktop and 2 for mobile)
+* Mobile reveal menu
 * Color themes
 * Icons
 * Minimal animations

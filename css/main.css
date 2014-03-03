@@ -27,7 +27,8 @@
 }
 
 html {
-	font-family: /*Georgia, Times, "Times New Roman",*/ serif;
+	/*font-family: serif;*/
+	font-family: sans-serif;
 	font-weight: normal;
 	font-size: 16px;
 	line-height: 1.5;	
@@ -71,14 +72,11 @@ img, video { max-width: 100%; }
 .crop-stacked img { margin: auto; }
 
 /* Headers */
-h1, h2 { padding-bottom: .1em; }
+/*h1, h2 { padding-bottom: .1em; }
 h1 { border-bottom: solid 2px #ddd; }
-h2 { border-bottom: solid 1px #ddd; }
-
-h4, h6 { /* need to figure out some differentiation of headers */ }
+h2 { border-bottom: solid 1px #ddd; }*/
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: /*Calibri, Candara, Segoe, "Segoe UI", Optima, Arial,*/ sans-serif;
 	line-height: 1.1;
 	margin-bottom: 0.5em;
 }
@@ -91,17 +89,12 @@ h5, .h5 { font-size:1.125em;	/* 16 * 1.125	=18 */ }
 h6, .h6 { font-size:1em;		/* 16 * 1		=16 */ }
 
 
-h1 img,
-h2 img,
-h3 img,
-h4 img,
-h5 img,
-h6 img {
-  margin: 0;
-}
+h1 img, h2 img, h3 img, h4 img, h5 img, h6 img { margin: 0; }
 
-h1 small,
-h2 small { color: #bbb; font-weight: normal; }
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small { 
+	font-weight: normal;
+	color: #bbb;
+}
 
 p {
 	font-size: 1em;  /* 16 * 1 = 16 */
@@ -115,7 +108,6 @@ p {
 .light { font-weight: 100; }
 
 /* Other Text */
-
 /* lists */
 ul { padding-left: 1em; }
 ol { padding-left: 1.3em; }
@@ -136,7 +128,7 @@ ul.disc { list-style-type: disc; }
 
 /* code */
 .code, code, kbd, pre, samp, var {
-	font-family: /*Menlo, Monaco, Consolas, "Courier New",*/ monospace;
+	font-family: monospace;
 	font-style: normal;
 	white-space: pre-wrap;
 	white-space: -moz-pre-wrap;
@@ -179,9 +171,9 @@ blockquote footer {
 
 small { line-height: 1; }
 
-.sans-serif { font-family: /*Calibri, Candara, Segoe, "Segoe UI", Optima, Arial,*/ sans-serif; }
-.serif { font-family: /*Georgia, Times, "Times New Roman",*/ serif; }
-.mono { font-family: /*Menlo, Monaco, Consolas, "Courier New",*/ monospace; }
+.sans-serif { font-family: sans-serif; }
+.serif { font-family: serif; }
+.mono { font-family: monospace; }
 
 hr {
 	border: 0;
@@ -241,7 +233,22 @@ table caption {
 }
 
 /* inputs */
-input { max-width: 100%; }
+input {
+	max-width: 100%; 
+}
+
+select {
+	border: 1px solid #a4a4a4; /* to force font size changes */
+}
+
+input[type="file"]::-webkit-file-upload-button {
+	border: 1px solid #a4a4a4; /* to force font size changes */
+}
+
+input[required]:invalid {
+	border: 1px solid red;
+}
+
 
 /* Buttons */
 button,
@@ -386,19 +393,16 @@ fieldset legend {
 }
 
 /*== Custom Elements ==*/
-/* shadows */
 .shadow { box-shadow: 0 2px 4px rgba(0,0,0,0.3); }
 
-/* wells */
 .well { box-shadow: inset 0 2px 4px rgba(0,0,0,0.3); }
 
-/* alerts */
 .alert {
 	border: solid 1px #ddd;
 	background-color: #eee;
 	padding: .15em .4em;
 }
-
+/*
 header.sticky,
 footer.sticky {
 	position: fixed;
@@ -410,7 +414,7 @@ footer.sticky {
 	top: auto;
 	bottom: 0;
 }
-
+*/
 /* nav list */
 nav ul {
     list-style-type: none;

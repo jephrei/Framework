@@ -87,13 +87,13 @@ a.activated { color: #FF851B; }
 		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
 		<h2>Lorem ipsum dolor <small>sit amet consectetur adipiscing elit</small></h2>
 		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-		<h3>Lorem ipsum dolor</h3>
+		<h3>Lorem ipsum dolor <small>sit amet consectetur adipiscing elit</small></h3>
 		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-		<h4>Lorem ipsum dolor</h4>
+		<h4>Lorem ipsum dolor <small>sit amet consectetur adipiscing elit</small></h4>
 		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-		<h5>Lorem ipsum dolor</h5>
+		<h5>Lorem ipsum dolor <small>sit amet consectetur adipiscing elit</small></h5>
 		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-		<h6>Lorem ipsum dolor</h6>
+		<h6>Lorem ipsum dolor <small>sit amet consectetur adipiscing elit</small></h6>
 		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
 		
 		<h3 class="light color-gray">Font Weight</h3>
@@ -418,7 +418,7 @@ a.activated { color: #FF851B; }
 		<div class="add-bot">
 			<button>button</button>
 			<a href="#0" class="button">a.button</a>
-			<div class="button">div.button</div>
+			<div class="button" tabindex="0">div.button</div><!-- tabindex="0" added to make DIV "tabbable" -->
 			<input class="button" type="button" value="input.button" />
 			<!--<input type="submit" value="input[type='submit']" />-->
 		</div>
@@ -426,7 +426,7 @@ a.activated { color: #FF851B; }
 		<div class="add-bot">
 			<button class="disabled">button</button>
 			<a href="#0" class="button disabled">a.button</a>
-			<div class="button disabled">div.button</div>
+			<div class="button disabled" tabindex="0">div.button</div><!-- tabindex="0" added to make DIV "tabbable" -->
 			<input type="button" value="input.button" class="button disabled" />
 			<!--<input type="submit" value="Submit Button" class="disabled" />	-->
 		</div>
@@ -541,7 +541,40 @@ a.activated { color: #FF851B; }
 				
 			</fieldset>
 			
-		</form>		
+		</form>
+		
+		<hr />
+		
+	<div class="input-test">
+			
+		<div class="add-bot"><input type="file" /></div>
+		<div class="add-bot"><input type="search" /></div>
+		<div class="add-bot"><input type="email" /></div>
+		<div class="add-bot"><input type="url" /></div>
+		<div class="add-bot"><input type="tel" /></div>
+		<div class="add-bot"><input type="number" /></div>
+		<div class="add-bot"><input type="range" /></div>
+		<div class="add-bot"><input type="date" /></div>
+		<div class="add-bot"><input type="month" /></div>
+		<div class="add-bot"><input type="week" /></div>
+		<div class="add-bot"><input type="time" /></div>
+		<div class="add-bot"><input type="datetime" /></div>
+		<div class="add-bot"><input type="datetime-local" /></div>
+		<div class="add-bot"><input type="color" /></div>
+
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+		
 		
 	</section>
 		
