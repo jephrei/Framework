@@ -92,7 +92,6 @@ h6, .h6 { font-size:1em;		/* 16 * 1		=16 */ }
 h1 img, h2 img, h3 img, h4 img, h5 img, h6 img { margin: 0; }
 
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small { 
-	font-weight: normal;
 	color: #bbb;
 }
 
@@ -160,7 +159,7 @@ blockquote footer {
 	/*text-align: right;*/
 }
 
-.pull-quote-right { /* not perfectly implmented yet */
+.pull-quote-right { /* not perfectly implemented yet */
 	/* content: attr(title) ": "; */ /* to use content of title attribute for pull quote */
     display: inline-block;
     font-size: 150%;
@@ -248,7 +247,15 @@ input[type="file"]::-webkit-file-upload-button {
 input[required]:invalid {
 	border: 1px solid red;
 }
-
+/* doesn't seem to work */
+/*
+::-webkit-input-placeholder,
+:-moz-placeholder,
+::-moz-placeholder,
+:-ms-input-placeholder {  
+   font-weight: normal;
+}
+*/
 
 /* Buttons */
 button,
@@ -288,7 +295,6 @@ button:not(.disabled):active,
     box-shadow: inset 0 .1em .1em rgba(0,0,0,0.1);
 }
 
-
 button.disabled,
 .button.disabled {
     cursor: not-allowed;
@@ -296,8 +302,9 @@ button.disabled,
     color: #bbb;
     text-shadow: none;
 }
+
 .button-group {
-    margin: .1em;
+    margin: 0em;
     white-space: nowrap;
 }
  
@@ -310,7 +317,6 @@ button.disabled,
 .button-group > button:last-child,
 .button-group > .button:last-child {
     border-right: none;
-	
 }
 
 .button-group > input[type="text"] {
@@ -373,9 +379,14 @@ progress::-moz-progress-bar {
     background-color: green;
     border: 0;
     border-radius: 4px;
-
 }
 */
+
+progress.vertical {
+	-webkit-orient: vertical; /* chrome doesn't support this yet */
+	-moz-orient: vertical;
+	orient: vertical; /* no one uses it */
+}
 
 fieldset {
 	padding: 1em 0 0 0;
@@ -455,6 +466,7 @@ nav li > ul {
 }
 
 nav li:hover > ul {
+	z-index: 1;
     display: block;
 }
 
