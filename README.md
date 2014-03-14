@@ -1,15 +1,14 @@
-#Framework v0.1 alpha
+#Framework v0.1&alpha;
 This is a personal framework. Things will be ugly and/or [broken](http://motherfuckingwebsite.com). The final scope isn't fully realized yet, but I have my ideas. I'll probably get distracted along the way.
 
 ##Another framework?
 Yes. It's an unorganized pile of foo but it's mine and I'm enjoying myself. You should make one too.
 
 ##Basics Ideas
-* Less is more
 * Semantic classes
 * Consitency rather than resets
 * Modular design for multiple use cases
-* Trying an experiment to make zero top margins work in practice
+* Keep it simple, stupid
 
 ##Key Features
 ###Implemented
@@ -20,19 +19,19 @@ Yes. It's an unorganized pile of foo but it's mine and I'm enjoying myself. You 
 
 ###To Do
 * Form Elements
-* Basic Form validation
 * Split CSS to multiple files
 * Cross-browser testing
 
 ###Maybe
+* Basic Form validation
 * Grid increments (like 4 columns for desktop and 2 for mobile)
 * Mobile reveal menu
-* Color themes
+* Dynamic, inheritable color themes
 * Icons
 * Minimal animations
 * Minified version
 * Flexbox (when something more final is decided on)
-* LESS (when/if my LESS knowledge gets better)
+* LESS (when my LESS knowledge gets better)
 
 ##Compatibility
 I noticed that IE8 and below sucks but you probably knew that.

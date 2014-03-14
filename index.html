@@ -28,60 +28,103 @@
 
 a.normal { color: #0074D9; }
 a.visited { color: #B10DC9; }
-a.hovered { color: #0074D9; text-decoration: underline; }
+a.hovered { color: #0074D9; text-decoration: underline; /*border-bottom: solid 1px;*/ }
 a.activated { color: #FF851B; }
 </style>
 
 </head>
 
 <body>
+<header>
+	<div class="container">
+		<nav class="add-top">
+			<ul>
+				<li class="flush"><a href="#grid">Grid</a></li>
+				<li><a href="#typography">Typography</a>
+					<ul>
+						<li><a href="#headers">Headers</a></li>
+						<li><a href="#weight">Weight</a></li>
+						<li><a href="#lists">Lists</a></li>
+						<li><a href="#quotes">Blockquotes & Pullquotes</a></li>
+						<li><a href="#links">Links</a></li>
+						<li><a href="#definitions">Definition Lists</a></li>
+						<li><a href="#misc">Misc</a></li>
+					</ul>
+				</li>
+				<li><a href="#elements">Elements</a>
+					<ul>
+						<li><a href="#images">Images</a></li>
+						<li><a href="#tables">Tables</a></li>
+						<li><a href="#buttons">Buttons</a></li>
+						<li><a href="#forms">Form Elements</a></li>
+					</ul>
+				</li>
+				<li><a href="#extras">Extras</a>
+					<ul>
+						<li><a href="#colors">Colors</a></li>
+						<li><a href="#div-styles">DIV Styles</a></li>
+						<li><a href="#positioning">Positioning</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+	</div>
+	<hr />
+</header>
 
 <div class="container">
 	<section>
-		<h1 class="lrg add-top-lrg">framework <small class="light">a minimal, modular web dev template.</small></h1>
-		<p>This is a demo/doc/template page for something that isn't meant nor ready for public consumption, but if you do partake...enjoy.</p>
+		<h1 class="lrg add-top-lrg">framework<sup class="light color-blue serif"><em>&alpha;</em></sup> <small class="light">a minimal, modular css template.</small></h1>
+		<a href="https://github.com/jephrei/Framework" class="button button-medium chisel bg-blue color-white">Github</a> <a href="https://github.com/jephrei/Framework/archive/master.zip" class="button button-medium chisel bg-blue color-white">Download</a>
+		<p class="color-gray">This is a personal framework that I would love to get used, but I highly suggest you make your own.</p>
 	</section>
 	<section>
-		<h2 class="light">Grid</h2>
+		<h2 id="grid" class="light">Grid</h2>
 		<p><code>.row > .col</code></p>
-		<div class="row bg-silver add-bot">
-			<div class="col span-1-6 bg-gray text-pad code">.col.span-1-6</div>
+		<div class="row bg-light add-bot">
+			<div class="col span-1-8 bg-light-gray text-pad code">.col.span-1-8</div>
 		</div>
-		<div class="row bg-silver add-bot">
-			<div class="col span-1-5 bg-gray text-pad code">.col.span-1-5</div>
+		<div class="row bg-light add-bot">
+			<div class="col span-1-7 bg-light-gray text-pad code">.col.span-1-7</div>
 		</div>
-		<div class="row bg-silver add-bot">
-			<div class="col span-1-4 bg-gray text-pad code">.col.span-1-4</div>
+		<div class="row bg-light add-bot">
+			<div class="col span-1-6 bg-light-gray text-pad code">.col.span-1-6</div>
 		</div>
-		<div class="row bg-silver add-bot">
-			<div class="col span-1-3 bg-gray text-pad code">.col.span-1-3</div>
+		<div class="row bg-light add-bot">
+			<div class="col span-1-5 bg-light-gray text-pad code">.col.span-1-5</div>
 		</div>
-		<div class="row bg-silver add-bot">
-			<div class="col span-1-2 bg-gray text-pad code">.col.span-1-2</div>
+		<div class="row bg-light add-bot">
+			<div class="col span-1-4 bg-light-gray text-pad code">.col.span-1-4</div>
 		</div>
-		<div class="row bg-silver add-bot">
-			<div class="col bg-gray text-pad code">.col</div>
+		<div class="row bg-light add-bot">
+			<div class="col span-1-3 bg-light-gray text-pad code">.col.span-1-3</div>
 		</div>
-		<div class="row bg-silver add-bot">
-			<div class="col span-4-6 skip-1-6 bg-gray text-pad code">.col.span-4-6.skip-1-6</div>
+		<div class="row bg-light add-bot">
+			<div class="col span-1-2 bg-light-gray text-pad code">.col.span-1-2</div>
+		</div>
+		<div class="row bg-light add-bot">
+			<div class="col bg-light-gray text-pad code">.col</div>
+		</div>
+		<div class="row bg-light add-bot">
+			<div class="col span-4-6 skip-1-6 bg-light-gray text-pad code">.col.span-4-6.skip-1-6</div>
 		</div>
 		
 		<p><code>.row.spaced > .col</code></p>
 		<div class="row spaced add-bot">
-			<div class="col span-1-3 code"><div class="bg-gray text-pad">.col.span-1-3</div></div>
-			<div class="col span-1-3 code"><div class="bg-gray text-pad">.col.span-1-3</div></div>
-			<div class="col span-1-3 code"><div class="bg-gray text-pad">.col.span-1-3</div></div>
+			<div class="col span-1-3 code"><div class="bg-light-gray text-pad">.col.span-1-3</div></div>
+			<div class="col span-1-3 code"><div class="bg-light-gray text-pad">.col.span-1-3</div></div>
+			<div class="col span-1-3 code"><div class="bg-light-gray text-pad">.col.span-1-3</div></div>
 		</div>
 		<p><code>.row.reverse > .col</code></p>
 		<div class="row reverse spaced add-bot">
-			<div class="col span-1-2"><div class="bg-gray text-pad">2nd in desktop, 1st in mobile</div></div>
-			<div class="col span-1-2"><div class="bg-gray text-pad">1st in desktop, 2nd in mobile</div></div>
+			<div class="col span-1-2"><div class="bg-light-gray text-pad">2nd in desktop, 1st in mobile</div></div>
+			<div class="col span-1-2"><div class="bg-light-gray text-pad">1st in desktop, 2nd in mobile</div></div>
 		</div>
 	</section>
 	
 	<section>
-		<h2 class="light">Typography</h2>
-		<h3 class="light color-gray">Headers</h3>
+		<h2 id="typography" class="light">Typography</h2>
+		<h3 id="headers" class="light color-gray">Headers</h3>
 		<p>I reorganized the sizing so that <code>h6</code> is equal in size to <code>p</code>.</p>
 		<h1>Lorem ipsum dolor <small>sit amet consectetur adipiscing elit</small></h1>
 		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
@@ -96,16 +139,16 @@ a.activated { color: #FF851B; }
 		<h6>Lorem ipsum dolor <small>sit amet consectetur adipiscing elit</small></h6>
 		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
 		
-		<h3 class="light color-gray">Font Weight</h3>
+		<h3 id="weight" class="light color-gray">Weight</h3>
 		<p class="code">.heavy</p>
 		<p class="heavy">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
 		
 		<p class="code">.light</p>
 		<p class="light">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
 		
-		<h3 class="light color-gray">Lists</h3>
+		<h3 id="lists" class="light color-gray">Lists</h3>
 		
-		<div class="row">
+		<div class="row spaced">
 			<div class="col span-1-3">
 				<p class="code">ul</p>
 				<ul>
@@ -150,7 +193,34 @@ a.activated { color: #FF851B; }
 			</div>
 		</div>
 		
-		<h3 class="light color-gray">Blockquotes & Pull Quotes</h3>
+		<div class="row spaced">
+			<div class="col span-1-3">
+				<p class="code">ol.outside</p>
+				<ol class="outside">
+					<li>Lorem ipsum</li>
+					<li>Dolor sit amet</li>
+					<li>Consectetur adipiscing elit</li>
+				</ol>
+			</div>
+			<div class="col span-1-3">
+				<p class="code">ul.blank</p>
+				<ul class="blank">
+					<li>Lorem ipsum</li>
+					<li>Dolor sit amet</li>
+					<li>Consectetur adipiscing elit</li>
+				</ul>
+			</div>
+			<div class="col span-1-3">
+				<p class="code">ul.square</p>
+				<ul class="square">
+					<li>Lorem ipsum</li>
+					<li>Dolor sit amet</li>
+					<li>Consectetur adipiscing elit</li>
+				</ul>
+			</div>
+		</div>
+		
+		<h3 id="quotes" class="light color-gray">Blockquotes & Pull Quotes</h3>
 		<p class="code">blockquote</p>
 		<blockquote>
 			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
@@ -164,20 +234,20 @@ a.activated { color: #FF851B; }
 		<p class="code">.pull-quote-right</p>
 		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. <span class="pull-quote-right">Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est.</span> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
 		
-		<h3 class="light color-gray">Definition Lists</h3>
-		<dl>
-			<dt>dt Definition List Title</dt>
-			<dd>dd This is a definition list division.</dd>
-		</dl>
-		
-		<h3 class="light color-gray">Links</h3>
+		<h3 id="links" class="light color-gray">Links</h3>
 		<!-- The 'visited' and 'hovered' classes are not part of the framework. they force the styles for demo page viewing only -->
 		<p><a href="#0" class="normal">A normal link</a></p>
 		<p><a href="#0" class="visited">A visited link</a></p>
 		<p><a href="#0" class="hovered">A hovered link</a></p>
 		<p><a href="#0" class="activated">An activated link</a></p>
 		
-		<h3 class="light color-gray">Misc</h3>
+		<h3 id="definitions" class="light color-gray">Definition Lists</h3>
+		<dl>
+			<dt>dt Definition List Title</dt>
+			<dd>dd This is a definition list division.</dd>
+		</dl>
+		
+		<h3 id="misc" class="light color-gray">Misc</h3>
 		<p class="sans-serif">Lorem ipsum <code>code</code> dolor sit amet consectetur adipiscing elit.</p>
 		<p class="serif">Lorem ipsum <code>code</code> dolor sit amet consectetur adipiscing elit.</p>
 		<p><em>em</em> / <i>i</i></p>
@@ -185,8 +255,8 @@ a.activated { color: #FF851B; }
 	</section>
 	
 	<section>
-		<h2 class="light">Images</h2>
-		
+		<h2 id="elements" class="light">Elements</h2>
+		<h3 id="images" class="light color-gray">Images</h3>
 		<div class="row spaced">
 			<div class="col span-1-3">
 				<p class="code">.crop-stacked img</p>
@@ -207,10 +277,8 @@ a.activated { color: #FF851B; }
 				</div>
 			</div>
 		</div>
-	</section>
-	
-	<section>
-		<h2 class="light">Tables</h2>
+
+		<h3 id="tables" class="light color-gray">Tables</h3>
 		
 		<p class="code">table</p>
 		<table>
@@ -313,108 +381,8 @@ a.activated { color: #FF851B; }
 				</tr>
 			</tbody>
 		</table>
-	</section>
-	
-	<section>
-		<h2 class="light">Colors <small>pallette taken from <a href="http://clrs.cc/">clrs.cc</a></small></h2>
-
-		<div class="row add-bot">
-			<div class="col span-1-3">
-				<div class="bg-aqua text-pad">Aqua <span class="float-right">#7FDBFF</span></div>
-				<div class="bg-blue color-white text-pad">Blue <span class="float-right">#0074D9</span></div>
-				<div class="bg-navy color-white text-pad">Navy <span class="float-right">#001F3F</span></div>
-				<div class="bg-teal text-pad">Teal <span class="float-right">#39CCCC</span></div>
-				<div class="bg-green text-pad">Green <span class="float-right">#2ECC40</span></div>
-				<div class="bg-olive text-pad">Olive <span class="float-right">#3D9970</span></div>
-				<div class="bg-lime text-pad">Lime <span class="float-right">#01FF70</span></div>
-			</div>
-			<div class="col span-1-3">
-				<div class="bg-yellow text-pad">Yellow <span class="float-right">#FFDC00</span></div>
-				<div class="bg-orange color-white text-pad">Orange <span class="float-right">#FF851B</span></div>
-				<div class="bg-red color-white text-pad">Red <span class="float-right">#FF4136</span></div>
-				<div class="bg-fuchsia color-white text-pad">Fuchsia <span class="float-right">#F012BE</span></div>
-				<div class="bg-purple color-white text-pad">Purple <span class="float-right">#B10DC9</span></div>
-				<div class="bg-maroon color-white text-pad">Maroon <span class="float-right">#85144B</span></div>
-			</div>
-			<div class="col span-1-3">
-				<div class="bg-white text-pad">White <span class="float-right">#FFF</span></div>
-				<div class="bg-silver text-pad">Silver <span class="float-right">#DDD</span></div>
-				<div class="bg-gray text-pad">Gray <span class="float-right">#AAA</span></div>
-				<div class="bg-black color-white text-pad">Black <span class="float-right">#111</span></div>	
-			</div>
-		</div>
-	</section>
-	
-	<section>
-		<h2 class="light">DIV Styles</h2>
 		
-		<p class="code">.shadow</p>
-		<div class="shadow bg-light text-pad add-bot">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</div>
-		
-		<p class="code">.well</p>
-		<div class="well bg-light text-pad add-bot">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</div>
-		
-		<p class="code">.alert</p>
-		<div class="alert add-bot">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</div>
-		
-		<div class="alert bg-red add-bot code">.alert.bg-red</div>
-		<div class="alert bg-orange color-white add-bot code">.alert.bg-Orange</div>
-		<div class="alert bg-yellow add-bot code">.alert.bg-yellow</div>	
-		<div class="alert bg-green add-bot code">.alert.bg-green</div>
-		<div class="alert bg-blue color-white add-bot code">.alert.bg-blue</div>
-		<div class="alert bg-purple color-white add-bot code">.alert.bg-Purple</div>
-		
-		<!--
-		<div class="alert bg-red add-bot code">.alert.bg-red</div>
-		<div class="alert bg-aqua add-bot code">.alert.bg-aqua</div>
-		<div class="alert bg-blue color-white add-bot code">.alert.bg-blue</div>
-		<div class="alert bg-navy color-white add-bot code">.alert.bg-navy</div>
-		<div class="alert bg-teal add-bot code">.alert.bg-teal</div>
-		<div class="alert bg-green add-bot code">.alert.bg-green</div>
-		<div class="alert bg-olive add-bot code">.alert.bg-olive</div>
-		<div class="alert bg-lime add-bot code">.alert.bg-lime</div>
-		<div class="alert bg-yellow add-bot code">.alert.bg-yellow</div>
-		<div class="alert bg-orange color-white add-bot code">.alert.bg-Orange</div>
-		<div class="alert bg-red color-white add-bot code">.alert.bg-Red</div>
-		<div class="alert bg-fuchsia color-white add-bot code">.alert.bg-Fuchsia</div>
-		<div class="alert bg-purple color-white add-bot code">.alert.bg-Purple</div>
-		<div class="alert bg-maroon color-white add-bot code">.alert.bg-Maroon</div>
-		-->
-	</section>
-	
-	<section>
-		<h2 class="light">Element Positioning</h2>
-		
-		<p class="code">.add-bot</p>
-		<div class="row add-bot">
-			<div class="col span-1-3 bg-gray">
-				<div class="text-pad code bg-light add-bot-sm">.add-bot-sm</div>
-			</div>
-			<div class="col span-1-3 bg-gray">
-				<div class="text-pad code bg-light add-bot">.add-bot</div>
-			</div>
-			<div class="col span-1-3 bg-gray">
-				<div class="text-pad code bg-light add-bot-lrg">.add-bot-lrg</div>
-			</div>
-		</div>
-		<p><span class="code">.add-bot</span> is relative too!</p>
-		<div class="row add-bot">
-			<div class="col span-1-3 bg-gray">
-				<div class="h1 text-pad code bg-light add-bot-sm">.h1</div>
-			</div>
-			<div class="col span-1-3 bg-gray">
-				<div class="h1 text-pad code bg-light add-bot">.h1</div>
-			</div>
-			<div class="col span-1-3 bg-gray">
-				<div class="h1 text-pad code bg-light add-bot-lrg">.h1</div>
-			</div>
-		</div>
-	</section>
-	
-	<section>
-		<h2 class="light">Form Elements</h2>
-		
-		<p class="code">button, .button, etc</p>
+		<h3 id="buttons" class="light color-gray">Buttons</h3>
 		<div class="add-bot">
 			<button>button</button>
 			<a href="#0" class="button">a.button</a>
@@ -476,6 +444,8 @@ a.activated { color: #FF851B; }
 		</div>
 		-->
 		
+		<h3 id="forms" class="light color-gray">Other Form Elements</h3>
+		
 		<form>		
 			<fieldset>
 				<legend>Fieldset Legend</legend>		
@@ -502,11 +472,110 @@ a.activated { color: #FF851B; }
 	</section>
 	
 	<section>
-		<h2 class="light">Sandbox <small>just playing around</small></h2>
+		<h2 id="extras" class="light">Extras</h2>
+		<h3 id="colors" class="light color-gray">Colors <small>pallette taken from <a href="http://clrs.cc/">clrs.cc</a></small></h3>
+
+		<div class="row add-bot">
+			<div class="col span-1-3">
+				<div class="bg-aqua text-pad">Aqua <span class="float-right">#7FDBFF</span></div>
+				<div class="bg-blue color-white text-pad">Blue <span class="float-right">#0074D9</span></div>
+				<div class="bg-navy color-white text-pad">Navy <span class="float-right">#001F3F</span></div>
+				<div class="bg-teal text-pad">Teal <span class="float-right">#39CCCC</span></div>
+				<div class="bg-green text-pad">Green <span class="float-right">#2ECC40</span></div>
+				<div class="bg-olive text-pad">Olive <span class="float-right">#3D9970</span></div>
+				<div class="bg-lime text-pad">Lime <span class="float-right">#01FF70</span></div>
+			</div>
+			<div class="col span-1-3">
+				<div class="bg-yellow text-pad">Yellow <span class="float-right">#FFDC00</span></div>
+				<div class="bg-orange color-white text-pad">Orange <span class="float-right">#FF851B</span></div>
+				<div class="bg-red color-white text-pad">Red <span class="float-right">#FF4136</span></div>
+				<div class="bg-fuchsia color-white text-pad">Fuchsia <span class="float-right">#F012BE</span></div>
+				<div class="bg-purple color-white text-pad">Purple <span class="float-right">#B10DC9</span></div>
+				<div class="bg-maroon color-white text-pad">Maroon <span class="float-right">#85144B</span></div>
+			</div>
+			<div class="col span-1-3">
+				<div class="bg-white text-pad">White <span class="float-right">#FFF</span></div>
+				<div class="bg-silver text-pad">Silver <span class="float-right">#DDD</span></div>
+				<div class="bg-gray text-pad">Gray <span class="float-right">#AAA</span></div>
+				<div class="bg-black color-white text-pad">Black <span class="float-right">#111</span></div>	
+			</div>
+		</div>
 		
+		<h3 id="div-styles" class="light color-gray">DIV Styles</h3>
+		
+		<p class="code">.shadow</p>
+		<div class="shadow bg-light text-pad add-bot">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</div>
+		
+		<p class="code">.well</p>
+		<div class="well bg-light text-pad add-bot">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</div>
+		
+		<p class="code">.alert</p>
+		<div class="alert add-bot">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</div>
+		
+		<div class="alert bg-red add-bot code">.alert.bg-red</div>
+		<div class="alert bg-orange color-white add-bot code">.alert.bg-Orange</div>
+		<div class="alert bg-yellow add-bot code">.alert.bg-yellow</div>	
+		<div class="alert bg-green add-bot code">.alert.bg-green</div>
+		<div class="alert bg-blue color-white add-bot code">.alert.bg-blue</div>
+		<div class="alert bg-purple color-white add-bot code">.alert.bg-Purple</div>
+		
+		<!--
+		<div class="alert bg-red add-bot code">.alert.bg-red</div>
+		<div class="alert bg-aqua add-bot code">.alert.bg-aqua</div>
+		<div class="alert bg-blue color-white add-bot code">.alert.bg-blue</div>
+		<div class="alert bg-navy color-white add-bot code">.alert.bg-navy</div>
+		<div class="alert bg-teal add-bot code">.alert.bg-teal</div>
+		<div class="alert bg-green add-bot code">.alert.bg-green</div>
+		<div class="alert bg-olive add-bot code">.alert.bg-olive</div>
+		<div class="alert bg-lime add-bot code">.alert.bg-lime</div>
+		<div class="alert bg-yellow add-bot code">.alert.bg-yellow</div>
+		<div class="alert bg-orange color-white add-bot code">.alert.bg-Orange</div>
+		<div class="alert bg-red color-white add-bot code">.alert.bg-Red</div>
+		<div class="alert bg-fuchsia color-white add-bot code">.alert.bg-Fuchsia</div>
+		<div class="alert bg-purple color-white add-bot code">.alert.bg-Purple</div>
+		<div class="alert bg-maroon color-white add-bot code">.alert.bg-Maroon</div>
+		-->
+		
+		<h3 id="positioning" class="light color-gray">Element Positioning</h3>
+		
+		<p class="code">.add-bot</p>
+		<div class="row add-bot">
+			<div class="col span-1-3 bg-gray">
+				<div class="text-pad code bg-light add-bot-sm">.add-bot-sm</div>
+			</div>
+			<div class="col span-1-3 bg-gray">
+				<div class="text-pad code bg-light add-bot">.add-bot</div>
+			</div>
+			<div class="col span-1-3 bg-gray">
+				<div class="text-pad code bg-light add-bot-lrg">.add-bot-lrg</div>
+			</div>
+		</div>
+		<p><span class="code">.add-bot</span> is relative too!</p>
+		<div class="row add-bot">
+			<div class="col span-1-3 bg-gray">
+				<div class="h1 text-pad code bg-light add-bot-sm">.h1</div>
+			</div>
+			<div class="col span-1-3 bg-gray">
+				<div class="h1 text-pad code bg-light add-bot">.h1</div>
+			</div>
+			<div class="col span-1-3 bg-gray">
+				<div class="h1 text-pad code bg-light add-bot-lrg">.h1</div>
+			</div>
+		</div>
+	</section>
+	<!--
+	<section>
+		<h2 id="sandbox" class="light">Sandbox <small>Just playing around</small></h2>
+		
+		<figure>
+			<img src="http://www.placehold.it/200&text=image" alt="">
+			<figcaption>Image Caption</figcaption>
+		</figure>
 				
-		<p><label for="text_area">Text Area:</label><br />
-		<textarea id="text_area"></textarea></p>
+		<p>
+			<label for="text_area">Text Area:</label><br />
+			<textarea id="text_area"></textarea>
+		</p>
 		
 		<p><label for="select_element">Select Element:</label><br />
 			<select name="select_element">
@@ -542,54 +611,51 @@ a.activated { color: #FF851B; }
 			<input type="file" class="file" name="file" id="file" />
 		</p>
 		
-		<p><input class="button" type="reset" value="Clear" /> <input class="button" type="submit" value="Submit" />
+		<p>
+			<input class="button" type="reset" value="Reset" /> <input class="button bg-blue color-white" type="submit" value="Submit" />
 		</p>
 		
-		
-		
 		<div class="input-test">
-			
-			<div class="add-bot"><input type="file" /></div>
-			<div class="add-bot"><input type="search" /></div>
-			<div class="add-bot"><input type="email" /></div>
-			<div class="add-bot"><input type="url" /></div>
-			<div class="add-bot"><input type="tel" /></div>
-			<div class="add-bot"><input type="number" /></div>
-			<div class="add-bot"><input type="range" /></div>
-			<div class="add-bot"><input type="date" /></div>
-			<div class="add-bot"><input type="month" /></div>
-			<div class="add-bot"><input type="week" /></div>
-			<div class="add-bot"><input type="time" /></div>
-			<div class="add-bot"><input type="datetime" /></div>
-			<div class="add-bot"><input type="datetime-local" /></div>
-			<div class="add-bot"><input type="color" /></div>
-	
+			<div class="add-bot"><input type="file" /><label>file</label></div>
+			<div class="add-bot"><input type="search" /><label>search</label></div>
+			<div class="add-bot"><input type="email" /><label>email</label></div>
+			<div class="add-bot"><input type="url" /><label>url</label></div>
+			<div class="add-bot"><input type="tel" /><label>tel</label></div>
+			<div class="add-bot"><input type="number" /><label>number</label></div>
+			<div class="add-bot"><input type="range" /><label>range</label></div>
+			<div class="add-bot"><input type="date" /><label>date</label></div>
+			<div class="add-bot"><input type="month" /><label>month</label></div>
+			<div class="add-bot"><input type="week" /><label>week</label></div>
+			<div class="add-bot"><input type="time" /><label>time</label></div>
+			<div class="add-bot"><input type="datetime" /><label>datetime</label></div>
+			<div class="add-bot"><input type="datetime-local" /><label>datetime-local</label></div>
+			<div class="add-bot"><input type="color" /><label>color</label></div>
 		</div>
 		
 		<h3>Unordered List in NAV</h3>
 		<nav>
 			<ul>
-				<li><a href="#nowhere" title="Lorum ipsum dolor sit amet">Lorem</a></li>
-				<li><a href="#nowhere" title="Aliquam tincidunt mauris eu risus">Aliquam</a>
+				<li><a href="#0" title="Lorum ipsum dolor sit amet">Lorem</a></li>
+				<li><a href="#0" title="Aliquam tincidunt mauris eu risus">Aliquam</a>
 					<ul>
-						<li><a href="#nowhere" title="Lorum ipsum dolor sit amet">Lorem</a></li>
-						<li><a href="#nowhere" title="Aliquam tincidunt mauris eu risus">Aliquam</a></li>
-						<li><a href="#nowhere" title="Morbi in sem quis dui placerat ornare">Morbi</a></li>
-						<li><a href="#nowhere" title="Praesent dapibus, neque id cursus faucibus">Praesent</a></li>
-						<li><a href="#nowhere" title="Pellentesque fermentum dolor">Pellentesque</a></li>
+						<li><a href="#0" title="Lorum ipsum dolor sit amet">Lorem</a></li>
+						<li><a href="#0" title="Aliquam tincidunt mauris eu risus">Aliquam</a></li>
+						<li><a href="#0" title="Morbi in sem quis dui placerat ornare">Morbi</a></li>
+						<li><a href="#0" title="Praesent dapibus, neque id cursus faucibus">Praesent</a></li>
+						<li><a href="#0" title="Pellentesque fermentum dolor">Pellentesque</a></li>
 					</ul>
 				</li>
-				<li><a href="#nowhere" title="Morbi in sem quis dui placerat ornare">Morbi</a></li>
-				<li><a href="#nowhere" title="Praesent dapibus, neque id cursus faucibus">Praesent</a>
+				<li><a href="#0" title="Morbi in sem quis dui placerat ornare">Morbi</a></li>
+				<li><a href="#0" title="Praesent dapibus, neque id cursus faucibus">Praesent</a>
 					<ul>
-						<li><a href="#nowhere" title="Lorum ipsum dolor sit amet">Lorem</a></li>
-						<li><a href="#nowhere" title="Aliquam tincidunt mauris eu risus">Aliquam</a></li>
-						<li><a href="#nowhere" title="Morbi in sem quis dui placerat ornare">Morbi</a></li>
-						<li><a href="#nowhere" title="Praesent dapibus, neque id cursus faucibus">Praesent</a></li>
-						<li><a href="#nowhere" title="Pellentesque fermentum dolor">Pellentesque</a></li>
+						<li><a href="#0" title="Lorum ipsum dolor sit amet">Lorem</a></li>
+						<li><a href="#0" title="Aliquam tincidunt mauris eu risus">Aliquam</a></li>
+						<li><a href="#0" title="Morbi in sem quis dui placerat ornare">Morbi</a></li>
+						<li><a href="#0" title="Praesent dapibus, neque id cursus faucibus">Praesent</a></li>
+						<li><a href="#0" title="Pellentesque fermentum dolor">Pellentesque</a></li>
 					</ul>      
 				</li>
-				<li><a href="#nowhere" title="Pellentesque fermentum dolor">Pellentesque</a></li>
+				<li><a href="#0" title="Pellentesque fermentum dolor">Pellentesque</a></li>
 			</ul>
 		</nav>
 		
@@ -631,22 +697,23 @@ a.activated { color: #FF851B; }
 		<menu type="toolbar">
 			<li>
 				<menu label="File">
-					<button type="button" onclick="new()">New...</button>
-					<button type="button" onclick="save()">Save...</button>
+					<button type="button" onclick="new()">New</button>
+					<button type="button" onclick="save()">Save</button>
 				</menu>
 			</li>
 			<li>
 				<menu label="Edit">
-					<button type="button" onclick="cut()">Cut...</button>
-					<button type="button" onclick="copy()">Copy...</button>
-					<button type="button" onclick="paste()">Paste...</button>
+					<button type="button" onclick="cut()">Cut</button>
+					<button type="button" onclick="copy()">Copy</button>
+					<button type="button" onclick="paste()">Paste</button>
 				</menu>
 			</li>
 		</menu>
 	</section>
-	
-	
-	<p class="text-center color-gray">mixed by jephrei with &#9829;</p>
+	-->
+	<footer>
+		<p class="text-center color-gray">mixed by jephrei with &#9829;</p>
+	</footer>
 		 
 </div>
 </body>

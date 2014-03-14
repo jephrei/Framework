@@ -8,12 +8,17 @@
  * form elements
  * details/summary element
  * color theme rehaul
- * make non-bulleted lists default
- * element-less size classes
- * commented explanations
- * add square, roman, and colored options
+ * add roman, and colored options
  * notification labels
  * hover show and/or toggle show
+ * rgb fallbacks (ex: selection)
+ * helper classes and explanations for
+ *  - clearfix
+ *  - etc
+ * show/hide in specific views (stacked, small, normal, large, etc.
+ *
+ * BUGS:
+ * color-* !important not working on links
  * 
  */
 
@@ -27,15 +32,13 @@
 }
 
 html {
-	/*font-family: serif;*/
 	font-family: sans-serif;
 	font-weight: normal;
 	font-size: 16px;
 	line-height: 1.5;	
 	-webkit-text-size-adjust: none;
 	-moz-text-size-adjust: none;
-	-ms-text-size-adjust: none;
-	
+	-ms-text-size-adjust: none;	
 	color: #333;
 }
 
@@ -44,20 +47,10 @@ body {
 	margin: 0;
 }
 
-/* no top margin experiment! */
-/*
-h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote, fieldset, table {
-	margin: 0 0 1em 0;
-}*/
-/*
-section {
-	margin: 0 0 2em 0;
-}*/
-
 /* Links */
 a { color: #0074D9; text-decoration: none; }
 a:visited { color: #B10DC9; }
-a:hover { text-decoration: underline; }
+a:hover { text-decoration: underline; /*border-bottom: solid 1px;*/ }
 a:active { color: #FF851B;}
 
 /* Images */
@@ -66,15 +59,12 @@ a img {
 	vertical-align: middle;
 }
 
-img, video { max-width: 100%; }
+img,
+video,
+audio { max-width: 100%; }
 
 .crop-stacked { overflow: auto; }
 .crop-stacked img { margin: auto; }
-
-/* Headers */
-/*h1, h2 { padding-bottom: .1em; }
-h1 { border-bottom: solid 2px #ddd; }
-h2 { border-bottom: solid 1px #ddd; }*/
 
 h1, h2, h3, h4, h5, h6 {
 	line-height: 1.1;
@@ -88,20 +78,19 @@ h4, .h4 { font-size:1.25em; 	/* 16 * 1.25	=20 */ }
 h5, .h5 { font-size:1.125em;	/* 16 * 1.125	=18 */ }
 h6, .h6 { font-size:1em;		/* 16 * 1		=16 */ }
 
-
 h1 img, h2 img, h3 img, h4 img, h5 img, h6 img { margin: 0; }
 
-h1 small, h2 small, h3 small, h4 small, h5 small, h6 small { 
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+	font-weight: normal;
 	color: #bbb;
 }
 
 p {
-	font-size: 1em;  /* 16 * 1 = 16 */
 	orphans: 3;
 	widows: 3;
 }
 
-.lrg { font-size:3em;  /* 16 x 3	= 48 */ }
+.lrg { font-size: 3em;  /* 16 x 3	= 48 */ }
 
 .heavy { font-weight: 900; }
 .light { font-weight: 100; }
@@ -113,17 +102,20 @@ ol { padding-left: 1.3em; }
 
 ol.long { padding-left: 2.4em; }
 
+menu.blank,
 ul.blank,
 ol.blank {
 	list-style-type: none;
 	padding-left: 0;
 }
 
-/*
+menu.outside,
+ul.outside,
+ol.outside { padding-left: 0; }
+
 ul.square { list-style-type: square; }
 ul.circle { list-style-type: circle; }
 ul.disc { list-style-type: disc; }
-*/
 
 /* code */
 .code, code, kbd, pre, samp, var {
@@ -149,6 +141,7 @@ pre code {
 	display: block;
 }
 
+/* quote elements */
 blockquote {
 	margin-left: 0;
 	padding-left: 1em;
@@ -176,10 +169,10 @@ small { line-height: 1; }
 
 hr {
 	border: 0;
-    height: 2px;
+    height: 0;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-	margin: 2em 0;
+	margin: 1em 0;
 }
 
 /* tables */
@@ -247,28 +240,24 @@ input[type="file"]::-webkit-file-upload-button {
 input[required]:invalid {
 	border: 1px solid red;
 }
-/* doesn't seem to work */
-/*
-::-webkit-input-placeholder,
-:-moz-placeholder,
-::-moz-placeholder,
-:-ms-input-placeholder {  
-   font-weight: normal;
-}
-*/
+
+::-webkit-input-placeholder { text-overflow: ellipsis; }
+:-moz-placeholder { text-overflow: ellipsis; }
+::-moz-placeholder { text-overflow: ellipsis; }
+:-ms-input-placeholder { text-overflow: ellipsis; }
 
 /* Buttons */
 button,
 .button,
-a.button /* for specificity */ {
+a.button /* for specificity. find a better way to do this? */ {
 	display: inline-block;
     font-family: sans-serif;
 	border: none;
     background-color: #ddd;
-	margin-bottom: 0.25em;
+	margin: 0;
     padding: 0.5em 1em;
     color: #333;
-    font-size: 1em;
+    /*font-size: 1em;*/ /* not needed? */
     line-height: normal;
     font-weight: normal;
     text-decoration: none;
@@ -280,6 +269,9 @@ a.button /* for specificity */ {
     -moz-user-select: none;
     user-select: none;
 	
+	-webkit-transition: background-color 0.3s ease;
+    -moz-transition: background-color 0.3s ease;
+    -o-transition: background-color 0.3s ease;
     transition: background-color 0.3s ease;
 }
 
@@ -292,7 +284,7 @@ button:hover,
 button:not(.disabled):active,
 .button:not(.disabled):active {
 	outline: none;
-    box-shadow: inset 0 .1em .1em rgba(0,0,0,0.1);
+    box-shadow: inset 0 .1em .4em rgba(0,0,0,0.2);
 }
 
 button.disabled,
@@ -341,12 +333,9 @@ button.disabled,
 /*
 textarea,
 input[type="text"] {
-    outline: none;
     border: solid 1px #eee;
-
     transition: border-color 0.5s ease,
                 box-shadow 0.5s ease;
-
 }
 
 textarea:focus,
@@ -402,6 +391,8 @@ fieldset legend {
 	width: 100%;
 	border-bottom: solid 1px #ddd;
 }
+
+figure { margin: 0; }
 
 /*== Custom Elements ==*/
 .shadow { box-shadow: 0 2px 4px rgba(0,0,0,0.3); }
@@ -471,60 +462,68 @@ nav li:hover > ul {
 }
 
 nav li > ul li {
+	white-space: pre;
     width: 100%;
 }
 
-/* =============== GLOBALS ============================================= */
-/* pallete taken from Colors @ http://clrs.cc/
-*/
+/* Color pallete taken from Colors @ http://clrs.cc/ */
+/* these are helper classes so yes, !important is ok here to override unknown specificity. */
 
 /* Cool */
-.color-aqua { color: #7FDBFF; }
-.color-blue { color: #0074D9; }
-.color-navy { color: #001F3F; }
-.color-teal { color: #39CCCC; }
-.color-green { color: #2ECC40; }
-.color-olive { color: #3D9970; }
-.color-lime { color: #01FF70; }
+.color-aqua { color: #7FDBFF !important; }
+.color-blue { color: #0074D9 !important; }
+.color-navy { color: #001F3F !important; }
+.color-teal { color: #39CCCC !important; }
+.color-green { color: #2ECC40 !important; }
+.color-olive { color: #3D9970 !important; }
+.color-lime { color: #01FF70 !important; }
 
 /* Warm */
-.color-yellow { color: #FFDC00; }
-.color-orange { color: #FF851B; }
-.color-red { color: #FF4136; }
-.color-fuchsia { color: #F012BE; }
-.color-purple { color: #B10DC9; }
-.color-maroon { color: #85144B; }
+.color-yellow { color: #FFDC00 !important; }
+.color-orange { color: #FF851B !important; }
+.color-red { color: #FF4136 !important; }
+.color-fuchsia { color: #F012BE !important; }
+.color-purple { color: #B10DC9 !important; }
+.color-maroon { color: #85144B !important; }
 
 /* Gray Scale */
-.color-white { color: #fff; }
-.color-silver { color: #ddd; }
-.color-gray { color: #aaa; }
-.color-black { color: #111; }
+.color-silver { color: #ddd !important; }
+
+.color-black { color: #000 !important; }
+.color-dark { color: #333 !important; }
+.color-dark-gray { color: #666 !important; }
+.color-gray { color: #999 !important; }
+.color-light-gray { color: #bbb !important; }
+.color-light { color: #eee !important; }
+.color-white { color: #fff !important; }
 
 /* Cool */
-.bg-aqua { background-color: #7FDBFF; }
-.bg-blue { background-color: #0074D9; }
-.bg-navy { background-color: #001F3F; }
-.bg-teal { background-color: #39CCCC; }
-.bg-green { background-color: #2ECC40; }
-.bg-olive { background-color: #3D9970; }
-.bg-lime { background-color: #01FF70; }
+.bg-aqua { background-color: #7FDBFF !important; }
+.bg-blue { background-color: #0074D9 !important; }
+.bg-navy { background-color: #001F3F !important; }
+.bg-teal { background-color: #39CCCC !important; }
+.bg-green { background-color: #2ECC40 !important; }
+.bg-olive { background-color: #3D9970 !important; }
+.bg-lime { background-color: #01FF70 !important; }
 
 /* Warm */
-.bg-yellow { background-color: #FFDC00; }
-.bg-orange { background-color: #FF851B; }
-.bg-red { background-color: #FF4136; }
-.bg-fuchsia { background-color: #F012BE; }
-.bg-purple { background-color: #B10DC9; }
-.bg-maroon { background-color: #85144B; }
+.bg-yellow { background-color: #FFDC00 !important; }
+.bg-orange { background-color: #FF851B !important; }
+.bg-red { background-color: #FF4136 !important; }
+.bg-fuchsia { background-color: #F012BE !important; }
+.bg-purple { background-color: #B10DC9 !important; }
+.bg-maroon { background-color: #85144B !important; }
 
 /* Gray Scale */
-.bg-white { background-color: #fff; }
-.bg-silver { background-color: #ddd; }
-.bg-gray { background-color: #aaa; }
-.bg-black { background-color: #111; }
+.bg-silver { background-color: #ddd !important; }
 
-.bg-light { background-color: #eee; }
+.bg-black { background-color: #000 !important; }
+.bg-dark { background-color: #333 !important; }
+.bg-dark-gray { background-color: #666 !important; }
+.bg-gray { background-color: #999 !important; }
+.bg-light-gray { background-color: #bbb !important; }
+.bg-light { background-color: #eee !important; }
+.bg-white { background-color: #fff !important; }
 
 /* Cool */
 .alert.bg-aqua { border-color: #7FDBFF; background-color: #a6e7ff; }
@@ -563,7 +562,7 @@ nav li > ul li {
 .position-relative { position: relative; }
 
 .auto-width { width: auto; max-width: 100%; }
-.full-width { width: 100%; }
+.full-width { width: 100%; max-width: 100%; }
 
 .no-wrap { white-space: nowrap; }
 
@@ -611,8 +610,8 @@ nav li > ul li {
 }
 
 /* fun stuff */
-::selection { background: #F012BE; }
-::-moz-selection { background: #F012BE; }
+::selection { background: rgba(46,204,64,0.3); }
+::-moz-selection { background: rgba(46,204,64,0.3); }
 
 /*== GRID SYSTEM ==*/
 .container {
