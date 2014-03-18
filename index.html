@@ -76,10 +76,11 @@ a.activated { color: #FF851B; }
 	<section>
 		<h1 class="lrg add-top-lrg">framework<sup class="light color-blue serif"><em>&alpha;</em></sup> <small class="light">a minimal, modular css template.</small></h1>
 		<a href="https://github.com/jephrei/Framework" class="button button-medium chisel bg-blue color-white">Github</a> <a href="https://github.com/jephrei/Framework/archive/master.zip" class="button button-medium chisel bg-blue color-white">Download</a>
-		<p class="color-gray">This is a personal framework that I would love to get used, but I highly suggest you make your own.</p>
+		<p>This is a personal framework that I would love to get used, but I highly suggest you make your own.</p>
 	</section>
 	<section>
-		<h2 id="grid" class="light">Grid</h2>
+		<h2 id="grid" class="light">The Grid</h2>
+		<p>The grid system is based on fractions. 1/2, 2/3, 5/8, etc. They can be used in any combination, reversed in mobile, and with or without gutters. There's no margin trickery here either. That means a column with the class <code>.span-1-2</code> is exactly 50% wide.</p>
 		<p><code>.row > .col</code></p>
 		<div class="row bg-light add-bot">
 			<div class="col span-1-8 bg-light-gray text-pad code">.col.span-1-8</div>
@@ -108,7 +109,7 @@ a.activated { color: #FF851B; }
 		<div class="row bg-light add-bot">
 			<div class="col span-4-6 skip-1-6 bg-light-gray text-pad code">.col.span-4-6.skip-1-6</div>
 		</div>
-		
+		<p>Rows with gutters (<code>.row.spaced</code>) have a negative margin on each side and applies a padding to each of it's children. So pseudo classes or extra <code>.first</code> and <code>.last</code> type classes aren't necessary.</p>
 		<p><code>.row.spaced > .col</code></p>
 		<div class="row spaced add-bot">
 			<div class="col span-1-3 code"><div class="bg-light-gray text-pad">.col.span-1-3</div></div>
@@ -124,8 +125,9 @@ a.activated { color: #FF851B; }
 	
 	<section>
 		<h2 id="typography" class="light">Typography</h2>
+		<p>All of the font sizes are <code>em</code> based so they scale with the body <code>font-size</code> percentage which, in turn, changes with media queries.</p>
 		<h3 id="headers" class="light color-gray">Headers</h3>
-		<p>I reorganized the sizing so that <code>h6</code> is equal in size to <code>p</code>.</p>
+		<p>The header sizes have been reset so that <code>h6</code> is equal in size to the <code>body</code> font size. Dangerous? Probably. It's an experiement so i may undo it depending on how it works in practice.</p>
 		<h1>Lorem ipsum dolor <small>sit amet consectetur adipiscing elit</small></h1>
 		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
 		<h2>Lorem ipsum dolor <small>sit amet consectetur adipiscing elit</small></h2>
@@ -252,6 +254,13 @@ a.activated { color: #FF851B; }
 		<p class="serif">Lorem ipsum <code>code</code> dolor sit amet consectetur adipiscing elit.</p>
 		<p><em>em</em> / <i>i</i></p>
 		<p><strong>strong</strong> / <b>b</b></p>
+		
+		<pre><code>&lt;ul>
+<!----->	&lt;li>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.&lt;/li>
+<!----->	&lt;li>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.&lt;/li>
+<!----->	&lt;li>Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.&lt;/li>
+<!----->	&lt;li>Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.&lt;/li>
+<!----->&lt;/ul></code></pre>
 	</section>
 	
 	<section>
@@ -473,6 +482,37 @@ a.activated { color: #FF851B; }
 	
 	<section>
 		<h2 id="extras" class="light">Extras</h2>
+		
+		<h3 class="light color-gray">Navigation</h3>
+		
+		<p><code>NAV > UL</code></p>
+		<nav>
+			<ul>
+				<li><a href="#0" title="Lorum ipsum dolor sit amet">Lorem</a></li>
+				<li><a href="#0" title="Aliquam tincidunt mauris eu risus">Aliquam</a>
+					<ul>
+						<li><a href="#0" title="Lorum ipsum dolor sit amet">Lorem</a></li>
+						<li><a href="#0" title="Aliquam tincidunt mauris eu risus">Aliquam</a></li>
+						<li><a href="#0" title="Morbi in sem quis dui placerat ornare">Morbi</a></li>
+						<li><a href="#0" title="Praesent dapibus, neque id cursus faucibus">Praesent</a></li>
+						<li><a href="#0" title="Pellentesque fermentum dolor">Pellentesque</a></li>
+					</ul>
+				</li>
+				<li><a href="#0" title="Morbi in sem quis dui placerat ornare">Morbi</a></li>
+				<li><a href="#0" title="Praesent dapibus, neque id cursus faucibus">Praesent</a>
+					<ul>
+						<li><a href="#0" title="Lorum ipsum dolor sit amet">Lorem</a></li>
+						<li><a href="#0" title="Aliquam tincidunt mauris eu risus">Aliquam</a></li>
+						<li><a href="#0" title="Morbi in sem quis dui placerat ornare">Morbi</a></li>
+						<li><a href="#0" title="Praesent dapibus, neque id cursus faucibus">Praesent</a></li>
+						<li><a href="#0" title="Pellentesque fermentum dolor">Pellentesque</a></li>
+					</ul>      
+				</li>
+				<li><a href="#0" title="Pellentesque fermentum dolor">Pellentesque</a></li>
+			</ul>
+		</nav>
+		
+		
 		<h3 id="colors" class="light color-gray">Colors <small>pallette taken from <a href="http://clrs.cc/">clrs.cc</a></small></h3>
 
 		<div class="row add-bot">
@@ -563,9 +603,70 @@ a.activated { color: #FF851B; }
 			</div>
 		</div>
 	</section>
-	<!--
+<!--	
 	<section>
 		<h2 id="sandbox" class="light">Sandbox <small>Just playing around</small></h2>
+		
+		<p>Notification Label <sup class="label curve">hello</sup></p>
+		
+		<div class="scroll-y">
+			<table class="default striped">
+				<caption>Table caption</caption>
+				<thead>
+					<tr>
+						<th>Table Header 1</th>
+						<th>Table Header 2</th>
+						<th>Table Header 3</th>
+						<th>Table Header 4</th>
+						<th>Table Header 5</th>
+						<th>Table Header 6</th>
+						<th>Table Header 7</th>
+						<th>Table Header 8</th>
+						<th>Table Header 9</th>
+					</tr>
+				</thead>
+				<tfoot>
+					<tr>
+						<td colspan="9">Table footer</td>
+					</tr>
+				</tfoot>
+				<tbody>
+					<tr>
+						<td>Division 1</td>
+						<td>Division 2</td>
+						<td>Division 3</td>
+						<td>Division 4</td>
+						<td>Division 5</td>
+						<td>Division 6</td>
+						<td>Division 7</td>
+						<td>Division 8</td>
+						<td>Division 9</td>
+					</tr>
+					<tr>
+						<td>Division 1</td>
+						<td>Division 2</td>
+						<td>Division 3</td>
+						<td>Division 4</td>
+						<td>Division 5</td>
+						<td>Division 6</td>
+						<td>Division 7</td>
+						<td>Division 8</td>
+						<td>Division 9</td>
+					</tr>
+					<tr>
+						<td>Division 1</td>
+						<td>Division 2</td>
+						<td>Division 3</td>
+						<td>Division 4</td>
+						<td>Division 5</td>
+						<td>Division 6</td>
+						<td>Division 7</td>
+						<td>Division 8</td>
+						<td>Division 9</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>	
 		
 		<figure>
 			<img src="http://www.placehold.it/200&text=image" alt="">
@@ -632,33 +733,6 @@ a.activated { color: #FF851B; }
 			<div class="add-bot"><input type="color" /><label>color</label></div>
 		</div>
 		
-		<h3>Unordered List in NAV</h3>
-		<nav>
-			<ul>
-				<li><a href="#0" title="Lorum ipsum dolor sit amet">Lorem</a></li>
-				<li><a href="#0" title="Aliquam tincidunt mauris eu risus">Aliquam</a>
-					<ul>
-						<li><a href="#0" title="Lorum ipsum dolor sit amet">Lorem</a></li>
-						<li><a href="#0" title="Aliquam tincidunt mauris eu risus">Aliquam</a></li>
-						<li><a href="#0" title="Morbi in sem quis dui placerat ornare">Morbi</a></li>
-						<li><a href="#0" title="Praesent dapibus, neque id cursus faucibus">Praesent</a></li>
-						<li><a href="#0" title="Pellentesque fermentum dolor">Pellentesque</a></li>
-					</ul>
-				</li>
-				<li><a href="#0" title="Morbi in sem quis dui placerat ornare">Morbi</a></li>
-				<li><a href="#0" title="Praesent dapibus, neque id cursus faucibus">Praesent</a>
-					<ul>
-						<li><a href="#0" title="Lorum ipsum dolor sit amet">Lorem</a></li>
-						<li><a href="#0" title="Aliquam tincidunt mauris eu risus">Aliquam</a></li>
-						<li><a href="#0" title="Morbi in sem quis dui placerat ornare">Morbi</a></li>
-						<li><a href="#0" title="Praesent dapibus, neque id cursus faucibus">Praesent</a></li>
-						<li><a href="#0" title="Pellentesque fermentum dolor">Pellentesque</a></li>
-					</ul>      
-				</li>
-				<li><a href="#0" title="Pellentesque fermentum dolor">Pellentesque</a></li>
-			</ul>
-		</nav>
-		
 		<p>Lorem <sup>superscript</sup> dolor <sub>subscript</sub> amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. <cite>cite</cite>. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. <acronym title="National Basketball Association">NBA</acronym> Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.  <abbr title="Avenue">AVE</abbr></p>
 	
 		<div class="add-bot">
@@ -710,7 +784,7 @@ a.activated { color: #FF851B; }
 			</li>
 		</menu>
 	</section>
-	-->
+-->	
 	<footer>
 		<p class="text-center color-gray">mixed by jephrei with &#9829;</p>
 	</footer>

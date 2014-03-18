@@ -16,6 +16,9 @@
  *  - clearfix
  *  - etc
  * show/hide in specific views (stacked, small, normal, large, etc.
+ * card (stacked) elements & MAYBE bring back button groups
+ * abbr[title] style
+ * add top stacked rules
  *
  * BUGS:
  * color-* !important not working on links
@@ -23,7 +26,7 @@
  */
 
 @import "normalize.css";
-@import "print.css" print;
+@import "print.css" print; 
 
 *, *:before, *:after {
 	-moz-box-sizing: border-box;
@@ -32,14 +35,11 @@
 }
 
 html {
-	font-family: sans-serif;
-	font-weight: normal;
-	font-size: 16px;
-	line-height: 1.5;	
+	font: 100 16px/1.5 sans-serif;
+	color: #333;
 	-webkit-text-size-adjust: none;
 	-moz-text-size-adjust: none;
 	-ms-text-size-adjust: none;	
-	color: #333;
 }
 
 body {
@@ -50,18 +50,20 @@ body {
 /* Links */
 a { color: #0074D9; text-decoration: none; }
 a:visited { color: #B10DC9; }
-a:hover { text-decoration: underline; /*border-bottom: solid 1px;*/ }
+a:hover { text-decoration: underline; }
 a:active { color: #FF851B;}
 
 /* Images */
 a img {
-	border: none;
-	vertical-align: middle;
+	border: none; /* remove border when inside 'a' element */
+	vertical-align: middle; /* for multiple items in parent 'a' element */
 }
 
 img,
+svg,
 video,
-audio { max-width: 100%; }
+audio,
+canvas { max-width: 100%; }
 
 .crop-stacked { overflow: auto; }
 .crop-stacked img { margin: auto; }
@@ -71,6 +73,7 @@ h1, h2, h3, h4, h5, h6 {
 	margin-bottom: 0.5em;
 }
 
+/* reset so that h6 is equal in size to the body font-size - i may undo */
 h1, .h1 { font-size:2.25em; 	/* 16 * 2.25	=36 */ }
 h2, .h2 { font-size:1.75em; 	/* 16 * 1.75	=28 */ }
 h3, .h3 { font-size:1.5em;  	/* 16 * 1.5		=24 */ }
@@ -85,15 +88,17 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
 	color: #bbb;
 }
 
-p {
-	orphans: 3;
-	widows: 3;
-}
-
 .lrg { font-size: 3em;  /* 16 x 3	= 48 */ }
 
 .heavy { font-weight: 900; }
+/*.normal { font-weight: 400; }*/ /* need better class name */
 .light { font-weight: 100; }
+
+small { line-height: 1; }
+
+.sans-serif { font-family: sans-serif; }
+.serif { font-family: serif; }
+.mono { font-family: monospace; }
 
 /* Other Text */
 /* lists */
@@ -119,8 +124,7 @@ ul.disc { list-style-type: disc; }
 
 /* code */
 .code, code, kbd, pre, samp, var {
-	font-family: monospace;
-	font-style: normal;
+	font: normal monospace;
 	white-space: pre-wrap;
 	white-space: -moz-pre-wrap;
 	white-space: -pre-wrap;
@@ -133,12 +137,19 @@ code {
 	color: #666;
 	background-color: #eee;
 	border: solid 1px #ddd;
-	white-space: nowrap;
 	border-radius: 4px;
+	white-space: nowrap;
 }
 
 pre code {
+	white-space: pre;
 	display: block;
+	word-wrap: initial;
+	padding: .5em 1em;
+	border: solid 1px #ddd;
+    max-width: 100%;
+    overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
 }
 
 /* quote elements */
@@ -148,10 +159,7 @@ blockquote {
 	border-left: solid 2px #ddd;
 }
 
-blockquote footer {
-	/*text-align: right;*/
-}
-
+.pull-quote-left,
 .pull-quote-right { /* not perfectly implemented yet */
 	/* content: attr(title) ": "; */ /* to use content of title attribute for pull quote */
     display: inline-block;
@@ -161,11 +169,9 @@ blockquote footer {
     width: 50%;
 }
 
-small { line-height: 1; }
-
-.sans-serif { font-family: sans-serif; }
-.serif { font-family: serif; }
-.mono { font-family: monospace; }
+.pull-quote-left { 
+    float: left;
+}
 
 hr {
 	border: 0;
@@ -177,8 +183,8 @@ hr {
 
 /* tables */
 table {
-	width: 100%;
-	margin-bottom: 1em;
+	max-width: 100%;
+	margin: 1em 0;
 }
 
 th { text-align: left; }
@@ -226,7 +232,9 @@ table caption {
 
 /* inputs */
 input {
-	max-width: 100%; 
+	max-width: 100%;
+	-webkit-appearance: none;
+	-webkit-border-radius: 0;
 }
 
 select {
@@ -254,7 +262,7 @@ a.button /* for specificity. find a better way to do this? */ {
     font-family: sans-serif;
 	border: none;
     background-color: #ddd;
-	margin: 0;
+	margin-bottom: 0.25em;
     padding: 0.5em 1em;
     color: #333;
     /*font-size: 1em;*/ /* not needed? */
@@ -264,7 +272,7 @@ a.button /* for specificity. find a better way to do this? */ {
     cursor: pointer;
     text-align: center;
     vertical-align: middle;  
-
+		
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none;
@@ -320,8 +328,8 @@ button.disabled,
     line-height: normal;
     font-weight: normal;
     text-decoration: none;
-    /*border: 0;*/
-	border: solid 1px #ddd;
+    border: 0;
+	/*border: solid 1px #ddd;*/
     vertical-align: middle;
 }
 
@@ -581,16 +589,22 @@ nav li > ul li {
 .add-bot-sm { margin-bottom: 0.5em; }
 .add-bot-lrg { margin-bottom: 2em; }
 
-.rem-top { margin-top: 0; }
-
 .add-bot-stacked,
 .add-bot-sm-stacked,
 .add-bot-lrg-stacked { margin-bottom: 0; }
+
+.rem-top { margin-top: 0; }
+.rem-bot { margin-botton: 0; }
 
 .text-pad { padding: 4px 8px; }
 
 .fixed { position: fixed; }
 
+.scroll-y {
+	overflow-x: hidden;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+}
 
 /* border radius */
 .chisel {
@@ -610,14 +624,19 @@ nav li > ul li {
 }
 
 /* fun stuff */
+/* need a better green or nothing at all - disabled for now */
+/*
 ::selection { background: rgba(46,204,64,0.3); }
 ::-moz-selection { background: rgba(46,204,64,0.3); }
+*/
 
 /*== GRID SYSTEM ==*/
 .container {
 	max-width: 960px; /* your normal desktop width */
-	margin: 0 auto;
-	padding: 0 1.4em;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 1.4em;
+	padding-right: 1.4em;
 }
 
 .row {
@@ -635,7 +654,7 @@ nav li > ul li {
 	float: left;
 }
 
-.row.spaced .col { padding: 0 8px; }
+.row.spaced > .col { padding: 0 8px; }
 
 .row.reverse > .col { float: right; }
 

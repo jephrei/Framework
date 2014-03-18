@@ -1,10 +1,15 @@
 @media print {
-    * {
-		background: transparent !important;
+    * { /* maaaaybe i shouldn't be doing this */
+		background: transparent !important; /* i should be shot */
         color: #000 !important;
         box-shadow: none !important;
         text-shadow: none !important;
 	}
 	
 	h1, h2, h3, h4, h5, h6 { page-break-inside: never; }
+	
+	p {
+		orphans: 3;
+		widows: 3;
+	}
 }

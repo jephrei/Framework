@@ -5,9 +5,9 @@ This is a personal framework. Things will be ugly and/or [broken](http://motherf
 Yes. It's an unorganized pile of foo but it's mine and I'm enjoying myself. You should make one too.
 
 ##Basics Ideas
-* Semantic classes
 * Consitency rather than resets
-* Modular design for multiple use cases
+* Semantic classes
+* Modular design for multiple use cases (don't assume too much)
 * Keep it simple, stupid
 
 ##Key Features
@@ -20,7 +20,9 @@ Yes. It's an unorganized pile of foo but it's mine and I'm enjoying myself. You 
 ###To Do
 * Form Elements
 * Split CSS to multiple files
+* Flexbox (when something more final is decided on)
 * Cross-browser testing
+* Minify
 
 ###Maybe
 * Basic Form validation
@@ -29,8 +31,6 @@ Yes. It's an unorganized pile of foo but it's mine and I'm enjoying myself. You 
 * Dynamic, inheritable color themes
 * Icons
 * Minimal animations
-* Minified version
-* Flexbox (when something more final is decided on)
 * LESS (when my LESS knowledge gets better)
 
 ##Compatibility
