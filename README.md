@@ -1,5 +1,5 @@
-#Framework v0.1&alpha;
-This is a personal framework. Things will be ugly and/or [broken](http://motherfuckingwebsite.com). The final scope isn't fully realized yet, but I have my ideas. I'll probably get distracted along the way.
+#Framework v0.2&alpha;
+This is a personal framework. Things will be ugly and/or [broken](http://motherfuckingwebsite.com). The final scope isn't fully realized yet, but I have my ideas. I'll probably get distracted along the way. Because this is alpha there are notes to myself and you everywhere. It's kinda messy in here.
 
 ##Another framework?
 Yes. It's an unorganized pile of foo but it's mine and I'm enjoying myself. You should make one too.
@@ -7,7 +7,7 @@ Yes. It's an unorganized pile of foo but it's mine and I'm enjoying myself. You 
 ##Basics Ideas
 * Consitency rather than resets
 * Semantic classes
-* Modular design for multiple use cases (don't assume too much)
+* Modular design for multiple use cases (trying not to assume too much)
 * Keep it simple, stupid
 
 ##Key Features

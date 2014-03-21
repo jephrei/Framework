@@ -10,13 +10,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <!--<link rel="shortcut icon" href="favicon.ico">-->
 
-<!-- test of the ionicon icon font set -->
-<!--<link href="http://code.ionicframework.com/ionicons/1.4.1/css/ionicons.min.css" rel="stylesheet" type="text/css" />-->
-
-<link href="css/main.css" rel="stylesheet" type="text/css" />
+<link href="css/main.css" rel="stylesheet" />
 
 <!--[if lt IE 9]>
-<link href="css/old.css" rel="stylesheet" type="text/css" /><!-- a foolish attempt to play nice -->
+<link href="css/old.css" rel="stylesheet" /><!-- a foolish attempt to play nice -->
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 <style>
@@ -55,6 +52,7 @@ a.activated { color: #FF851B; }
 					<ul>
 						<li><a href="#images">Images</a></li>
 						<li><a href="#tables">Tables</a></li>
+						<li><a href="#navigation">Navigation</a></li>
 						<li><a href="#buttons">Buttons</a></li>
 						<li><a href="#forms">Form Elements</a></li>
 					</ul>
@@ -75,57 +73,53 @@ a.activated { color: #FF851B; }
 <div class="container">
 	<section>
 		<h1 class="lrg add-top-lrg">framework<sup class="light color-blue serif"><em>&alpha;</em></sup> <small class="light">a minimal, modular css template.</small></h1>
-		<a href="https://github.com/jephrei/Framework" class="button button-medium chisel bg-blue color-white">Github</a> <a href="https://github.com/jephrei/Framework/archive/master.zip" class="button button-medium chisel bg-blue color-white">Download</a>
+		<p>
+			<a href="https://github.com/jephrei/Framework" class="button chisel bg-black color-white">Github</a> <a href="https://github.com/jephrei/Framework/archive/master.zip" class="button chisel bg-blue color-white">Download</a> <a href="https://github.com/jephrei/Framework/issues" class="button bg-red color-white chisel">Issues</a>
+		</p>
+		<p>
+			
+		</p>		
 		<p>This is a personal framework that I would love to get used, but I highly suggest you make your own.</p>
 	</section>
 	<section>
-		<h2 id="grid" class="light">The Grid</h2>
-		<p>The grid system is based on fractions. 1/2, 2/3, 5/8, etc. They can be used in any combination, reversed in mobile, and with or without gutters. There's no margin trickery here either. That means a column with the class <code>.span-1-2</code> is exactly 50% wide.</p>
+		<h2 id="grid">The Grid</h2>
+		<p>The grid system is based on fractions. 1/2, 2/3, 5/8, etc. They can be nested, used in any combination, reversed in mobile, with or without gutters. There's no margin trickery here either. That means a column with the class <code>.span-1-2</code> is exactly 50% wide.</p>
 		<p><code>.row > .col</code></p>
 		<div class="row bg-light add-bot">
-			<div class="col span-1-8 bg-light-gray text-pad code">.col.span-1-8</div>
+			<div class="col bg-light-gray text-pad">.col</div>
 		</div>
 		<div class="row bg-light add-bot">
-			<div class="col span-1-7 bg-light-gray text-pad code">.col.span-1-7</div>
+			<div class="col span-1-8 bg-light-gray text-pad">.col.span-1-8</div>
 		</div>
 		<div class="row bg-light add-bot">
-			<div class="col span-1-6 bg-light-gray text-pad code">.col.span-1-6</div>
+			<div class="col span-4-6 skip-1-6 bg-light-gray text-pad">.col.span-4-6.skip-1-6</div>
 		</div>
 		<div class="row bg-light add-bot">
-			<div class="col span-1-5 bg-light-gray text-pad code">.col.span-1-5</div>
-		</div>
-		<div class="row bg-light add-bot">
-			<div class="col span-1-4 bg-light-gray text-pad code">.col.span-1-4</div>
-		</div>
-		<div class="row bg-light add-bot">
-			<div class="col span-1-3 bg-light-gray text-pad code">.col.span-1-3</div>
-		</div>
-		<div class="row bg-light add-bot">
-			<div class="col span-1-2 bg-light-gray text-pad code">.col.span-1-2</div>
-		</div>
-		<div class="row bg-light add-bot">
-			<div class="col bg-light-gray text-pad code">.col</div>
-		</div>
-		<div class="row bg-light add-bot">
-			<div class="col span-4-6 skip-1-6 bg-light-gray text-pad code">.col.span-4-6.skip-1-6</div>
+			<div class="col span-2-8 bg-light-gray text-pad">.col.span-4-6.skip-1-6</div>
+			<div class="col span-5-8 skip-1-8 bg-light-gray text-pad">.col.span-4-6.skip-1-6</div>
 		</div>
 		<p>Rows with gutters (<code>.row.spaced</code>) have a negative margin on each side and applies a padding to each of it's children. So pseudo classes or extra <code>.first</code> and <code>.last</code> type classes aren't necessary.</p>
 		<p><code>.row.spaced > .col</code></p>
 		<div class="row spaced add-bot">
-			<div class="col span-1-3 code"><div class="bg-light-gray text-pad">.col.span-1-3</div></div>
-			<div class="col span-1-3 code"><div class="bg-light-gray text-pad">.col.span-1-3</div></div>
-			<div class="col span-1-3 code"><div class="bg-light-gray text-pad">.col.span-1-3</div></div>
-		</div>
+			<div class="col span-1-3"><div class="bg-light-gray text-pad">.col.span-1-3</div></div>
+			<div class="col span-1-3"><div class="bg-light-gray text-pad">.col.span-1-3</div></div>
+			<div class="col span-1-3"><div class="bg-light-gray text-pad">.col.span-1-3</div></div>
+		</div>		
 		<p><code>.row.reverse > .col</code></p>
 		<div class="row reverse spaced add-bot">
 			<div class="col span-1-2"><div class="bg-light-gray text-pad">2nd in desktop, 1st in mobile</div></div>
 			<div class="col span-1-2"><div class="bg-light-gray text-pad">1st in desktop, 2nd in mobile</div></div>
 		</div>
+		
+		<!--
+		<h3 id="container" class="light color-gray">The Container</h3>
+		<p>Because the rows themselves are a full width container, aptly named <code>.container</code>, is needed to control the width of the content.</p>
+		-->
 	</section>
 	
 	<section>
-		<h2 id="typography" class="light">Typography</h2>
-		<p>All of the font sizes are <code>em</code> based so they scale with the body <code>font-size</code> percentage which, in turn, changes with media queries.</p>
+		<h2 id="typography">Typography</h2>
+		<p>The font families chosen are serif, sans-serif, and monospace...that's it. Browsers and the operating systems they live in pick the best looking font they can if it's not specified. The font sizes are <code>em</code> based so they scale with the body <code>font-size</code> percentage which, in turn, changes with media queries.</p>
 		<h3 id="headers" class="light color-gray">Headers</h3>
 		<p>The header sizes have been reset so that <code>h6</code> is equal in size to the <code>body</code> font size. Dangerous? Probably. It's an experiement so i may undo it depending on how it works in practice.</p>
 		<h1>Lorem ipsum dolor <small>sit amet consectetur adipiscing elit</small></h1>
@@ -142,17 +136,17 @@ a.activated { color: #FF851B; }
 		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
 		
 		<h3 id="weight" class="light color-gray">Weight</h3>
-		<p class="code">.heavy</p>
+		<p>.heavy</p>
 		<p class="heavy">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
 		
-		<p class="code">.light</p>
+		<p>.light</p>
 		<p class="light">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
 		
 		<h3 id="lists" class="light color-gray">Lists</h3>
 		
 		<div class="row spaced">
 			<div class="col span-1-3">
-				<p class="code">ul</p>
+				<p>ul</p>
 				<ul>
 					<li>Lorem ipsum</li>
 					<li>Dolor sit amet</li>
@@ -166,7 +160,7 @@ a.activated { color: #FF851B; }
 				</ul>
 			</div>
 			<div class="col span-1-3">
-				<p class="code">ol</p>
+				<p>ol</p>
 				<ol>
 					<li>Lorem ipsum</li>
 					<li>Dolor sit amet</li>
@@ -180,7 +174,7 @@ a.activated { color: #FF851B; }
 				</ol>
 			</div>
 			<div class="col span-1-3">
-				<p class="code">ol.long</p>
+				<p>ol.long</p>
 				<ol class="long" start="99">
 					<li>Lorem ipsum</li>
 					<li>Dolor sit amet</li>
@@ -197,7 +191,7 @@ a.activated { color: #FF851B; }
 		
 		<div class="row spaced">
 			<div class="col span-1-3">
-				<p class="code">ol.outside</p>
+				<p>ol.outside</p>
 				<ol class="outside">
 					<li>Lorem ipsum</li>
 					<li>Dolor sit amet</li>
@@ -205,7 +199,7 @@ a.activated { color: #FF851B; }
 				</ol>
 			</div>
 			<div class="col span-1-3">
-				<p class="code">ul.blank</p>
+				<p>ul.blank</p>
 				<ul class="blank">
 					<li>Lorem ipsum</li>
 					<li>Dolor sit amet</li>
@@ -213,7 +207,7 @@ a.activated { color: #FF851B; }
 				</ul>
 			</div>
 			<div class="col span-1-3">
-				<p class="code">ul.square</p>
+				<p>ul.square</p>
 				<ul class="square">
 					<li>Lorem ipsum</li>
 					<li>Dolor sit amet</li>
@@ -223,18 +217,23 @@ a.activated { color: #FF851B; }
 		</div>
 		
 		<h3 id="quotes" class="light color-gray">Blockquotes & Pull Quotes</h3>
-		<p class="code">blockquote</p>
+		<p>blockquote</p>
 		<blockquote>
 			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
 		</blockquote>
-		
+	
 		<blockquote cite="http://example.com/">
 			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
 			<footer>&mdash; <a href="http://example.com/">someone latin</a></footer>
 		</blockquote>
+
+		<p>blockquote.outside</p>
+		<blockquote class="outside">
+			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+		</blockquote>
 		
-		<p class="code">.pull-quote-right</p>
-		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. <span class="pull-quote-right">Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est.</span> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+		<p>.pull-quote-right</p>
+		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. <span class="pull-quote-right" data-pullquote="Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est.">Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est.</span> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
 		
 		<h3 id="links" class="light color-gray">Links</h3>
 		<!-- The 'visited' and 'hovered' classes are not part of the framework. they force the styles for demo page viewing only -->
@@ -264,23 +263,23 @@ a.activated { color: #FF851B; }
 	</section>
 	
 	<section>
-		<h2 id="elements" class="light">Elements</h2>
+		<h2 id="elements">Elements</h2>
 		<h3 id="images" class="light color-gray">Images</h3>
 		<div class="row spaced">
 			<div class="col span-1-3">
-				<p class="code">.crop-stacked img</p>
+				<p>.crop-stacked img</p>
 				<div class="crop-stacked add-bot">
 					<img src="http://www.placehold.it/420&text=image" />
 				</div>		
 			</div>
 			<div class="col span-1-3">
-				<p class="code">.flush-stacked img</p>
+				<p>.flush-stacked img</p>
 				<div class="flush-stacked add-bot">
 					<img src="http://www.placehold.it/420&text=image" />
 				</div>
 			</div>
 			<div class="col span-1-3">
-				<p class="code">.flush-stacked.crop-stacked img</p>
+				<p>.flush-stacked.crop-stacked img</p>
 				<div class="flush-stacked crop-stacked add-bot">
 					<img src="http://www.placehold.it/420&text=image" />
 				</div>
@@ -289,7 +288,7 @@ a.activated { color: #FF851B; }
 
 		<h3 id="tables" class="light color-gray">Tables</h3>
 		
-		<p class="code">table</p>
+		<p>table</p>
 		<table>
 			<caption>Table caption</caption>
 			<thead>
@@ -323,7 +322,7 @@ a.activated { color: #FF851B; }
 			</tbody>	
 		</table>
 		
-		<p class="code">table.default</p>
+		<p>table.default</p>
 		<table class="default">
 			<caption>Table caption</caption>
 			<thead>
@@ -357,7 +356,7 @@ a.activated { color: #FF851B; }
 			</tbody>
 		</table>
 		
-		<p class="code">table.default.striped</p>
+		<p>table.default.striped</p>
 		<table class="default striped">
 			<caption>Table caption</caption>
 			<thead>
@@ -391,12 +390,51 @@ a.activated { color: #FF851B; }
 			</tbody>
 		</table>
 		
+		<h3 id="navigation" class="light color-gray">Navigation</h3>
+		
+		<p><code>NAV > UL</code></p>
+		<nav>
+			<ul>
+				<li><a href="#0" title="Lorum ipsum dolor sit amet">Lorem</a></li>
+				<li><a href="#0" title="Aliquam tincidunt mauris eu risus">Aliquam</a>
+					<ul>
+						<li><a href="#0" title="Lorum ipsum dolor sit amet">Lorem</a></li>
+						<li><a href="#0" title="Aliquam tincidunt mauris eu risus">Aliquam</a></li>
+						<li><a href="#0" title="Morbi in sem quis dui placerat ornare">Morbi</a>
+							<ul>
+								<li><a href="#0" title="Lorum ipsum dolor sit amet">Lorem</a></li>
+								<li><a href="#0" title="Aliquam tincidunt mauris eu risus">Aliquam</a></li>
+								<li><a href="#0" title="Morbi in sem quis dui placerat ornare">Morbi</a></li>
+								<li><a href="#0" title="Praesent dapibus, neque id cursus faucibus">Praesent</a></li>
+								<li><a href="#0" title="Pellentesque fermentum dolor">Pellentesque</a></li>
+							</ul>
+						</li>
+						<li><a href="#0" title="Praesent dapibus, neque id cursus faucibus">Praesent</a></li>
+						<li><a href="#0" title="Pellentesque fermentum dolor">Pellentesque</a></li>
+					</ul>
+				</li>
+				<li><a href="#0" title="Morbi in sem quis dui placerat ornare">Morbi</a></li>
+				<li><a href="#0" title="Praesent dapibus, neque id cursus faucibus">Praesent</a>
+					<ul>
+						<li><a href="#0" title="Lorum ipsum dolor sit amet">Lorem</a></li>
+						<li><a href="#0" title="Aliquam tincidunt mauris eu risus">Aliquam</a></li>
+						<li><a href="#0" title="Morbi in sem quis dui placerat ornare">Morbi</a></li>
+						<li><a href="#0" title="Praesent dapibus, neque id cursus faucibus">Praesent</a></li>
+						<li><a href="#0" title="Pellentesque fermentum dolor">Pellentesque</a></li>
+					</ul>      
+				</li>
+				<li><a href="#0" title="Pellentesque fermentum dolor">Pellentesque</a></li>
+			</ul>
+		</nav>
+		
+		
 		<h3 id="buttons" class="light color-gray">Buttons</h3>
+		<p>The buttons were designed to have some basic styles but can be easily overridden. Be sure to add <code>tabindex="0"</code> to any elements that aren't natively clickable for accessability.</p>	
 		<div class="add-bot">
 			<button>button</button>
 			<a href="#0" class="button">a.button</a>
 			<div class="button" tabindex="0">div.button</div><!-- tabindex="0" added to make DIV "tabbable" -->
-			<input class="button" type="button" value="input.button" />
+			<input type="button" value="input.button" />
 			<!--<input type="submit" value="input[type='submit']" />-->
 		</div>
 		
@@ -404,13 +442,19 @@ a.activated { color: #FF851B; }
 			<button class="disabled">button</button>
 			<a href="#0" class="button disabled">a.button</a>
 			<div class="button disabled" tabindex="0">div.button</div><!-- tabindex="0" added to make DIV "tabbable" -->
-			<input type="button" value="input.button" class="button disabled" />
+			<input type="button" value="input.button" class="disabled" />
 			<!--<input type="submit" value="Submit Button" class="disabled" />	-->
 		</div>
 		
 		<div class="add-bot">
-			<button>Double<br />Line</button>
+			<button>Multi<br />Line</button>
 		</div>
+		
+		<!-- not TOTALLY sure if this is necessary. mostly introducted to not have a BR tag. -->
+		<div class="add-bot">
+			<button>Button Text<span class="button-subtext">Sub-text Example</span></button>
+		</div>
+			
 		
 		<div class="add-bot">
 			<button class="button-large">.button-large</button>
@@ -481,37 +525,7 @@ a.activated { color: #FF851B; }
 	</section>
 	
 	<section>
-		<h2 id="extras" class="light">Extras</h2>
-		
-		<h3 class="light color-gray">Navigation</h3>
-		
-		<p><code>NAV > UL</code></p>
-		<nav>
-			<ul>
-				<li><a href="#0" title="Lorum ipsum dolor sit amet">Lorem</a></li>
-				<li><a href="#0" title="Aliquam tincidunt mauris eu risus">Aliquam</a>
-					<ul>
-						<li><a href="#0" title="Lorum ipsum dolor sit amet">Lorem</a></li>
-						<li><a href="#0" title="Aliquam tincidunt mauris eu risus">Aliquam</a></li>
-						<li><a href="#0" title="Morbi in sem quis dui placerat ornare">Morbi</a></li>
-						<li><a href="#0" title="Praesent dapibus, neque id cursus faucibus">Praesent</a></li>
-						<li><a href="#0" title="Pellentesque fermentum dolor">Pellentesque</a></li>
-					</ul>
-				</li>
-				<li><a href="#0" title="Morbi in sem quis dui placerat ornare">Morbi</a></li>
-				<li><a href="#0" title="Praesent dapibus, neque id cursus faucibus">Praesent</a>
-					<ul>
-						<li><a href="#0" title="Lorum ipsum dolor sit amet">Lorem</a></li>
-						<li><a href="#0" title="Aliquam tincidunt mauris eu risus">Aliquam</a></li>
-						<li><a href="#0" title="Morbi in sem quis dui placerat ornare">Morbi</a></li>
-						<li><a href="#0" title="Praesent dapibus, neque id cursus faucibus">Praesent</a></li>
-						<li><a href="#0" title="Pellentesque fermentum dolor">Pellentesque</a></li>
-					</ul>      
-				</li>
-				<li><a href="#0" title="Pellentesque fermentum dolor">Pellentesque</a></li>
-			</ul>
-		</nav>
-		
+		<h2 id="extras">Extras</h2>
 		
 		<h3 id="colors" class="light color-gray">Colors <small>pallette taken from <a href="http://clrs.cc/">clrs.cc</a></small></h3>
 
@@ -543,42 +557,46 @@ a.activated { color: #FF851B; }
 		
 		<h3 id="div-styles" class="light color-gray">DIV Styles</h3>
 		
-		<p class="code">.shadow</p>
-		<div class="shadow bg-light text-pad add-bot">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</div>
+		<p>.well</p>
+		<div class="well bg-white text-pad add-bot">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</div>
+
+		<p>.shadow</p>
+		<div class="shadow bg-white text-pad add-bot">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</div>
 		
-		<p class="code">.well</p>
-		<div class="well bg-light text-pad add-bot">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</div>
+		<p>.deep-shadow</p>
+		<div class="deep-shadow bg-white text-pad add-bot">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</div>
+	
 		
-		<p class="code">.alert</p>
+		<p>.alert</p>
 		<div class="alert add-bot">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</div>
 		
-		<div class="alert bg-red add-bot code">.alert.bg-red</div>
-		<div class="alert bg-orange color-white add-bot code">.alert.bg-Orange</div>
-		<div class="alert bg-yellow add-bot code">.alert.bg-yellow</div>	
-		<div class="alert bg-green add-bot code">.alert.bg-green</div>
-		<div class="alert bg-blue color-white add-bot code">.alert.bg-blue</div>
-		<div class="alert bg-purple color-white add-bot code">.alert.bg-Purple</div>
+		<div class="alert bg-red add-bot">.alert.bg-red</div>
+		<div class="alert bg-orange color-white add-bot">.alert.bg-Orange</div>
+		<div class="alert bg-yellow add-bot">.alert.bg-yellow</div>	
+		<div class="alert bg-green add-bot">.alert.bg-green</div>
+		<div class="alert bg-blue color-white add-bot">.alert.bg-blue</div>
+		<div class="alert bg-purple color-white add-bot">.alert.bg-Purple</div>
 		
 		<!--
-		<div class="alert bg-red add-bot code">.alert.bg-red</div>
-		<div class="alert bg-aqua add-bot code">.alert.bg-aqua</div>
-		<div class="alert bg-blue color-white add-bot code">.alert.bg-blue</div>
-		<div class="alert bg-navy color-white add-bot code">.alert.bg-navy</div>
-		<div class="alert bg-teal add-bot code">.alert.bg-teal</div>
-		<div class="alert bg-green add-bot code">.alert.bg-green</div>
-		<div class="alert bg-olive add-bot code">.alert.bg-olive</div>
-		<div class="alert bg-lime add-bot code">.alert.bg-lime</div>
-		<div class="alert bg-yellow add-bot code">.alert.bg-yellow</div>
-		<div class="alert bg-orange color-white add-bot code">.alert.bg-Orange</div>
-		<div class="alert bg-red color-white add-bot code">.alert.bg-Red</div>
-		<div class="alert bg-fuchsia color-white add-bot code">.alert.bg-Fuchsia</div>
-		<div class="alert bg-purple color-white add-bot code">.alert.bg-Purple</div>
-		<div class="alert bg-maroon color-white add-bot code">.alert.bg-Maroon</div>
+		<div class="alert bg-red add-bot">.alert.bg-red</div>
+		<div class="alert bg-aqua add-bot">.alert.bg-aqua</div>
+		<div class="alert bg-blue color-white add-bot">.alert.bg-blue</div>
+		<div class="alert bg-navy color-white add-bot">.alert.bg-navy</div>
+		<div class="alert bg-teal add-bot">.alert.bg-teal</div>
+		<div class="alert bg-green add-bot">.alert.bg-green</div>
+		<div class="alert bg-olive add-bot">.alert.bg-olive</div>
+		<div class="alert bg-lime add-bot">.alert.bg-lime</div>
+		<div class="alert bg-yellow add-bot">.alert.bg-yellow</div>
+		<div class="alert bg-orange color-white add-bot">.alert.bg-Orange</div>
+		<div class="alert bg-red color-white add-bot">.alert.bg-Red</div>
+		<div class="alert bg-fuchsia color-white add-bot">.alert.bg-Fuchsia</div>
+		<div class="alert bg-purple color-white add-bot">.alert.bg-Purple</div>
+		<div class="alert bg-maroon color-white add-bot">.alert.bg-Maroon</div>
 		-->
 		
 		<h3 id="positioning" class="light color-gray">Element Positioning</h3>
 		
-		<p class="code">.add-bot</p>
+		<p>.add-bot</p>
 		<div class="row add-bot">
 			<div class="col span-1-3 bg-gray">
 				<div class="text-pad code bg-light add-bot-sm">.add-bot-sm</div>
@@ -590,7 +608,7 @@ a.activated { color: #FF851B; }
 				<div class="text-pad code bg-light add-bot-lrg">.add-bot-lrg</div>
 			</div>
 		</div>
-		<p><span class="code">.add-bot</span> is relative too!</p>
+		<p><span>.add-bot</span> is relative too!</p>
 		<div class="row add-bot">
 			<div class="col span-1-3 bg-gray">
 				<div class="h1 text-pad code bg-light add-bot-sm">.h1</div>
@@ -603,9 +621,9 @@ a.activated { color: #FF851B; }
 			</div>
 		</div>
 	</section>
-<!--	
+	
 	<section>
-		<h2 id="sandbox" class="light">Sandbox <small>Just playing around</small></h2>
+		<h2 id="sandbox">Sandbox <small>Just playing around</small></h2>
 		
 		<p>Notification Label <sup class="label curve">hello</sup></p>
 		
@@ -784,7 +802,7 @@ a.activated { color: #FF851B; }
 			</li>
 		</menu>
 	</section>
--->	
+	
 	<footer>
 		<p class="text-center color-gray">mixed by jephrei with &#9829;</p>
 	</footer>
