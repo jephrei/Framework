@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    
+
 <head>
 <meta charset="utf-8" />
 <title>Framework Demo Page</title>
@@ -20,12 +20,11 @@
 /*
  * these embedded styles are not part of framework
  * and are specific to this demo page only
- * 
+ *
  */
-
 a.normal { color: #0074D9; }
 a.visited { color: #B10DC9; }
-a.hovered { color: #0074D9; text-decoration: underline; /*border-bottom: solid 1px;*/ }
+a.hovered { color: #0074D9; text-decoration: underline; }
 a.activated { color: #FF851B; }
 </style>
 
@@ -34,7 +33,7 @@ a.activated { color: #FF851B; }
 <body>
 <header>
 	<div class="container">
-		<nav class="add-top">
+		<nav class="horiz add-top">
 			<ul>
 				<li class="flush"><a href="#grid">Grid</a></li>
 				<li><a href="#typography">Typography</a>
@@ -44,7 +43,7 @@ a.activated { color: #FF851B; }
 						<li><a href="#lists">Lists</a></li>
 						<li><a href="#quotes">Blockquotes & Pullquotes</a></li>
 						<li><a href="#links">Links</a></li>
-						<li><a href="#definitions">Definition Lists</a></li>
+						<!--<li><a href="#definitions">Definition Lists</a></li>-->
 						<li><a href="#misc">Misc</a></li>
 					</ul>
 				</li>
@@ -71,742 +70,623 @@ a.activated { color: #FF851B; }
 </header>
 
 <div class="container">
-	<section>
-		<h1 class="lrg add-top-lrg">framework<sup class="light color-blue serif"><em>&alpha;</em></sup> <small class="light">a minimal, modular css template.</small></h1>
-		<p>
-			<a href="https://github.com/jephrei/Framework" class="button chisel bg-black color-white">Github</a> <a href="https://github.com/jephrei/Framework/archive/master.zip" class="button chisel bg-blue color-white">Download</a> <a href="https://github.com/jephrei/Framework/issues" class="button bg-red color-white chisel">Issues</a>
-		</p>
-		<p>
-			
-		</p>		
-		<p>This is a personal framework that I would love to get used, but I highly suggest you make your own.</p>
-	</section>
-	<section>
-		<h2 id="grid">The Grid</h2>
-		<p>The grid system is based on fractions. 1/2, 2/3, 5/8, etc. They can be nested, used in any combination, reversed in mobile, with or without gutters. There's no margin trickery here either. That means a column with the class <code>.span-1-2</code> is exactly 50% wide.</p>
-		<p><code>.row > .col</code></p>
-		<div class="row bg-light add-bot">
-			<div class="col bg-light-gray text-pad">.col</div>
-		</div>
-		<div class="row bg-light add-bot">
-			<div class="col span-1-8 bg-light-gray text-pad">.col.span-1-8</div>
-		</div>
-		<div class="row bg-light add-bot">
-			<div class="col span-4-6 skip-1-6 bg-light-gray text-pad">.col.span-4-6.skip-1-6</div>
-		</div>
-		<div class="row bg-light add-bot">
-			<div class="col span-2-8 bg-light-gray text-pad">.col.span-4-6.skip-1-6</div>
-			<div class="col span-5-8 skip-1-8 bg-light-gray text-pad">.col.span-4-6.skip-1-6</div>
-		</div>
-		<p>Rows with gutters (<code>.row.spaced</code>) have a negative margin on each side and applies a padding to each of it's children. So pseudo classes or extra <code>.first</code> and <code>.last</code> type classes aren't necessary.</p>
-		<p><code>.row.spaced > .col</code></p>
-		<div class="row spaced add-bot">
-			<div class="col span-1-3"><div class="bg-light-gray text-pad">.col.span-1-3</div></div>
-			<div class="col span-1-3"><div class="bg-light-gray text-pad">.col.span-1-3</div></div>
-			<div class="col span-1-3"><div class="bg-light-gray text-pad">.col.span-1-3</div></div>
-		</div>		
-		<p><code>.row.reverse > .col</code></p>
-		<div class="row reverse spaced add-bot">
-			<div class="col span-1-2"><div class="bg-light-gray text-pad">2nd in desktop, 1st in mobile</div></div>
-			<div class="col span-1-2"><div class="bg-light-gray text-pad">1st in desktop, 2nd in mobile</div></div>
-		</div>
-		
-		<!--
-		<h3 id="container" class="light color-gray">The Container</h3>
-		<p>Because the rows themselves are a full width container, aptly named <code>.container</code>, is needed to control the width of the content.</p>
-		-->
-	</section>
-	
-	<section>
-		<h2 id="typography">Typography</h2>
-		<p>The font families chosen are serif, sans-serif, and monospace...that's it. Browsers and the operating systems they live in pick the best looking font they can if it's not specified. The font sizes are <code>em</code> based so they scale with the body <code>font-size</code> percentage which, in turn, changes with media queries.</p>
-		<h3 id="headers" class="light color-gray">Headers</h3>
-		<p>The header sizes have been reset so that <code>h6</code> is equal in size to the <code>body</code> font size. Dangerous? Probably. It's an experiement so i may undo it depending on how it works in practice.</p>
-		<h1>Lorem ipsum dolor <small>sit amet consectetur adipiscing elit</small></h1>
-		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-		<h2>Lorem ipsum dolor <small>sit amet consectetur adipiscing elit</small></h2>
-		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-		<h3>Lorem ipsum dolor <small>sit amet consectetur adipiscing elit</small></h3>
-		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-		<h4>Lorem ipsum dolor <small>sit amet consectetur adipiscing elit</small></h4>
-		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-		<h5>Lorem ipsum dolor <small>sit amet consectetur adipiscing elit</small></h5>
-		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-		<h6>Lorem ipsum dolor <small>sit amet consectetur adipiscing elit</small></h6>
-		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-		
-		<h3 id="weight" class="light color-gray">Weight</h3>
-		<p>.heavy</p>
-		<p class="heavy">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-		
-		<p>.light</p>
-		<p class="light">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-		
-		<h3 id="lists" class="light color-gray">Lists</h3>
-		
-		<div class="row spaced">
-			<div class="col span-1-3">
-				<p>ul</p>
-				<ul>
-					<li>Lorem ipsum</li>
-					<li>Dolor sit amet</li>
-					<li>Consectetur adipiscing elit
-						<ul>
-							<li>Fusce vitae interdum mi</li>
-							<li>Pellentesque tristique</li>
-							<li>Tellus nec eleifend molestie</li>
-						</ul>	
-					</li>
-				</ul>
-			</div>
-			<div class="col span-1-3">
-				<p>ol</p>
-				<ol>
-					<li>Lorem ipsum</li>
-					<li>Dolor sit amet</li>
-					<li>Consectetur adipiscing elit
-						<ol>
-							<li>Fusce vitae interdum mi</li>
-							<li>Pellentesque tristique</li>
-							<li>Tellus nec eleifend molestie</li>
-						</ol>	
-					</li>
-				</ol>
-			</div>
-			<div class="col span-1-3">
-				<p>ol.long</p>
-				<ol class="long" start="99">
-					<li>Lorem ipsum</li>
-					<li>Dolor sit amet</li>
-					<li>Consectetur adipiscing elit
-						<ol>
-							<li>Fusce vitae interdum mi</li>
-							<li>Pellentesque tristique</li>
-							<li>Tellus nec eleifend molestie</li>
-						</ol>	
-					</li>
-				</ol>
-			</div>
-		</div>
-		
-		<div class="row spaced">
-			<div class="col span-1-3">
-				<p>ol.outside</p>
-				<ol class="outside">
-					<li>Lorem ipsum</li>
-					<li>Dolor sit amet</li>
-					<li>Consectetur adipiscing elit</li>
-				</ol>
-			</div>
-			<div class="col span-1-3">
-				<p>ul.blank</p>
-				<ul class="blank">
-					<li>Lorem ipsum</li>
-					<li>Dolor sit amet</li>
-					<li>Consectetur adipiscing elit</li>
-				</ul>
-			</div>
-			<div class="col span-1-3">
-				<p>ul.square</p>
-				<ul class="square">
-					<li>Lorem ipsum</li>
-					<li>Dolor sit amet</li>
-					<li>Consectetur adipiscing elit</li>
-				</ul>
-			</div>
-		</div>
-		
-		<h3 id="quotes" class="light color-gray">Blockquotes & Pull Quotes</h3>
-		<p>blockquote</p>
-		<blockquote>
-			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-		</blockquote>
-	
-		<blockquote cite="http://example.com/">
-			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-			<footer>&mdash; <a href="http://example.com/">someone latin</a></footer>
-		</blockquote>
 
-		<p>blockquote.outside</p>
-		<blockquote class="outside">
-			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-		</blockquote>
-		
-		<p>.pull-quote-right</p>
-		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. <span class="pull-quote-right" data-pullquote="Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est.">Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est.</span> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
-		
-		<h3 id="links" class="light color-gray">Links</h3>
-		<!-- The 'visited' and 'hovered' classes are not part of the framework. they force the styles for demo page viewing only -->
-		<p><a href="#0" class="normal">A normal link</a></p>
-		<p><a href="#0" class="visited">A visited link</a></p>
-		<p><a href="#0" class="hovered">A hovered link</a></p>
-		<p><a href="#0" class="activated">An activated link</a></p>
-		
-		<h3 id="definitions" class="light color-gray">Definition Lists</h3>
-		<dl>
-			<dt>dt Definition List Title</dt>
-			<dd>dd This is a definition list division.</dd>
-		</dl>
-		
-		<h3 id="misc" class="light color-gray">Misc</h3>
-		<p class="sans-serif">Lorem ipsum <code>code</code> dolor sit amet consectetur adipiscing elit.</p>
-		<p class="serif">Lorem ipsum <code>code</code> dolor sit amet consectetur adipiscing elit.</p>
-		<p><em>em</em> / <i>i</i></p>
-		<p><strong>strong</strong> / <b>b</b></p>
-		
-		<pre><code>&lt;ul>
+	<h1 class="text-center lrg add-top-lrg">framework<sup class="light color-blue serif"><em>&alpha;</em></sup><br/><small class="light">a minimal, modular css template.</small></h1>
+	<p class="text-center add-bot-lrg">
+		<a href="https://github.com/jephrei/Framework" class="button chisel bg-dark color-white">Github</a>
+		<a href="https://github.com/jephrei/Framework/archive/master.zip" class="button chisel bg-blue color-white">Download</a>
+		<a href="https://github.com/jephrei/Framework/issues" class="button bg-green color-white chisel">Issues</a>
+	</p>
+	<p>This is a personal framework that was made for many reasons. Overall, I wanted to design a minimal (not necessarily small) framework that could apply to multiple use cases. I would love this to get used, but I highly suggest you make your own. This is alpha so things will change and/or break.</p>
+<!--  -->
+	<h2 id="grid">The Grid</h2>
+	<p>It can be nested, the columns used in any combination, reversed in mobile, with or without gutters. It's a damn fine grid.</p>
+
+	<h3 id="columns" class="light color-gray">Columns</h3>
+	<p>The system is based on fractions. 1/2, 2/3, 5/8, etc so the total number of columns is irrelevant. There's no margin trickery here either; a column with the class <code>.span-1-2</code> is exactly 50% wide.</p>
+	<p><code>.row > .col.span-*</code></p>
+	<div class="row add-bot">
+		<div class="col bg-dark color-light mono text-pad">.col</div>
+	</div>
+	<div class="row add-bot">
+		<div class="col span-1-2 bg-dark color-light mono text-pad">.col.span-1-2</div>
+		<div class="col span-1-2 bg-gray color-light mono text-pad">1/2</div>
+	</div>
+	<div class="row add-bot">
+		<div class="col span-1-3 bg-dark color-light mono text-pad">1/3</div>
+		<div class="col span-2-3 bg-gray color-light mono text-pad">2/3</div>
+	</div>
+	<div class="row add-bot">
+		<div class="col span-1-4 bg-dark color-light mono text-pad">1/4</div>
+		<div class="col span-3-4 bg-gray color-light mono text-pad">3/4</div>
+	</div>
+	<div class="row add-bot">
+		<div class="col span-1-5 bg-dark color-light mono text-pad">1/5</div>
+		<div class="col span-4-5 bg-gray color-light mono text-pad">4/5</div>
+	</div>
+	<div class="row add-bot">
+		<div class="col span-1-6 bg-dark color-light mono text-pad">1/6</div>
+		<div class="col span-5-6 bg-gray color-light mono text-pad">5/6</div>
+	</div>
+	<div class="row add-bot">
+		<div class="col span-1-7 bg-dark color-light mono text-pad">1/7</div>
+		<div class="col span-6-7 bg-gray color-light mono text-pad">6/7</div>
+	</div>
+	<div class="row add-bot">
+		<div class="col span-1-8 bg-dark color-light mono text-pad">1/8</div>
+		<div class="col span-7-8 bg-gray color-light mono text-pad">7/8</div>
+	</div>
+	<p>Etc...</p>
+
+	<h3 id="offset" class="light color-gray">Offset</h3>
+	<p>Offset or "skip" columns by adding the <code>.skip-*</code> class. For every column width there is an equal offset. For example, because <code>.span-4-7</code> exists, so does <code>.skip-4-7</code>.</p>
+	<p><code>.row > .col.skip-*</code></p>
+	<div class="row bg-light add-bot">
+		<div class="col span-1-2 skip-1-8 bg-dark color-light mono text-pad">.col.span-1-2.skip-1-8</div>
+	</div>
+	<h3 id="gutters" class="light color-gray">Gutters</h3>
+	<p>The gutters are exactly <span class="mono">2em</span> for readability. They can be added by adding the <code>.spaced</code> class to a row. Pseudo classes or extra <span class="mono">.first</span> and <span class="mono">.last</span> type classes aren't required here as each column is perfectly equal.</p>
+	<p><code>.row.spaced > .col</code></p>
+	<div class="row spaced add-bot">
+		<div class="col span-1-3"><div class="bg-dark color-light mono text-pad">.col.span-1-3</div></div>
+		<div class="col span-1-3"><div class="bg-dark color-light mono text-pad">.col.span-1-3</div></div>
+		<div class="col span-1-3"><div class="bg-dark color-light mono text-pad">.col.span-1-3</div></div>
+	</div>
+	<h3 id="reverse" class="light color-gray">Reverse for "Stacked" View</h3>
+	<p>Using the <code>.reverse</code> class on a row will reverse the order of the columns in desktop, but stack in order on smaller devices.</p>
+
+	<p><code>.row.reverse > .col</code></p>
+	<div class="row reverse spaced add-bot">
+		<div class="col span-1-2"><div class="bg-dark color-light text-pad">2nd in desktop, 1st in mobile</div></div>
+		<div class="col span-1-2"><div class="bg-dark color-light text-pad">1st in desktop, 2nd in mobile</div></div>
+	</div>
+
+	<h3 id="rows-and-containers" class="light color-gray">Rows & Containers</h3>
+	<p>Every column needs to be placed within a <code>.row</code>. Rows are always full width and are resitriced in width (if desired) by the <code>.container</code> class. This controls the overall width of the page.</p>
+	<p>The container can wrap the entire page, wrap sections, or can be within any full viewport width element like a typical header or footer.</p>
+
+<!--  -->
+	<h2 id="typography">Typography</h2>
+	<p>The font families chosen are serif, sans-serif, and monospace...that's it. Browsers and their environment decide on best looking font available if it's not specified. The font sizes are <code>em</code> based so they scale with the body <code>font-size</code> percentage which, in turn, changes with media queries.</p>
+	<h3 id="headers" class="light color-gray">Headers</h3>
+	<p>The header sizes have been reset so that <code>h6</code> is equal in size to the <code>body</code> font size. Dangerous? Probably. It's an experiement so i may undo it depending on how it works in practice.</p>
+	<h1>Lorem ipsum dolor <small>sit amet consectetur adipiscing elit</small></h1>
+	<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+	<h2>Lorem ipsum dolor <small>sit amet consectetur adipiscing elit</small></h2>
+	<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+	<h3>Lorem ipsum dolor <small>sit amet consectetur adipiscing elit</small></h3>
+	<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+	<h4>Lorem ipsum dolor <small>sit amet consectetur adipiscing elit</small></h4>
+	<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+	<h5>Lorem ipsum dolor <small>sit amet consectetur adipiscing elit</small></h5>
+	<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+	<h6>Lorem ipsum dolor <small>sit amet consectetur adipiscing elit</small></h6>
+	<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+
+	<h3 id="weight" class="light color-gray">Weight</h3>
+	<p>900 weight <code>.heavy</code></p>
+	<p class="heavy">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+
+	<p>100 weight <code>.light</code></p>
+	<p class="light">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+
+	<h3 id="lists" class="light color-gray">Lists</h3>
+
+	<div class="row spaced">
+		<div class="col span-1-3">
+			<p><code>ul</code></p>
+			<ul>
+				<li>Lorem ipsum</li>
+				<li>Dolor sit amet</li>
+				<li>Consectetur adipiscing elit
+					<ul>
+						<li>Fusce vitae interdum mi</li>
+						<li>Pellentesque tristique</li>
+						<li>Tellus nec eleifend molestie</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="col span-1-3">
+			<p><code>ol</code></p>
+			<ol>
+				<li>Lorem ipsum</li>
+				<li>Dolor sit amet</li>
+				<li>Consectetur adipiscing elit
+					<ol>
+						<li>Fusce vitae interdum mi</li>
+						<li>Pellentesque tristique</li>
+						<li>Tellus nec eleifend molestie</li>
+					</ol>
+				</li>
+			</ol>
+		</div>
+		<div class="col span-1-3">
+			<p><code>ol.long</code></p>
+			<ol class="long" start="99">
+				<li>Lorem ipsum</li>
+				<li>Dolor sit amet</li>
+				<li>Consectetur adipiscing elit
+					<ol>
+						<li>Fusce vitae interdum mi</li>
+						<li>Pellentesque tristique</li>
+						<li>Tellus nec eleifend molestie</li>
+					</ol>
+				</li>
+			</ol>
+		</div>
+	</div>
+
+	<div class="row spaced">
+		<div class="col span-1-3">
+			<p><code>ol.outside</code></p>
+			<ol class="outside">
+				<li>Lorem ipsum</li>
+				<li>Dolor sit amet</li>
+				<li>Consectetur adipiscing elit</li>
+			</ol>
+		</div>
+		<div class="col span-1-3">
+			<p><code>ul.blank</code></p>
+			<ul class="blank">
+				<li>Lorem ipsum</li>
+				<li>Dolor sit amet</li>
+				<li>Consectetur adipiscing elit</li>
+			</ul>
+		</div>
+		<div class="col span-1-3">
+			<p><code>ul.square</code></p>
+			<ul class="square">
+				<li>Lorem ipsum</li>
+				<li>Dolor sit amet</li>
+				<li>Consectetur adipiscing elit</li>
+			</ul>
+		</div>
+	</div>
+
+	<h3 id="quotes" class="light color-gray">Blockquotes & Pull Quotes</h3>
+	<p><code>blockquote</code></p>
+	<blockquote>
+		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+	</blockquote>
+
+	<blockquote cite="http://example.com/">
+		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+		<cite>&mdash; <a href="http://example.com/">someone latin</a></cite>
+	</blockquote>
+
+	<p><code>blockquote.outside</code></p>
+	<blockquote class="outside">
+		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+	</blockquote>
+
+	<p>Pullquote content isn't duplicated. It is controlled by the <code>data-pullquote</code> attribute as shown below.</p>
+
+	<pre><code>&lt;span class="pullquote-left" data-pullquote="Donec eu libero...">Donec eu libero...&lt;/span></code></pre>
+
+	<p><code>.pullquote-left</code></p>
+	<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. <span class="pullquote-left" data-pullquote="Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est.">Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est.</span> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+
+	<p><code>.pullquote-right</code></p>
+	<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. <span class="pullquote-right" data-pullquote="Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est.">Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est.</span> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+
+	<h3 id="links" class="light color-gray">Links</h3>
+	<!-- The 'visited' and 'hovered' classes are not part of the framework. they force the styles for demo page viewing only -->
+	<p><a href="#0" class="normal">A normal link</a></p>
+	<p><a href="#0" class="visited">A visited link</a></p>
+	<p><a href="#0" class="hovered">A hovered link</a></p>
+	<p><a href="#0" class="activated">An activated link</a></p>
+	<!--
+	<h3 id="definitions" class="light color-gray">Definition Lists</h3>
+	<dl>
+		<dt>dt Definition List Title</dt>
+		<dd>dd This is a definition list division.</dd>
+	</dl>
+	-->
+	<h3 id="misc" class="light color-gray">Misc</h3>
+	<p class="sans-serif">Lorem ipsum <code>code</code> dolor sit amet consectetur adipiscing elit.</p>
+	<p class="serif">Lorem ipsum <code>code</code> dolor sit amet consectetur adipiscing elit.</p>
+	<p><em>em</em> / <i>i</i></p>
+	<p><strong>strong</strong> / <b>b</b></p>
+
+	<pre><code>&lt;ul>
 <!----->	&lt;li>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.&lt;/li>
 <!----->	&lt;li>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.&lt;/li>
 <!----->	&lt;li>Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.&lt;/li>
 <!----->	&lt;li>Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.&lt;/li>
 <!----->&lt;/ul></code></pre>
-	</section>
-	
-	<section>
-		<h2 id="elements">Elements</h2>
-		<h3 id="images" class="light color-gray">Images</h3>
-		<div class="row spaced">
-			<div class="col span-1-3">
-				<p>.crop-stacked img</p>
-				<div class="crop-stacked add-bot">
-					<img src="http://www.placehold.it/420&text=image" />
-				</div>		
-			</div>
-			<div class="col span-1-3">
-				<p>.flush-stacked img</p>
-				<div class="flush-stacked add-bot">
-					<img src="http://www.placehold.it/420&text=image" />
-				</div>
-			</div>
-			<div class="col span-1-3">
-				<p>.flush-stacked.crop-stacked img</p>
-				<div class="flush-stacked crop-stacked add-bot">
-					<img src="http://www.placehold.it/420&text=image" />
-				</div>
-			</div>
-		</div>
 
-		<h3 id="tables" class="light color-gray">Tables</h3>
-		
-		<p>table</p>
-		<table>
-			<caption>Table caption</caption>
-			<thead>
-				<tr>
-					<th>Table Header 1</th>
-					<th>Table Header 2</th>
-					<th>Table Header 3</th>
-				</tr>
-			</thead>
-			<tfoot>
-				<tr>
-					<td colspan="3">Table footer</td>
-				</tr>
-			</tfoot>
-			<tbody>
-				<tr>
-					<td>Division 1</td>
-					<td>Division 2</td>
-					<td>Division 3</td>
-				</tr>
-				<tr>
-					<td>Division 1</td>
-					<td>Division 2</td>
-					<td>Division 3</td>
-				</tr>
-				<tr>
-					<td>Division 1</td>
-					<td>Division 2</td>
-					<td>Division 3</td>
-				</tr>
-			</tbody>	
-		</table>
-		
-		<p>table.default</p>
-		<table class="default">
-			<caption>Table caption</caption>
-			<thead>
-				<tr>
-					<th>Table Header 1</th>
-					<th>Table Header 2</th>
-					<th>Table Header 3</th>
-				</tr>
-			</thead>
-			<tfoot>
-				<tr>
-					<td colspan="3">Table footer</td>
-				</tr>
-			</tfoot>
-			<tbody>
-				<tr>
-					<td>Division 1</td>
-					<td>Division 2</td>
-					<td>Division 3</td>
-				</tr>
-				<tr>
-					<td>Division 1</td>
-					<td>Division 2</td>
-					<td>Division 3</td>
-				</tr>
-				<tr>
-					<td>Division 1</td>
-					<td>Division 2</td>
-					<td>Division 3</td>
-				</tr>
-			</tbody>
-		</table>
-		
-		<p>table.default.striped</p>
-		<table class="default striped">
-			<caption>Table caption</caption>
-			<thead>
-				<tr>
-					<th>Table Header 1</th>
-					<th>Table Header 2</th>
-					<th>Table Header 3</th>
-				</tr>
-			</thead>
-			<tfoot>
-				<tr>
-					<td colspan="3">Table footer</td>
-				</tr>
-			</tfoot>
-			<tbody>
-				<tr>
-					<td>Division 1</td>
-					<td>Division 2</td>
-					<td>Division 3</td>
-				</tr>
-				<tr>
-					<td>Division 1</td>
-					<td>Division 2</td>
-					<td>Division 3</td>
-				</tr>
-				<tr>
-					<td>Division 1</td>
-					<td>Division 2</td>
-					<td>Division 3</td>
-				</tr>
-			</tbody>
-		</table>
-		
-		<h3 id="navigation" class="light color-gray">Navigation</h3>
-		
-		<p><code>NAV > UL</code></p>
-		<nav>
-			<ul>
-				<li><a href="#0" title="Lorum ipsum dolor sit amet">Lorem</a></li>
-				<li><a href="#0" title="Aliquam tincidunt mauris eu risus">Aliquam</a>
-					<ul>
-						<li><a href="#0" title="Lorum ipsum dolor sit amet">Lorem</a></li>
-						<li><a href="#0" title="Aliquam tincidunt mauris eu risus">Aliquam</a></li>
-						<li><a href="#0" title="Morbi in sem quis dui placerat ornare">Morbi</a>
-							<ul>
-								<li><a href="#0" title="Lorum ipsum dolor sit amet">Lorem</a></li>
-								<li><a href="#0" title="Aliquam tincidunt mauris eu risus">Aliquam</a></li>
-								<li><a href="#0" title="Morbi in sem quis dui placerat ornare">Morbi</a></li>
-								<li><a href="#0" title="Praesent dapibus, neque id cursus faucibus">Praesent</a></li>
-								<li><a href="#0" title="Pellentesque fermentum dolor">Pellentesque</a></li>
-							</ul>
-						</li>
-						<li><a href="#0" title="Praesent dapibus, neque id cursus faucibus">Praesent</a></li>
-						<li><a href="#0" title="Pellentesque fermentum dolor">Pellentesque</a></li>
-					</ul>
-				</li>
-				<li><a href="#0" title="Morbi in sem quis dui placerat ornare">Morbi</a></li>
-				<li><a href="#0" title="Praesent dapibus, neque id cursus faucibus">Praesent</a>
-					<ul>
-						<li><a href="#0" title="Lorum ipsum dolor sit amet">Lorem</a></li>
-						<li><a href="#0" title="Aliquam tincidunt mauris eu risus">Aliquam</a></li>
-						<li><a href="#0" title="Morbi in sem quis dui placerat ornare">Morbi</a></li>
-						<li><a href="#0" title="Praesent dapibus, neque id cursus faucibus">Praesent</a></li>
-						<li><a href="#0" title="Pellentesque fermentum dolor">Pellentesque</a></li>
-					</ul>      
-				</li>
-				<li><a href="#0" title="Pellentesque fermentum dolor">Pellentesque</a></li>
-			</ul>
-		</nav>
-		
-		
-		<h3 id="buttons" class="light color-gray">Buttons</h3>
-		<p>The buttons were designed to have some basic styles but can be easily overridden. Be sure to add <code>tabindex="0"</code> to any elements that aren't natively clickable for accessability.</p>	
-		<div class="add-bot">
-			<button>button</button>
-			<a href="#0" class="button">a.button</a>
-			<div class="button" tabindex="0">div.button</div><!-- tabindex="0" added to make DIV "tabbable" -->
-			<input type="button" value="input.button" />
-			<!--<input type="submit" value="input[type='submit']" />-->
+<!--  -->
+	<h2 id="elements">Elements</h2>
+	<h3 id="images" class="light color-gray">Images</h3>
+	<div class="row spaced">
+		<div class="col span-1-3">
+			<p>.crop-stacked img</p>
+			<div class="crop-stacked add-bot">
+				<img src="http://www.placehold.it/420&text=image" />
+			</div>
 		</div>
-		
-		<div class="add-bot">
-			<button class="disabled">button</button>
-			<a href="#0" class="button disabled">a.button</a>
-			<div class="button disabled" tabindex="0">div.button</div><!-- tabindex="0" added to make DIV "tabbable" -->
-			<input type="button" value="input.button" class="disabled" />
-			<!--<input type="submit" value="Submit Button" class="disabled" />	-->
+		<div class="col span-1-3">
+			<p>.flush-stacked img</p>
+			<div class="flush-stacked add-bot">
+				<img src="http://www.placehold.it/420&text=image" />
+			</div>
 		</div>
-		
-		<div class="add-bot">
-			<button>Multi<br />Line</button>
+		<div class="col span-1-3">
+			<p>.flush-stacked.crop-stacked img</p>
+			<div class="flush-stacked crop-stacked add-bot">
+				<img src="http://www.placehold.it/420&text=image" />
+			</div>
 		</div>
-		
-		<!-- not TOTALLY sure if this is necessary. mostly introducted to not have a BR tag. -->
-		<div class="add-bot">
-			<button>Button Text<span class="button-subtext">Sub-text Example</span></button>
-		</div>
-			
-		
-		<div class="add-bot">
-			<button class="button-large">.button-large</button>
-			<button class="button-medium">.button-medium</button>
-			<button>button</button>
-			<button class="button-small">.button-small</button>
-		</div>
-		
-		<div class="add-bot">
-			<button class="chisel">.chisel</button>
-			<button class="curve">.curve</button>
-			<button class="round">.round</button>
-		</div>
-		
-		<div class="add-bot">
-			<button class="chisel button-medium">.chisel</button>
-			<button class="curve button-medium">.curve</button>
-			<button class="round button-medium">.round</button>
-		</div>
-		
-		<button class="full-width add-bot">.full-width</button>
-		
-		<div class="button-group add-bot">
-			<button>One</button><button>Two</button><button>Three</button>
-		</div>
-		
-		<div class="button-group add-bot">
-			<!--<label for="name">Label</label>-->
-			<input type="text" name="name" id="name" placeholder="Text Box" /><button>Action</button>
-		</div>
-		
-		<!--
-		<div class="add-bot">
-			<button class="bg-red">button</button>
-			<button class="bg-orange">button</button>
-			<button class="bg-yellow">button</button>
-			<button class="bg-green">button</button>
-			<button class="bg-blue">button</button>
-			<button class="bg-purple">button</button>
-		</div>
-		-->
-		
-		<h3 id="forms" class="light color-gray">Other Form Elements</h3>
-		
-		<form>		
-			<fieldset>
-				<legend>Fieldset Legend</legend>		
-				
-				<div class="row spaced">
-					<div class="col span-1-2 add-bot">
-						<input type="text" class="full-width" id="input-text" placeholder="First blood" />
-					</div>
-					<div class="col span-1-2 add-bot">
-						<input type="text" class="full-width" id="input-text-2" placeholder="Final legacy" />
-					</div>
-				</div>
-				
-				<div class="row spaced">
-					<div class="col span-1-2 add-bot">
-						<input type="password" class="full-width" name="password" id="password" placeholder="Squidward" />
-					</div>
-					<div class="col span-1-2 add-bot">
-						<input type="password" class="full-width" name="password" id="password" placeholder="Confirm squidward" />
-					</div>
-				</div>
-			</fieldset>
-		</form>
-	</section>
-	
-	<section>
-		<h2 id="extras">Extras</h2>
-		
-		<h3 id="colors" class="light color-gray">Colors <small>pallette taken from <a href="http://clrs.cc/">clrs.cc</a></small></h3>
+	</div>
 
-		<div class="row add-bot">
-			<div class="col span-1-3">
-				<div class="bg-aqua text-pad">Aqua <span class="float-right">#7FDBFF</span></div>
-				<div class="bg-blue color-white text-pad">Blue <span class="float-right">#0074D9</span></div>
-				<div class="bg-navy color-white text-pad">Navy <span class="float-right">#001F3F</span></div>
-				<div class="bg-teal text-pad">Teal <span class="float-right">#39CCCC</span></div>
-				<div class="bg-green text-pad">Green <span class="float-right">#2ECC40</span></div>
-				<div class="bg-olive text-pad">Olive <span class="float-right">#3D9970</span></div>
-				<div class="bg-lime text-pad">Lime <span class="float-right">#01FF70</span></div>
-			</div>
-			<div class="col span-1-3">
-				<div class="bg-yellow text-pad">Yellow <span class="float-right">#FFDC00</span></div>
-				<div class="bg-orange color-white text-pad">Orange <span class="float-right">#FF851B</span></div>
-				<div class="bg-red color-white text-pad">Red <span class="float-right">#FF4136</span></div>
-				<div class="bg-fuchsia color-white text-pad">Fuchsia <span class="float-right">#F012BE</span></div>
-				<div class="bg-purple color-white text-pad">Purple <span class="float-right">#B10DC9</span></div>
-				<div class="bg-maroon color-white text-pad">Maroon <span class="float-right">#85144B</span></div>
-			</div>
-			<div class="col span-1-3">
-				<div class="bg-white text-pad">White <span class="float-right">#FFF</span></div>
-				<div class="bg-silver text-pad">Silver <span class="float-right">#DDD</span></div>
-				<div class="bg-gray text-pad">Gray <span class="float-right">#AAA</span></div>
-				<div class="bg-black color-white text-pad">Black <span class="float-right">#111</span></div>	
-			</div>
-		</div>
-		
-		<h3 id="div-styles" class="light color-gray">DIV Styles</h3>
-		
-		<p>.well</p>
-		<div class="well bg-white text-pad add-bot">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</div>
+	<h3 id="tables" class="light color-gray">Tables</h3>
 
-		<p>.shadow</p>
-		<div class="shadow bg-white text-pad add-bot">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</div>
-		
-		<p>.deep-shadow</p>
-		<div class="deep-shadow bg-white text-pad add-bot">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</div>
-	
-		
-		<p>.alert</p>
-		<div class="alert add-bot">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</div>
-		
-		<div class="alert bg-red add-bot">.alert.bg-red</div>
-		<div class="alert bg-orange color-white add-bot">.alert.bg-Orange</div>
-		<div class="alert bg-yellow add-bot">.alert.bg-yellow</div>	
-		<div class="alert bg-green add-bot">.alert.bg-green</div>
-		<div class="alert bg-blue color-white add-bot">.alert.bg-blue</div>
-		<div class="alert bg-purple color-white add-bot">.alert.bg-Purple</div>
-		
-		<!--
-		<div class="alert bg-red add-bot">.alert.bg-red</div>
-		<div class="alert bg-aqua add-bot">.alert.bg-aqua</div>
-		<div class="alert bg-blue color-white add-bot">.alert.bg-blue</div>
-		<div class="alert bg-navy color-white add-bot">.alert.bg-navy</div>
-		<div class="alert bg-teal add-bot">.alert.bg-teal</div>
-		<div class="alert bg-green add-bot">.alert.bg-green</div>
-		<div class="alert bg-olive add-bot">.alert.bg-olive</div>
-		<div class="alert bg-lime add-bot">.alert.bg-lime</div>
-		<div class="alert bg-yellow add-bot">.alert.bg-yellow</div>
-		<div class="alert bg-orange color-white add-bot">.alert.bg-Orange</div>
-		<div class="alert bg-red color-white add-bot">.alert.bg-Red</div>
-		<div class="alert bg-fuchsia color-white add-bot">.alert.bg-Fuchsia</div>
-		<div class="alert bg-purple color-white add-bot">.alert.bg-Purple</div>
-		<div class="alert bg-maroon color-white add-bot">.alert.bg-Maroon</div>
-		-->
-		
-		<h3 id="positioning" class="light color-gray">Element Positioning</h3>
-		
-		<p>.add-bot</p>
-		<div class="row add-bot">
-			<div class="col span-1-3 bg-gray">
-				<div class="text-pad code bg-light add-bot-sm">.add-bot-sm</div>
-			</div>
-			<div class="col span-1-3 bg-gray">
-				<div class="text-pad code bg-light add-bot">.add-bot</div>
-			</div>
-			<div class="col span-1-3 bg-gray">
-				<div class="text-pad code bg-light add-bot-lrg">.add-bot-lrg</div>
-			</div>
-		</div>
-		<p><span>.add-bot</span> is relative too!</p>
-		<div class="row add-bot">
-			<div class="col span-1-3 bg-gray">
-				<div class="h1 text-pad code bg-light add-bot-sm">.h1</div>
-			</div>
-			<div class="col span-1-3 bg-gray">
-				<div class="h1 text-pad code bg-light add-bot">.h1</div>
-			</div>
-			<div class="col span-1-3 bg-gray">
-				<div class="h1 text-pad code bg-light add-bot-lrg">.h1</div>
-			</div>
-		</div>
-	</section>
-	
-	<section>
-		<h2 id="sandbox">Sandbox <small>Just playing around</small></h2>
-		
-		<p>Notification Label <sup class="label curve">hello</sup></p>
-		
-		<div class="scroll-y">
-			<table class="default striped">
-				<caption>Table caption</caption>
-				<thead>
-					<tr>
-						<th>Table Header 1</th>
-						<th>Table Header 2</th>
-						<th>Table Header 3</th>
-						<th>Table Header 4</th>
-						<th>Table Header 5</th>
-						<th>Table Header 6</th>
-						<th>Table Header 7</th>
-						<th>Table Header 8</th>
-						<th>Table Header 9</th>
-					</tr>
-				</thead>
-				<tfoot>
-					<tr>
-						<td colspan="9">Table footer</td>
-					</tr>
-				</tfoot>
-				<tbody>
-					<tr>
-						<td>Division 1</td>
-						<td>Division 2</td>
-						<td>Division 3</td>
-						<td>Division 4</td>
-						<td>Division 5</td>
-						<td>Division 6</td>
-						<td>Division 7</td>
-						<td>Division 8</td>
-						<td>Division 9</td>
-					</tr>
-					<tr>
-						<td>Division 1</td>
-						<td>Division 2</td>
-						<td>Division 3</td>
-						<td>Division 4</td>
-						<td>Division 5</td>
-						<td>Division 6</td>
-						<td>Division 7</td>
-						<td>Division 8</td>
-						<td>Division 9</td>
-					</tr>
-					<tr>
-						<td>Division 1</td>
-						<td>Division 2</td>
-						<td>Division 3</td>
-						<td>Division 4</td>
-						<td>Division 5</td>
-						<td>Division 6</td>
-						<td>Division 7</td>
-						<td>Division 8</td>
-						<td>Division 9</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>	
-		
-		<figure>
-			<img src="http://www.placehold.it/200&text=image" alt="">
-			<figcaption>Image Caption</figcaption>
-		</figure>
-				
-		<p>
-			<label for="text_area">Text Area:</label><br />
-			<textarea id="text_area"></textarea>
-		</p>
-		
-		<p><label for="select_element">Select Element:</label><br />
-			<select name="select_element">
-			<optgroup label="Option Group 1">
-				<option value="1">Option 1</option>
-				<option value="2">Option 2</option>
-				<option value="3">Option 3</option>
-			</optgroup>
-			<optgroup label="Option Group 2">
-				<option value="1">Option 1</option>
-				<option value="2">Option 2</option>
-				<option value="3">Option 3</option>
-			</optgroup>
-		</select></p>
-		
-		<p><label for="radio_buttons">Radio Buttons:</label><br />
-			<input type="radio" class="radio" name="radio_button" value="radio_1" id="radio_1" /> <label for="radio_1">Radio 1</label><br/>
-			<input type="radio" class="radio" name="radio_button" value="radio_2" id="radio_2" /> <label for="radio_2">Radio 2</label><br/>
-			<input type="radio" class="radio" name="radio_button" value="radio_3" id="radio_3" /> <label for="radio_3">Radio 3</label><br/>
-		</p>
-		
-		<p><label for="checkboxes">Checkboxes:</label><br />
-			<input type="checkbox" class="checkbox" name="checkboxes" value="check_1" id="check_1" /> <label for="check_1">Check 1</label><br/>
-			<input type="checkbox" class="checkbox" name="checkboxes" value="check_2" id="check_2" /> <label for="check_2">Check 2</label><br/>
-			<input type="checkbox" class="checkbox" name="checkboxes" value="check_3" id="check_3" /> <label for="check_3">Check 3</label><br/>
-		</p>
-		
-		<p><label for="password">Password:</label><br />
-			<input type="password" class="password" name="password" id="password" />
-		</p>
-		
-		<p><label for="file">File Input:</label><br />
-			<input type="file" class="file" name="file" id="file" />
-		</p>
-		
-		<p>
-			<input class="button" type="reset" value="Reset" /> <input class="button bg-blue color-white" type="submit" value="Submit" />
-		</p>
-		
-		<div class="input-test">
-			<div class="add-bot"><input type="file" /><label>file</label></div>
-			<div class="add-bot"><input type="search" /><label>search</label></div>
-			<div class="add-bot"><input type="email" /><label>email</label></div>
-			<div class="add-bot"><input type="url" /><label>url</label></div>
-			<div class="add-bot"><input type="tel" /><label>tel</label></div>
-			<div class="add-bot"><input type="number" /><label>number</label></div>
-			<div class="add-bot"><input type="range" /><label>range</label></div>
-			<div class="add-bot"><input type="date" /><label>date</label></div>
-			<div class="add-bot"><input type="month" /><label>month</label></div>
-			<div class="add-bot"><input type="week" /><label>week</label></div>
-			<div class="add-bot"><input type="time" /><label>time</label></div>
-			<div class="add-bot"><input type="datetime" /><label>datetime</label></div>
-			<div class="add-bot"><input type="datetime-local" /><label>datetime-local</label></div>
-			<div class="add-bot"><input type="color" /><label>color</label></div>
-		</div>
-		
-		<p>Lorem <sup>superscript</sup> dolor <sub>subscript</sub> amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. <cite>cite</cite>. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. <acronym title="National Basketball Association">NBA</acronym> Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.  <abbr title="Avenue">AVE</abbr></p>
-	
-		<div class="add-bot">
-			<input list="browsers" />
-			<datalist id="browsers">
-				<option value="Chrome">
-				<option value="Firefox">
-				<option value="Internet Explorer">
-				<option value="Opera">
-				<option value="Safari">
-			</datalist>
-		</div>
-			
-		<div class="add-bot">
-			<meter max="100" min="0" value="10" high="75" low="25" optimum="50" title="Meter Title">10</meter>
-			<meter max="100" min="0" value="50" high="75" low="25" optimum="50" title="Meter Title">50</meter>
-			<meter max="100" min="0" value="90" high="75" low="25" optimum="50" title="Meter Title">90</meter>
-		</div>
-		<div class="add-bot">
-			<progress max="100" value="10" title="Progress Title">10</progress>
-			<progress max="100" value="50" title="Progress Title">50</progress>
-			<progress max="100" value="90" title="Progress Title">90</progress>
-		</div>
-		<div class="add-bot">
-			<progress class="vertical" max="100" value="10" title="Progress Title">10</progress>
-			<progress class="vertical" max="100" value="50" title="Progress Title">50</progress>
-			<progress class="vertical" max="100" value="90" title="Progress Title">90</progress>
-		</div>
-		
-		<form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
-			<input type="range" name="b" value="50" /> +
-			<input type="number" name="a" value="10" /> =
-			<output name="result"></output>
-		</form>
-		
-		<menu type="toolbar">
-			<li>
-				<menu label="File">
-					<button type="button" onclick="new()">New</button>
-					<button type="button" onclick="save()">Save</button>
-				</menu>
+	<p>table</p>
+	<table>
+		<caption>Table caption</caption>
+		<thead>
+			<tr>
+				<th>Table Header 1</th>
+				<th>Table Header 2</th>
+				<th>Table Header 3</th>
+			</tr>
+		</thead>
+		<tfoot>
+			<tr>
+				<td colspan="3">Table footer</td>
+			</tr>
+		</tfoot>
+		<tbody>
+			<tr>
+				<td>Division 1</td>
+				<td>Division 2</td>
+				<td>Division 3</td>
+			</tr>
+			<tr>
+				<td>Division 1</td>
+				<td>Division 2</td>
+				<td>Division 3</td>
+			</tr>
+			<tr>
+				<td>Division 1</td>
+				<td>Division 2</td>
+				<td>Division 3</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<p>table.default</p>
+	<table class="default">
+		<caption>Table caption</caption>
+		<thead>
+			<tr>
+				<th>Table Header 1</th>
+				<th>Table Header 2</th>
+				<th>Table Header 3</th>
+			</tr>
+		</thead>
+		<tfoot>
+			<tr>
+				<td colspan="3">Table footer</td>
+			</tr>
+		</tfoot>
+		<tbody>
+			<tr>
+				<td>Division 1</td>
+				<td>Division 2</td>
+				<td>Division 3</td>
+			</tr>
+			<tr>
+				<td>Division 1</td>
+				<td>Division 2</td>
+				<td>Division 3</td>
+			</tr>
+			<tr>
+				<td>Division 1</td>
+				<td>Division 2</td>
+				<td>Division 3</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<p>table.default.striped</p>
+	<table class="default striped">
+		<caption>Table caption</caption>
+		<thead>
+			<tr>
+				<th>Table Header 1</th>
+				<th>Table Header 2</th>
+				<th>Table Header 3</th>
+			</tr>
+		</thead>
+		<tfoot>
+			<tr>
+				<td colspan="3">Table footer</td>
+			</tr>
+		</tfoot>
+		<tbody>
+			<tr>
+				<td>Division 1</td>
+				<td>Division 2</td>
+				<td>Division 3</td>
+			</tr>
+			<tr>
+				<td>Division 1</td>
+				<td>Division 2</td>
+				<td>Division 3</td>
+			</tr>
+			<tr>
+				<td>Division 1</td>
+				<td>Division 2</td>
+				<td>Division 3</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h3 id="navigation" class="light color-gray">Navigation</h3>
+
+	<p><code>nav.horiz > ul</code></p>
+
+	<nav class="horiz">
+		<ul>
+			<li><a href="#0">Lorem</a></li>
+			<li><a href="#0">Aliquam</a>
+				<ul>
+					<li><a href="#0">Lorem</a></li>
+					<li><a href="#0">Aliquam</a></li>
+					<li><a href="#0">Morbi</a>
+						<ul>
+							<li><a href="#0">Lorem</a></li>
+							<li><a href="#0">Aliquam</a></li>
+							<li><a href="#0">Morbi</a></li>
+							<li><a href="#0">Praesent</a></li>
+							<li><a href="#0">Pellentesque</a></li>
+						</ul>
+					</li>
+					<li><a href="#0">Praesent</a></li>
+					<li><a href="#0">Pellentesque</a></li>
+				</ul>
 			</li>
-			<li>
-				<menu label="Edit">
-					<button type="button" onclick="cut()">Cut</button>
-					<button type="button" onclick="copy()">Copy</button>
-					<button type="button" onclick="paste()">Paste</button>
-				</menu>
+			<li><a href="#0">Morbi</a></li>
+			<li><a href="#0">Praesent</a>
+				<ul>
+					<li><a href="#0">Lorem</a></li>
+					<li><a href="#0">Aliquam</a></li>
+					<li><a href="#0">Morbi</a></li>
+					<li><a href="#0">Praesent</a></li>
+					<li><a href="#0">Pellentesque</a></li>
+				</ul>
 			</li>
-		</menu>
-	</section>
-	
+			<li><a href="#0">Pellentesque</a></li>
+		</ul>
+	</nav>
+
+	<p><code>nav.vert > ul</code></p>
+	<nav class="vert">
+		<ul>
+			<li><a href="#0">Lorem</a></li>
+			<li><a href="#0">Aliquam</a>
+				<ul>
+					<li><a href="#0">Lorem</a></li>
+					<li><a href="#0">Morbi</a>
+						<ul>
+							<li><a href="#0">Praesent</a></li>
+							<li><a href="#0">Pellentesque</a></li>
+						</ul>
+					</li>
+					<li><a href="#0">Praesent</a></li>
+					<li><a href="#0">Pellentesque</a></li>
+				</ul>
+			</li>
+			<li><a href="#0">Morbi</a></li>
+			<li><a href="#0">Pellentesque</a></li>
+		</ul>
+	</nav>
+
+
+	<h3 id="buttons" class="light color-gray">Buttons</h3>
+	<p>The buttons were designed to have some basic styles but can be easily overridden. Be sure to add <code>tabindex="0"</code> to any elements that aren't natively clickable for accessability.</p>
+	<div class="add-bot">
+		<button>button</button>
+		<a href="#0" class="button">a.button</a>
+		<div class="button" tabindex="0">div.button</div><!-- tabindex="0" added to make DIV "tabbable" -->
+		<input type="button" value="input.button" />
+		<!--<input type="submit" value="input[type='submit']" />-->
+	</div>
+
+	<div class="add-bot">
+		<button class="disabled">button</button>
+		<a href="#0" class="button disabled">a.button</a>
+		<div class="button disabled" tabindex="0">div.button</div><!-- tabindex="0" added to make DIV "tabbable" -->
+		<input type="button" value="input.button" class="disabled" />
+		<!--<input type="submit" value="Submit Button" class="disabled" />	-->
+	</div>
+
+	<div class="add-bot">
+		<button>Multi<br />Line</button>
+	</div>
+
+	<!-- not TOTALLY sure if this is necessary. mostly introducted to not have a BR tag. -->
+	<div class="add-bot">
+		<button>Button Text<span class="button-subtext">Sub-text Example</span></button>
+	</div>
+
+
+	<div class="add-bot">
+		<button class="button-large">.button-large</button>
+		<button class="button-medium">.button-medium</button>
+		<button>button</button>
+		<button class="button-small">.button-small</button>
+	</div>
+
+	<div class="add-bot">
+		<button class="chisel">.chisel</button>
+		<button class="curve">.curve</button>
+		<button class="round">.round</button>
+	</div>
+
+	<div class="add-bot">
+		<button class="chisel button-medium">.chisel</button>
+		<button class="curve button-medium">.curve</button>
+		<button class="round button-medium">.round</button>
+	</div>
+
+	<button class="full-width add-bot">.full-width</button>
+
+	<div class="button-group add-bot">
+		<button>One</button><button>Two</button><button>Three</button>
+	</div>
+
+	<div class="button-group add-bot">
+		<!--<label for="name">Label</label>-->
+		<input type="text" name="name" id="name" placeholder="Text Box" /><button>Action</button>
+	</div>
+
+	<!--
+	<div class="add-bot">
+		<button class="bg-red">button</button>
+		<button class="bg-orange">button</button>
+		<button class="bg-yellow">button</button>
+		<button class="bg-green">button</button>
+		<button class="bg-blue">button</button>
+		<button class="bg-purple">button</button>
+	</div>
+	-->
+
+	<h3 id="forms" class="light color-gray">Other Form Elements</h3>
+
+	<form>
+		<fieldset>
+			<legend>Fieldset Legend</legend>
+
+			<div class="row spaced">
+				<div class="col span-1-2 add-bot">
+					<input type="text" class="full-width" id="input-text" placeholder="First blood" />
+				</div>
+				<div class="col span-1-2 add-bot">
+					<input type="text" class="full-width" id="input-text-2" placeholder="Final legacy" />
+				</div>
+			</div>
+
+			<div class="row spaced">
+				<div class="col span-1-2 add-bot">
+					<input type="password" class="full-width" name="password" id="password" placeholder="Squidward" />
+				</div>
+				<div class="col span-1-2 add-bot">
+					<input type="password" class="full-width" name="password" id="password" placeholder="Confirm squidward" />
+				</div>
+			</div>
+		</fieldset>
+	</form>
+
+<!--  -->
+	<h2 id="extras">Extras</h2>
+
+	<h3 id="colors" class="light color-gray">Colors <small>pallette taken from <a href="http://clrs.cc/">clrs.cc</a></small></h3>
+
+	<div class="row add-bot">
+		<div class="col span-1-3">
+			<div class="bg-aqua text-pad">Aqua <span class="float-right">#7FDBFF</span></div>
+			<div class="bg-blue color-white text-pad">Blue <span class="float-right">#0074D9</span></div>
+			<div class="bg-navy color-white text-pad">Navy <span class="float-right">#001F3F</span></div>
+			<div class="bg-teal text-pad">Teal <span class="float-right">#39CCCC</span></div>
+			<div class="bg-green text-pad">Green <span class="float-right">#2ECC40</span></div>
+			<div class="bg-olive text-pad">Olive <span class="float-right">#3D9970</span></div>
+			<div class="bg-lime text-pad">Lime <span class="float-right">#01FF70</span></div>
+		</div>
+		<div class="col span-1-3">
+			<div class="bg-yellow text-pad">Yellow <span class="float-right">#FFDC00</span></div>
+			<div class="bg-orange color-white text-pad">Orange <span class="float-right">#FF851B</span></div>
+			<div class="bg-red color-white text-pad">Red <span class="float-right">#FF4136</span></div>
+			<div class="bg-fuchsia color-white text-pad">Fuchsia <span class="float-right">#F012BE</span></div>
+			<div class="bg-purple color-white text-pad">Purple <span class="float-right">#B10DC9</span></div>
+			<div class="bg-maroon color-white text-pad">Maroon <span class="float-right">#85144B</span></div>
+		</div>
+		<div class="col span-1-3">
+			<div class="bg-white text-pad">White <span class="float-right">#FFF</span></div>
+			<div class="bg-silver text-pad">Silver <span class="float-right">#DDD</span></div>
+			<div class="bg-gray text-pad">Gray <span class="float-right">#AAA</span></div>
+			<div class="bg-black color-white text-pad">Black <span class="float-right">#111</span></div>
+		</div>
+	</div>
+
+	<h3 id="div-styles" class="light color-gray">DIV Styles</h3>
+
+	<p>.well</p>
+	<div class="well bg-white text-pad add-bot">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</div>
+
+	<p>.deep-well</p>
+	<div class="deep-well bg-white text-pad add-bot">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</div>
+
+
+	<p>.shadow</p>
+	<div class="shadow bg-white text-pad add-bot">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</div>
+
+	<p>.deep-shadow</p>
+	<div class="deep-shadow bg-white text-pad add-bot">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</div>
+
+
+	<p>.alert</p>
+	<div class="alert add-bot">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</div>
+
+	<div class="alert bg-red add-bot">.alert.bg-red</div>
+	<div class="alert bg-orange color-white add-bot">.alert.bg-Orange</div>
+	<div class="alert bg-yellow add-bot">.alert.bg-yellow</div>
+	<div class="alert bg-green add-bot">.alert.bg-green</div>
+	<div class="alert bg-blue color-white add-bot">.alert.bg-blue</div>
+	<div class="alert bg-purple color-white add-bot">.alert.bg-Purple</div>
+
+	<!--
+	<div class="alert bg-red add-bot">.alert.bg-red</div>
+	<div class="alert bg-aqua add-bot">.alert.bg-aqua</div>
+	<div class="alert bg-blue color-white add-bot">.alert.bg-blue</div>
+	<div class="alert bg-navy color-white add-bot">.alert.bg-navy</div>
+	<div class="alert bg-teal add-bot">.alert.bg-teal</div>
+	<div class="alert bg-green add-bot">.alert.bg-green</div>
+	<div class="alert bg-olive add-bot">.alert.bg-olive</div>
+	<div class="alert bg-lime add-bot">.alert.bg-lime</div>
+	<div class="alert bg-yellow add-bot">.alert.bg-yellow</div>
+	<div class="alert bg-orange color-white add-bot">.alert.bg-Orange</div>
+	<div class="alert bg-red color-white add-bot">.alert.bg-Red</div>
+	<div class="alert bg-fuchsia color-white add-bot">.alert.bg-Fuchsia</div>
+	<div class="alert bg-purple color-white add-bot">.alert.bg-Purple</div>
+	<div class="alert bg-maroon color-white add-bot">.alert.bg-Maroon</div>
+	-->
+
+	<h3 id="positioning" class="light color-gray">Element Positioning</h3>
+
+	<p>.add-bot</p>
+	<div class="row add-bot">
+		<div class="col span-1-3 bg-gray">
+			<div class="text-pad code bg-light add-bot-sm">.add-bot-sm</div>
+		</div>
+		<div class="col span-1-3 bg-gray">
+			<div class="text-pad code bg-light add-bot">.add-bot</div>
+		</div>
+		<div class="col span-1-3 bg-gray">
+			<div class="text-pad code bg-light add-bot-lrg">.add-bot-lrg</div>
+		</div>
+	</div>
+	<p><span>.add-bot</span> is relative too!</p>
+	<div class="row add-bot">
+		<div class="col span-1-3 bg-gray">
+			<div class="h1 text-pad code bg-light add-bot-sm">.h1</div>
+		</div>
+		<div class="col span-1-3 bg-gray">
+			<div class="h1 text-pad code bg-light add-bot">.h1</div>
+		</div>
+		<div class="col span-1-3 bg-gray">
+			<div class="h1 text-pad code bg-light add-bot-lrg">.h1</div>
+		</div>
+	</div>
+
+<!--  -->
+
 	<footer>
 		<p class="text-center color-gray">mixed by jephrei with &#9829;</p>
 	</footer>
-		 
+
 </div>
 </body>
 

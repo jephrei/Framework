@@ -1,5 +1,5 @@
 #Framework v0.2&alpha;
-This is a personal framework. Things will be ugly and/or [broken](http://motherfuckingwebsite.com). The final scope isn't fully realized yet, but I have my ideas. I'll probably get distracted along the way. Because this is alpha there are notes to myself and you everywhere. It's kinda messy in here.
+This is a personal framework. Things will be ugly and/or [broken](http://motherfuckingwebsite.com). The final scope isn't fully realized yet, but I have my ideas. I'll probably get distracted along the way. Because this is alpha there are notes to myself and you everywhere. It's kinda messy in there.
 
 ##Another framework?
 Yes. It's an unorganized pile of foo but it's mine and I'm enjoying myself. You should make one too.
@@ -8,21 +8,21 @@ Yes. It's an unorganized pile of foo but it's mine and I'm enjoying myself. You 
 * Consitency rather than resets
 * Semantic classes
 * Modular design for multiple use cases (trying not to assume too much)
-* Keep it simple, stupid
+* Keeping it simple, stupid
 
 ##Key Features
 ###Implemented
 * Includes normalize.css v3.0.0
 * Border box model
-* Responsive grid layout
+* Responsive grid/elements
 * Basic element styles
 
 ###To Do
-* Form Elements
-* Split CSS to multiple files
-* Flexbox (when something more final is decided on)
+* More form styling
+* Split CSS to multiple files -
+* Flexbox - when something more stable is decided on
 * Cross-browser testing
-* Minify
+* Minified Version - after alpha most likely
 
 ###Maybe
 * Basic Form validation
@@ -31,7 +31,7 @@ Yes. It's an unorganized pile of foo but it's mine and I'm enjoying myself. You 
 * Dynamic, inheritable color themes
 * Icons
 * Minimal animations
-* LESS (when my LESS knowledge gets better)
+* LESS version (when my LESS knowledge gets better)
 
 ##Compatibility
 I noticed that IE8 and below sucks but you probably knew that.

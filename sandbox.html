@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8" />
+<title>Framework Demo Page</title>
+<meta name="description" content="" />
+<meta name="author" content="" />
+<meta name="apple-mobile-web-app-capable" content="yes" /> <!-- Removes iOS broswer UI -->
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!--<link rel="shortcut icon" href="favicon.ico">-->
+
+<link href="css/main.css" rel="stylesheet" />
+
+<!--[if lt IE 9]>
+<link href="css/old.css" rel="stylesheet" /><!-- a foolish attempt to play nice -->
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<style>
+/*
+ * these embedded styles are not part of framework
+ * and are specific to this demo page only
+ *
+ */
+a.normal { color: #0074D9; }
+a.visited { color: #B10DC9; }
+a.hovered { color: #0074D9; text-decoration: underline; }
+a.activated { color: #FF851B; }
+</style>
+
+</head>
+
+<body>
+<div class="container">
+
+	<h2 id="sandbox">Sandbox <small>Just playing around</small></h2>
+
+	<p>Notification Label <sup class="label curve">hello</sup></p>
+
+	<div class="scroll-y">
+		<table class="default striped">
+			<caption>Table caption</caption>
+			<thead>
+				<tr>
+					<th>Table Header 1</th>
+					<th>Table Header 2</th>
+					<th>Table Header 3</th>
+					<th>Table Header 4</th>
+					<th>Table Header 5</th>
+					<th>Table Header 6</th>
+					<th>Table Header 7</th>
+					<th>Table Header 8</th>
+					<th>Table Header 9</th>
+				</tr>
+			</thead>
+			<tfoot>
+				<tr>
+					<td colspan="9">Table footer</td>
+				</tr>
+			</tfoot>
+			<tbody>
+				<tr>
+					<td>Division 1</td>
+					<td>Division 2</td>
+					<td>Division 3</td>
+					<td>Division 4</td>
+					<td>Division 5</td>
+					<td>Division 6</td>
+					<td>Division 7</td>
+					<td>Division 8</td>
+					<td>Division 9</td>
+				</tr>
+				<tr>
+					<td>Division 1</td>
+					<td>Division 2</td>
+					<td>Division 3</td>
+					<td>Division 4</td>
+					<td>Division 5</td>
+					<td>Division 6</td>
+					<td>Division 7</td>
+					<td>Division 8</td>
+					<td>Division 9</td>
+				</tr>
+				<tr>
+					<td>Division 1</td>
+					<td>Division 2</td>
+					<td>Division 3</td>
+					<td>Division 4</td>
+					<td>Division 5</td>
+					<td>Division 6</td>
+					<td>Division 7</td>
+					<td>Division 8</td>
+					<td>Division 9</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<figure>
+		<img src="http://www.placehold.it/200&text=image" alt="">
+		<figcaption>Image Caption</figcaption>
+	</figure>
+
+	<p>
+		<label for="text_area">Text Area:</label><br />
+		<textarea id="text_area"></textarea>
+	</p>
+
+	<p><label for="select_element">Select Element:</label><br />
+		<select name="select_element">
+		<optgroup label="Option Group 1">
+			<option value="1">Option 1</option>
+			<option value="2">Option 2</option>
+			<option value="3">Option 3</option>
+		</optgroup>
+		<optgroup label="Option Group 2">
+			<option value="1">Option 1</option>
+			<option value="2">Option 2</option>
+			<option value="3">Option 3</option>
+		</optgroup>
+	</select></p>
+
+	<p><label for="radio_buttons">Radio Buttons:</label><br />
+		<input type="radio" class="radio" name="radio_button" value="radio_1" id="radio_1" /> <label for="radio_1">Radio 1</label><br/>
+		<input type="radio" class="radio" name="radio_button" value="radio_2" id="radio_2" /> <label for="radio_2">Radio 2</label><br/>
+		<input type="radio" class="radio" name="radio_button" value="radio_3" id="radio_3" /> <label for="radio_3">Radio 3</label><br/>
+	</p>
+
+	<p><label for="checkboxes">Checkboxes:</label><br />
+		<input type="checkbox" class="checkbox" name="checkboxes" value="check_1" id="check_1" /> <label for="check_1">Check 1</label><br/>
+		<input type="checkbox" class="checkbox" name="checkboxes" value="check_2" id="check_2" /> <label for="check_2">Check 2</label><br/>
+		<input type="checkbox" class="checkbox" name="checkboxes" value="check_3" id="check_3" /> <label for="check_3">Check 3</label><br/>
+	</p>
+
+	<p><label for="password">Password:</label><br />
+		<input type="password" class="password" name="password" id="password" />
+	</p>
+
+	<p><label for="file">File Input:</label><br />
+		<input type="file" class="file" name="file" id="file" />
+	</p>
+
+	<p>
+		<input class="button" type="reset" value="Reset" /> <input class="button bg-blue color-white" type="submit" value="Submit" />
+	</p>
+
+	<div class="input-test">
+		<div class="add-bot"><input type="file" /><label>file</label></div>
+		<div class="add-bot"><input type="search" /><label>search</label></div>
+		<div class="add-bot"><input type="email" /><label>email</label></div>
+		<div class="add-bot"><input type="url" /><label>url</label></div>
+		<div class="add-bot"><input type="tel" /><label>tel</label></div>
+		<div class="add-bot"><input type="number" /><label>number</label></div>
+		<div class="add-bot"><input type="range" /><label>range</label></div>
+		<div class="add-bot"><input type="date" /><label>date</label></div>
+		<div class="add-bot"><input type="month" /><label>month</label></div>
+		<div class="add-bot"><input type="week" /><label>week</label></div>
+		<div class="add-bot"><input type="time" /><label>time</label></div>
+		<div class="add-bot"><input type="datetime" /><label>datetime</label></div>
+		<div class="add-bot"><input type="datetime-local" /><label>datetime-local</label></div>
+		<div class="add-bot"><input type="color" /><label>color</label></div>
+	</div>
+
+	<p>Lorem <sup>superscript</sup> dolor <sub>subscript</sub> amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. <cite>cite</cite>. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. <acronym title="National Basketball Association">NBA</acronym> Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.  <abbr title="Avenue">AVE</abbr></p>
+
+	<div class="add-bot">
+		<input list="browsers" />
+		<datalist id="browsers">
+			<option value="Chrome">
+			<option value="Firefox">
+			<option value="Internet Explorer">
+			<option value="Opera">
+			<option value="Safari">
+		</datalist>
+	</div>
+
+	<div class="add-bot">
+		<meter max="100" min="0" value="10" high="75" low="25" optimum="50" title="Meter Title">10</meter>
+		<meter max="100" min="0" value="50" high="75" low="25" optimum="50" title="Meter Title">50</meter>
+		<meter max="100" min="0" value="90" high="75" low="25" optimum="50" title="Meter Title">90</meter>
+	</div>
+	<div class="add-bot">
+		<progress max="100" value="10" title="Progress Title">10</progress>
+		<progress max="100" value="50" title="Progress Title">50</progress>
+		<progress max="100" value="90" title="Progress Title">90</progress>
+	</div>
+	<div class="add-bot">
+		<progress class="vertical" max="100" value="10" title="Progress Title">10</progress>
+		<progress class="vertical" max="100" value="50" title="Progress Title">50</progress>
+		<progress class="vertical" max="100" value="90" title="Progress Title">90</progress>
+	</div>
+
+	<form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+		<input type="range" name="b" value="50" /> +
+		<input type="number" name="a" value="10" /> =
+		<output name="result"></output>
+	</form>
+
+	<menu type="toolbar">
+		<li>
+			<menu label="File">
+				<button type="button" onclick="new()">New</button>
+				<button type="button" onclick="save()">Save</button>
+			</menu>
+		</li>
+		<li>
+			<menu label="Edit">
+				<button type="button" onclick="cut()">Cut</button>
+				<button type="button" onclick="copy()">Copy</button>
+				<button type="button" onclick="paste()">Paste</button>
+			</menu>
+		</li>
+	</menu>
+
+</div>
+</body>
+
+</html>
