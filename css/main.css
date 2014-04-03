@@ -49,15 +49,13 @@ body {
 	margin: 0;
 }
 
-/* Links */
 a { color: #0074D9; text-decoration: none; }
 a:visited { color: #B10DC9; }
 a:hover { text-decoration: underline; }
-a:active { color: #FF851B;}
+a:active { color: #FF851B; }
 
-/* Images */
 a img {
-	border: none; /* remove border when inside 'a' element */
+	border: none; /* remove border on older browsers */
 	vertical-align: middle; /* for multiple items in parent 'a' element */
 }
 
@@ -255,11 +253,11 @@ input[type='button'] {
 }
 
 select {
-	border: 1px solid #a4a4a4; /* to force font size changes */
+	border: 1px solid #a4a4a4; /* to force font size changes...for now */
 }
 
 input[type="file"]::-webkit-file-upload-button {
-	border: 1px solid #a4a4a4; /* to force font size changes */
+	border: 1px solid #a4a4a4; /* to force font size changes...for now */
 }
 
 input[required]:invalid {
