@@ -11,15 +11,90 @@
 <!--<link rel="shortcut icon" href="favicon.ico">-->
 
 <link href="css/main.css" rel="stylesheet" />
+<link href="css/extras.css" rel="stylesheet" />
 
 <!--[if lt IE 9]>
 <link href="css/old.css" rel="stylesheet" /><!-- a foolish attempt to play nice -->
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 <style>
+/* table borders */
+table.bordered-rows thead {
+	border-bottom: solid 2px lightgray;
+}
+
+table.bordered-rows tr {
+    border-bottom: solid 1px lightgray;
+}
+
+table.bordered-rows tr:last-child {
+    border-bottom: 0;
+}
+
+table.bordered-rows th,
+table.bordered-rows td {
+	padding: .25em 1em;
+}
+
+table.bordered-rows th:first-child,
+table.bordered-rows td:first-child {
+	padding-left: 0;
+}
+
+table.bordered-cols thead {
+	border-bottom: solid 2px lightgray;
+}
+
+table.bordered-cols th,
+table.bordered-cols td {
+	padding: .25em 1em;
+    border-right: solid 1px lightgray;
+}
+
+table.bordered-cols th:last-child,
+table.bordered-cols td:last-child {
+    border-right: 0;
+}
+
+table.bordered-cols th:first-child,
+table.bordered-cols td:first-child {
+	padding-left: 0;
+}
+
+/* Progress Bar */
+progress {
+    background-color: #f3f3f3;
+    border: 0;
+    height: 1em;
+    border-radius: 4px;
+    text-indent: .5em;
+}
+
+progress::-webkit-progress-bar {
+    background-color: #f3f3f3;
+    border: 0;
+    border-radius: 4px;
+}
+
+progress::-webkit-progress-value {
+    border-radius: 4px;
+}
+
+progress::-moz-progress-bar {
+    background-color: green;
+    border: 0;
+    border-radius: 4px;
+}
+
+progress.vertical {
+	-webkit-orient: vertical; /* chrome doesn't support this yet */
+	-moz-orient: vertical;
+	orient: vertical; /* no one uses it */
+}
+
 /*
- * these embedded styles are not part of framework
- * and are specific to this demo page only
+ * the following embedded styles are not part of
+ * the framework and are specific to this demo page only
  *
  */
 a.normal { color: #0074D9; }
@@ -35,7 +110,71 @@ a.activated { color: #FF851B; }
 
 	<h2 id="sandbox">Sandbox <small>Just playing around</small></h2>
 
-	<p>Notification Label <sup class="label curve">hello</sup></p>
+	<table class="bordered-rows">
+		<caption>Table caption</caption>
+		<thead>
+			<tr>
+				<th>Table Header 1</th>
+				<th>Table Header 2</th>
+				<th>Table Header 3</th>
+			</tr>
+		</thead>
+		<tfoot>
+			<tr>
+				<td colspan="3">Table footer</td>
+			</tr>
+		</tfoot>
+		<tbody>
+			<tr>
+				<td>Division 1</td>
+				<td>Division 2</td>
+				<td>Division 3</td>
+			</tr>
+			<tr>
+				<td>Division 1</td>
+				<td>Division 2</td>
+				<td>Division 3</td>
+			</tr>
+			<tr>
+				<td>Division 1</td>
+				<td>Division 2</td>
+				<td>Division 3</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<table class="bordered-cols">
+		<caption>Table caption</caption>
+		<thead>
+			<tr>
+				<th>Table Header 1</th>
+				<th>Table Header 2</th>
+				<th>Table Header 3</th>
+			</tr>
+		</thead>
+		<tfoot>
+			<tr>
+				<td colspan="3">Table footer</td>
+			</tr>
+		</tfoot>
+		<tbody>
+			<tr>
+				<td>Division 1</td>
+				<td>Division 2</td>
+				<td>Division 3</td>
+			</tr>
+			<tr>
+				<td>Division 1</td>
+				<td>Division 2</td>
+				<td>Division 3</td>
+			</tr>
+			<tr>
+				<td>Division 1</td>
+				<td>Division 2</td>
+				<td>Division 3</td>
+			</tr>
+		</tbody>
+	</table>
 
 	<div class="scroll-y">
 		<table class="default striped">
@@ -96,6 +235,89 @@ a.activated { color: #FF851B; }
 		</table>
 	</div>
 
+	<h2 id="extras">Extras</h2>
+
+	<h3 id="links" class="light color-gray">Links</h3>
+	<!-- The 'visited' and 'hovered' classes are not part of the framework. they force the styles for demo page viewing only -->
+	<p><a href="#0" class="normal">A normal link</a></p>
+	<p><a href="#0" class="visited">A visited link</a></p>
+	<p><a href="#0" class="hovered">A hovered link</a></p>
+	<p><a href="#0" class="activated">An activated link</a></p>
+
+	<h3 id="colors" class="light color-gray">Colors <small>pallette taken from <a href="http://clrs.cc/">clrs.cc</a></small></h3>
+
+	<div class="row add-bot">
+		<div class="col span-1-3">
+			<div class="bg-aqua text-pad">Aqua <span class="float-right">#7FDBFF</span></div>
+			<div class="bg-blue color-white text-pad">Blue <span class="float-right">#0074D9</span></div>
+			<div class="bg-navy color-white text-pad">Navy <span class="float-right">#001F3F</span></div>
+			<div class="bg-teal text-pad">Teal <span class="float-right">#39CCCC</span></div>
+			<div class="bg-green text-pad">Green <span class="float-right">#2ECC40</span></div>
+			<div class="bg-olive text-pad">Olive <span class="float-right">#3D9970</span></div>
+			<div class="bg-lime text-pad">Lime <span class="float-right">#01FF70</span></div>
+		</div>
+		<div class="col span-1-3">
+			<div class="bg-yellow text-pad">Yellow <span class="float-right">#FFDC00</span></div>
+			<div class="bg-orange color-white text-pad">Orange <span class="float-right">#FF851B</span></div>
+			<div class="bg-red color-white text-pad">Red <span class="float-right">#FF4136</span></div>
+			<div class="bg-fuchsia color-white text-pad">Fuchsia <span class="float-right">#F012BE</span></div>
+			<div class="bg-purple color-white text-pad">Purple <span class="float-right">#B10DC9</span></div>
+			<div class="bg-maroon color-white text-pad">Maroon <span class="float-right">#85144B</span></div>
+		</div>
+		<div class="col span-1-3">
+			<div class="bg-white text-pad">White <span class="float-right">#FFF</span></div>
+			<div class="bg-silver text-pad">Silver <span class="float-right">#DDD</span></div>
+			<div class="bg-gray text-pad">Gray <span class="float-right">#AAA</span></div>
+			<div class="bg-black color-white text-pad">Black <span class="float-right">#111</span></div>
+		</div>
+	</div>
+
+	<h3 id="div-styles" class="light color-gray">DIV Styles</h3>
+
+	<p>.well</p>
+	<div class="well bg-white text-pad add-bot">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</div>
+
+	<p>.deep-well</p>
+	<div class="deep-well bg-white text-pad add-bot">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</div>
+
+
+	<p>.shadow</p>
+	<div class="shadow bg-white text-pad add-bot">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</div>
+
+	<p>.deep-shadow</p>
+	<div class="deep-shadow bg-white text-pad add-bot">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</div>
+
+
+	<p>.alert</p>
+	<div class="alert add-bot">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</div>
+
+	<div class="alert bg-red add-bot">.alert.bg-red</div>
+	<div class="alert bg-orange color-white add-bot">.alert.bg-Orange</div>
+	<div class="alert bg-yellow add-bot">.alert.bg-yellow</div>
+	<div class="alert bg-green add-bot">.alert.bg-green</div>
+	<div class="alert bg-blue color-white add-bot">.alert.bg-blue</div>
+	<div class="alert bg-purple color-white add-bot">.alert.bg-Purple</div>
+
+	<!--
+	<div class="alert bg-red add-bot">.alert.bg-red</div>
+	<div class="alert bg-aqua add-bot">.alert.bg-aqua</div>
+	<div class="alert bg-blue color-white add-bot">.alert.bg-blue</div>
+	<div class="alert bg-navy color-white add-bot">.alert.bg-navy</div>
+	<div class="alert bg-teal add-bot">.alert.bg-teal</div>
+	<div class="alert bg-green add-bot">.alert.bg-green</div>
+	<div class="alert bg-olive add-bot">.alert.bg-olive</div>
+	<div class="alert bg-lime add-bot">.alert.bg-lime</div>
+	<div class="alert bg-yellow add-bot">.alert.bg-yellow</div>
+	<div class="alert bg-orange color-white add-bot">.alert.bg-Orange</div>
+	<div class="alert bg-red color-white add-bot">.alert.bg-Red</div>
+	<div class="alert bg-fuchsia color-white add-bot">.alert.bg-Fuchsia</div>
+	<div class="alert bg-purple color-white add-bot">.alert.bg-Purple</div>
+	<div class="alert bg-maroon color-white add-bot">.alert.bg-Maroon</div>
+	-->
+
+
+	<p>Notification Label <sup class="label curve">hello</sup></p>
+
 	<figure>
 		<img src="http://www.placehold.it/200&text=image" alt="">
 		<figcaption>Image Caption</figcaption>
@@ -146,17 +368,17 @@ a.activated { color: #FF851B; }
 
 	<div class="input-test">
 		<div class="add-bot"><input type="file" /><label>file</label></div>
-		<div class="add-bot"><input type="search" /><label>search</label></div>
-		<div class="add-bot"><input type="email" /><label>email</label></div>
-		<div class="add-bot"><input type="url" /><label>url</label></div>
-		<div class="add-bot"><input type="tel" /><label>tel</label></div>
-		<div class="add-bot"><input type="number" /><label>number</label></div>
+		<div class="add-bot"><input type="search" placeholder="Search..." /><label>search</label></div>
+		<div class="add-bot"><input type="email" placeholder="Email Address" /><label>email</label></div>
+		<div class="add-bot"><input type="url" placeholder="URL" /><label>url</label></div>
+		<div class="add-bot"><input type="tel" placeholder="Phone" /><label>tel</label></div>
+		<div class="add-bot"><input type="number" placeholder="Number" /><label>number</label></div>
 		<div class="add-bot"><input type="range" /><label>range</label></div>
 		<div class="add-bot"><input type="date" /><label>date</label></div>
 		<div class="add-bot"><input type="month" /><label>month</label></div>
 		<div class="add-bot"><input type="week" /><label>week</label></div>
 		<div class="add-bot"><input type="time" /><label>time</label></div>
-		<div class="add-bot"><input type="datetime" /><label>datetime</label></div>
+		<div class="add-bot"><input type="datetime" placeholder="Datetime" /><label>datetime</label></div>
 		<div class="add-bot"><input type="datetime-local" /><label>datetime-local</label></div>
 		<div class="add-bot"><input type="color" /><label>color</label></div>
 	</div>
