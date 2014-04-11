@@ -18,12 +18,10 @@
  * add top stacked rules
  *
  * BUGS:
- * a.button showing visited colors
  * vertical scrollbar shows on overflowed pre code
  *
  * REFINE:
  * list style positioning
- * color theme rehaul (or remove alltogether)
  *
  */
 
@@ -175,7 +173,6 @@ blockquote.outside {
 .pullquote-left:after,
 .pullquote-right:after { /* not perfectly implemented yet */
 	content: attr(data-pullquote);
-    display: inline-block;
     font-size: 150%;
     float: right;
     margin: .5em 0 .5em .5em;
@@ -248,6 +245,25 @@ input {
 	max-width: 100%;
 }
 
+textarea,
+input[type='text'],
+input[type='search'],
+input[type='password'],
+input[type='email'],
+input[type='url'],
+input[type='tel'],
+input[type='number'],
+input[type='date'],
+input[type='tel'],
+input[type='month'],
+input[type='week'],
+input[type='time'],
+input[type='datetime'],
+input[type='datetime-local'],
+input[list] {
+	padding: .5em;
+}
+
 input[type='button'] {
 	-webkit-appearance: none;
 	-webkit-border-radius: 0;
@@ -260,10 +276,11 @@ select {
 input[type="file"]::-webkit-file-upload-button {
 	border: 1px solid #a4a4a4; /* to force font size changes...for now */
 }
-
+/*
 input[required]:invalid {
 	border: 1px solid red;
 }
+*/
 
 ::-webkit-input-placeholder { text-overflow: ellipsis; }
 :-moz-placeholder { text-overflow: ellipsis; }
@@ -326,7 +343,7 @@ input[type='button'].disabled {
 }
 
 .button-group {
-    margin: 0em;
+    margin: 0;
     white-space: nowrap;
 }
 
@@ -511,7 +528,7 @@ nav.vert ul ul {
 .add-bot-lrg-stacked { margin-bottom: 0; }
 
 .rem-top { margin-top: 0; }
-.rem-bot { margin-botton: 0; }
+.rem-bot { margin-bottom: 0; }
 
 .text-pad { padding: 4px 8px; }
 .text-pad-rel { padding: .4em .8em; }
@@ -750,7 +767,8 @@ nav ul,
 
 /* all but phone (stacked columns) */
 @media only screen and (min-width: 481px) {
-
+	.show-stacked { display: none; }
+	/*.hide-stacked { display: initial; }*/
 }
 
 /* phone (stacked columns) */
@@ -759,7 +777,7 @@ nav ul,
 
 	.row {}
 
-	.col:not(.col-mobile) {
+	.row:not(.no-stack) > .col {
 		float: none;
 		width: 100%;
 	}
@@ -782,4 +800,7 @@ nav ul,
 	.flush-stacked img { width: 100%; }
 
 	.text-center-stacked { text-align: center; }
+
+	/*.show-stacked { display: initial; }*/
+	.hide-stacked { display: none; }
 }
