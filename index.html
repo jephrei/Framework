@@ -16,17 +16,6 @@
 <link href="css/old.css" rel="stylesheet" /><!-- a foolish attempt to play nice -->
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
-<style>
-/*
- * these embedded styles are not part of framework
- * and are specific to this demo page only
- *
- */
-a.normal { color: #0074D9; }
-a.visited { color: #B10DC9; }
-a.hovered { color: #0074D9; text-decoration: underline; }
-a.activated { color: #FF851B; }
-</style>
 
 </head>
 
@@ -42,8 +31,6 @@ a.activated { color: #FF851B; }
 						<li><a href="#weight">Weight</a></li>
 						<li><a href="#lists">Lists</a></li>
 						<li><a href="#quotes">Blockquotes & Pullquotes</a></li>
-						<li><a href="#links">Links</a></li>
-						<!--<li><a href="#definitions">Definition Lists</a></li>-->
 						<li><a href="#misc">Misc</a></li>
 					</ul>
 				</li>
@@ -59,7 +46,6 @@ a.activated { color: #FF851B; }
 				<li><a href="#extras">Extras</a>
 					<ul>
 						<li><a href="#colors">Colors</a></li>
-						<li><a href="#div-styles">DIV Styles</a></li>
 						<li><a href="#positioning">Positioning</a></li>
 					</ul>
 				</li>
@@ -71,11 +57,11 @@ a.activated { color: #FF851B; }
 
 <div class="container">
 
-	<h1 class="text-center lrg add-top-lrg">framework<sup class="light color-blue serif"><em>&alpha;</em></sup><br/><small class="light">a minimal, modular css template.</small></h1>
+	<h1 class="text-center lrg add-top-lrg">framework<sup class="light serif"><em>&alpha;</em></sup><br/><small class="light">a minimal, modular css template.</small></h1>
 	<p class="text-center add-bot-lrg">
-		<a href="https://github.com/jephrei/Framework" class="button chisel bg-navy color-white">Github</a>
-		<a href="https://github.com/jephrei/Framework/archive/master.zip" class="button chisel bg-blue color-white">Download</a>
-		<a href="https://github.com/jephrei/Framework/issues" class="button bg-aqua color-white chisel">Issues</a>
+		<a href="https://github.com/jephrei/Framework" class="github button chisel">Github</a>
+		<a href="https://github.com/jephrei/Framework/archive/master.zip" class="download button chisel">Download</a>
+		<a href="https://github.com/jephrei/Framework/issues" class="issues button chisel">Issues</a>
 	</p>
 	<p>This is a minimal (not necessarily small) framework that can be applied to multiple use cases. It isn't meant to assume the final product so this is for people to use as a foundation under their own code. This is a personal framework that is in the alpha stages of development so things will change and/or break. I would love this to get used, but I highly suggest you make your own.</p>
 <!--  -->
@@ -149,18 +135,19 @@ a.activated { color: #FF851B; }
 	<h2 id="typography">Typography</h2>
 	<p>The font families chosen are serif, sans-serif, and monospace...that's it. Browsers and their environment decide on best looking font available if it's not specified. The font sizes are <code>em</code> based so they scale with the body <code>font-size</code> percentage which, in turn, changes with media queries.</p>
 	<h3 id="headers" class="light color-gray">Headers</h3>
-	<p>The header sizes have been reset so that <code>h6</code> is equal in size to the <code>body</code> font size. Dangerous? Probably. It's an experiement so i may undo it depending on how it works in practice.</p>
-	<h1>Lorem ipsum dolor <small>sit amet consectetur adipiscing elit</small></h1>
+	<p>The header sizes have been reset so that <code>h6</code> is equal in size to the <code>body</code> font size. Dangerous? Possibly. It's an experiment so i may undo it depending on how it works in practice.</p>
+
+	<h1>h1 Lorem ipsum dolor <small>sit amet consectetur adipiscing elit</small></h1>
 	<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-	<h2>Lorem ipsum dolor <small>sit amet consectetur adipiscing elit</small></h2>
+	<h2>h2 Lorem ipsum dolor <small>sit amet consectetur adipiscing elit</small></h2>
 	<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-	<h3>Lorem ipsum dolor <small>sit amet consectetur adipiscing elit</small></h3>
+	<h3>h3 Lorem ipsum dolor <small>sit amet consectetur adipiscing elit</small></h3>
 	<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-	<h4>Lorem ipsum dolor <small>sit amet consectetur adipiscing elit</small></h4>
+	<h4>h4 Lorem ipsum dolor <small>sit amet consectetur adipiscing elit</small></h4>
 	<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-	<h5>Lorem ipsum dolor <small>sit amet consectetur adipiscing elit</small></h5>
+	<h5>h5 Lorem ipsum dolor <small>sit amet consectetur adipiscing elit</small></h5>
 	<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-	<h6>Lorem ipsum dolor <small>sit amet consectetur adipiscing elit</small></h6>
+	<h6>h6 Lorem ipsum dolor <small>sit amet consectetur adipiscing elit</small></h6>
 	<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
 
 	<h3 id="weight" class="light color-gray">Weight</h3>
@@ -270,12 +257,6 @@ a.activated { color: #FF851B; }
 	<p><code>.pullquote-right</code></p>
 	<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. <span class="pullquote-right" data-pullquote="Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est.">Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est.</span> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
 
-	<h3 id="links" class="light color-gray">Links</h3>
-	<!-- The 'visited' and 'hovered' classes are not part of the framework. they force the styles for demo page viewing only -->
-	<p><a href="#0" class="normal">A normal link</a></p>
-	<p><a href="#0" class="visited">A visited link</a></p>
-	<p><a href="#0" class="hovered">A hovered link</a></p>
-	<p><a href="#0" class="activated">An activated link</a></p>
 	<!--
 	<h3 id="definitions" class="light color-gray">Definition Lists</h3>
 	<dl>
@@ -583,77 +564,6 @@ a.activated { color: #FF851B; }
 <!--  -->
 	<h2 id="extras">Extras</h2>
 
-	<h3 id="colors" class="light color-gray">Colors <small>pallette taken from <a href="http://clrs.cc/">clrs.cc</a></small></h3>
-
-	<div class="row add-bot">
-		<div class="col span-1-3">
-			<div class="bg-aqua text-pad">Aqua <span class="float-right">#7FDBFF</span></div>
-			<div class="bg-blue color-white text-pad">Blue <span class="float-right">#0074D9</span></div>
-			<div class="bg-navy color-white text-pad">Navy <span class="float-right">#001F3F</span></div>
-			<div class="bg-teal text-pad">Teal <span class="float-right">#39CCCC</span></div>
-			<div class="bg-green text-pad">Green <span class="float-right">#2ECC40</span></div>
-			<div class="bg-olive text-pad">Olive <span class="float-right">#3D9970</span></div>
-			<div class="bg-lime text-pad">Lime <span class="float-right">#01FF70</span></div>
-		</div>
-		<div class="col span-1-3">
-			<div class="bg-yellow text-pad">Yellow <span class="float-right">#FFDC00</span></div>
-			<div class="bg-orange color-white text-pad">Orange <span class="float-right">#FF851B</span></div>
-			<div class="bg-red color-white text-pad">Red <span class="float-right">#FF4136</span></div>
-			<div class="bg-fuchsia color-white text-pad">Fuchsia <span class="float-right">#F012BE</span></div>
-			<div class="bg-purple color-white text-pad">Purple <span class="float-right">#B10DC9</span></div>
-			<div class="bg-maroon color-white text-pad">Maroon <span class="float-right">#85144B</span></div>
-		</div>
-		<div class="col span-1-3">
-			<div class="bg-white text-pad">White <span class="float-right">#FFF</span></div>
-			<div class="bg-silver text-pad">Silver <span class="float-right">#DDD</span></div>
-			<div class="bg-gray text-pad">Gray <span class="float-right">#AAA</span></div>
-			<div class="bg-black color-white text-pad">Black <span class="float-right">#111</span></div>
-		</div>
-	</div>
-
-	<h3 id="div-styles" class="light color-gray">DIV Styles</h3>
-
-	<p>.well</p>
-	<div class="well bg-white text-pad add-bot">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</div>
-
-	<p>.deep-well</p>
-	<div class="deep-well bg-white text-pad add-bot">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</div>
-
-
-	<p>.shadow</p>
-	<div class="shadow bg-white text-pad add-bot">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</div>
-
-	<p>.deep-shadow</p>
-	<div class="deep-shadow bg-white text-pad add-bot">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</div>
-
-
-	<p>.alert</p>
-	<div class="alert add-bot">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</div>
-
-	<div class="alert bg-red add-bot">.alert.bg-red</div>
-	<div class="alert bg-orange color-white add-bot">.alert.bg-Orange</div>
-	<div class="alert bg-yellow add-bot">.alert.bg-yellow</div>
-	<div class="alert bg-green add-bot">.alert.bg-green</div>
-	<div class="alert bg-blue color-white add-bot">.alert.bg-blue</div>
-	<div class="alert bg-purple color-white add-bot">.alert.bg-Purple</div>
-
-	<!--
-	<div class="alert bg-red add-bot">.alert.bg-red</div>
-	<div class="alert bg-aqua add-bot">.alert.bg-aqua</div>
-	<div class="alert bg-blue color-white add-bot">.alert.bg-blue</div>
-	<div class="alert bg-navy color-white add-bot">.alert.bg-navy</div>
-	<div class="alert bg-teal add-bot">.alert.bg-teal</div>
-	<div class="alert bg-green add-bot">.alert.bg-green</div>
-	<div class="alert bg-olive add-bot">.alert.bg-olive</div>
-	<div class="alert bg-lime add-bot">.alert.bg-lime</div>
-	<div class="alert bg-yellow add-bot">.alert.bg-yellow</div>
-	<div class="alert bg-orange color-white add-bot">.alert.bg-Orange</div>
-	<div class="alert bg-red color-white add-bot">.alert.bg-Red</div>
-	<div class="alert bg-fuchsia color-white add-bot">.alert.bg-Fuchsia</div>
-	<div class="alert bg-purple color-white add-bot">.alert.bg-Purple</div>
-	<div class="alert bg-maroon color-white add-bot">.alert.bg-Maroon</div>
-	-->
-
 	<h3 id="positioning" class="light color-gray">Element Positioning</h3>
 
 	<p>.add-bot</p>
@@ -680,6 +590,17 @@ a.activated { color: #FF851B; }
 			<div class="h1 text-pad code bg-light add-bot-lrg">.h1</div>
 		</div>
 	</div>
+
+	<h3 id="colors" class="light color-gray">Colors</h3>
+	<p>Basic grayscale colors are included for background (<code>bg-*</code>) and font color (<code>color-*</code>).</p>
+
+	<div class="bg-white text-pad">White <span class="float-right"><code>.bg-white</code> #FFF</span></div>
+	<div class="bg-light text-pad">Light <span class="float-right"><code>bg-light</code> #EEE</span></div>
+	<div class="bg-light-gray text-pad">Light Gray <span class="float-right"><code>bg-light-gray</code> #BBB</span></div>
+	<div class="bg-gray color-white text-pad">Gray <span class="float-right"><code>bg-gray</code> #999</span></div>
+	<div class="bg-dark-gray color-white text-pad">Dark Gray <span class="float-right"><code>bg-dark-gray</code> #666</span></div>
+	<div class="bg-dark color-white text-pad">Dark <span class="float-right"><code>.bg-dark</code> #333</span></div>
+	<div class="bg-black color-white text-pad">Black <span class="float-right"><code>.bg-black</code> #000</span></div>
 
 <!--  -->
 

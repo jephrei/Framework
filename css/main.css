@@ -18,7 +18,7 @@
  * add top stacked rules
  *
  * BUGS:
- * color-* !important not working on links
+ * a.button showing visited colors
  * vertical scrollbar shows on overflowed pre code
  *
  * REFINE:
@@ -90,6 +90,7 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
 }
 
 .lrg { font-size: 3em;  /* 16 x 3	= 48 */ }
+.small { font-size: .8em; }
 
 .heavy { font-weight: 900; }
 /*.normal { font-weight: 400; }*/ /* need better class name */
@@ -192,7 +193,7 @@ hr {
     height: 0;
     border-top: .1em solid rgba(0, 0, 0, 0.1);
     border-bottom: .1em solid rgba(255, 255, 255, 0.3);
-	margin: 1em 0;
+	margin: .5em 0;
 }
 
 /* tables */
@@ -271,8 +272,7 @@ input[required]:invalid {
 
 /* Buttons */
 button,
-.button,
-a.button, /* for specificity. find a better way to do this? */
+.button, /* for specificity. find a better way to do this? */
 input[type='button']  {
 	display: inline-block;
     font-family: sans-serif;
@@ -281,8 +281,7 @@ input[type='button']  {
 	margin-bottom: 0.25em;
     padding: 0.5em 1em;
     color: #333;
-    /*font-size: 1em;*/ /* not needed? */
-    line-height: normal;
+    line-height: 1.2;
     font-weight: normal;
     text-decoration: none;
     cursor: pointer;
@@ -297,6 +296,10 @@ input[type='button']  {
     -moz-transition: background-color 0.3s ease;
     -o-transition: background-color 0.3s ease;
     transition: background-color 0.3s ease;
+}
+
+.button:visited {
+	color: initial;
 }
 
 button:hover,
@@ -382,38 +385,6 @@ input[type="text"]:focus {
     box-shadow: 0 0 10px rgba(0,0,0,0.25);
 }
 */
-/* Progress Bar */
-/*
-progress {
-    background-color: #f3f3f3;
-    border: 0;
-    height: 1em;
-    border-radius: 4px;
-    text-indent: .5em;
-}
-
-progress::-webkit-progress-bar {
-    background-color: #f3f3f3;
-    border: 0;
-    border-radius: 4px;
-}
-
-progress::-webkit-progress-value {
-    border-radius: 4px;
-}
-
-progress::-moz-progress-bar {
-    background-color: green;
-    border: 0;
-    border-radius: 4px;
-}
-*/
-
-progress.vertical {
-	-webkit-orient: vertical; /* chrome doesn't support this yet */
-	-moz-orient: vertical;
-	orient: vertical; /* no one uses it */
-}
 
 fieldset {
 	padding: 1em 0 0 0;
@@ -432,31 +403,6 @@ fieldset legend {
 
 figure { margin: 0; }
 
-/*== Custom Elements ==*/
-.shadow { box-shadow: 0 1px 4px rgba(0,0,0,0.3); }
-.deep-shadow { box-shadow: 0 0 20px rgba(0,0,0,0.3); }
-
-.well { box-shadow: inset 0 1px 4px rgba(0,0,0,0.3); }
-.deep-well { box-shadow: inset 0 0 20px rgba(0,0,0,0.3); }
-
-.alert {
-	border: solid 1px #ddd;
-	background-color: #eee;
-	padding: .2em .4em;
-}
-/*
-header.sticky,
-footer.sticky {
-	position: fixed;
-	top: 0;
-	width: 100%;
-}
-
-footer.sticky {
-	top: auto;
-	bottom: 0;
-}
-*/
 /* nav list */
 nav ul {
     list-style-type: none;
@@ -467,6 +413,7 @@ nav ul {
 
 nav a {
     display: block;
+	width: 100%;
     padding: .25em .75em;
 }
 
@@ -511,91 +458,23 @@ nav.vert ul ul {
     margin-left: 1em;
 }
 
-/* Color pallete taken from Colors @ http://clrs.cc/ */
-/* these are helper classes so yes, !important is ok here to override unknown specificity. */
 
-/* Cool */
-.color-aqua { color: #7FDBFF !important; }
-.color-blue { color: #0074D9 !important; }
-.color-navy { color: #001F3F !important; }
-.color-teal { color: #39CCCC !important; }
-.color-green { color: #2ECC40 !important; }
-.color-olive { color: #3D9970 !important; }
-.color-lime { color: #01FF70 !important; }
-
-/* Warm */
-.color-yellow { color: #FFDC00 !important; }
-.color-orange { color: #FF851B !important; }
-.color-red { color: #FF4136 !important; }
-.color-fuchsia { color: #F012BE !important; }
-.color-purple { color: #B10DC9 !important; }
-.color-maroon { color: #85144B !important; }
-
-/* Gray Scale */
-.color-silver { color: #ddd !important; }
-
-.color-black { color: #000 !important; }
-.color-dark { color: #333 !important; }
-.color-dark-gray { color: #666 !important; }
-.color-gray { color: #999 !important; }
-.color-light-gray { color: #bbb !important; }
-.color-light { color: #eee !important; }
-.color-white { color: #fff !important; }
-
-/* Cool */
-.bg-aqua { background-color: #7FDBFF !important; }
-.bg-blue { background-color: #0074D9 !important; }
-.bg-navy { background-color: #001F3F !important; }
-.bg-teal { background-color: #39CCCC !important; }
-.bg-green { background-color: #2ECC40 !important; }
-.bg-olive { background-color: #3D9970 !important; }
-.bg-lime { background-color: #01FF70 !important; }
-
-/* Warm */
-.bg-yellow { background-color: #FFDC00 !important; }
-.bg-orange { background-color: #FF851B !important; }
-.bg-red { background-color: #FF4136 !important; }
-.bg-fuchsia { background-color: #F012BE !important; }
-.bg-purple { background-color: #B10DC9 !important; }
-.bg-maroon { background-color: #85144B !important; }
-
-/* Gray Scale */
-.bg-silver { background-color: #ddd !important; }
-
-.bg-black { background-color: #000 !important; }
-.bg-dark { background-color: #333 !important; }
-.bg-dark-gray { background-color: #666 !important; }
-.bg-gray { background-color: #999 !important; }
-.bg-light-gray { background-color: #bbb !important; }
-.bg-light { background-color: #eee !important; }
-.bg-white { background-color: #fff !important; }
-
-/* Cool */
-.alert.bg-aqua { border-color: #7FDBFF; background-color: #a6e7ff; }
-.alert.bg-blue { border-color: #0074D9; background-color: #2f9cff; }
-.alert.bg-navy { border-color: #001F3F; background-color: #004a95; }
-.alert.bg-teal { border-color: #39CCCC; background-color: #7cdede; }
-.alert.bg-green { border-color: #2ECC40; background-color: #71df7e; }
-.alert.bg-olive { border-color: #3D9970; background-color: #69c29a; }
-.alert.bg-lime { border-color: #01FF70; background-color: #56fe9d; }
-
-/* Warm */
-.alert.bg-yellow { border-color: #FFDC00; background-color: #ffea55; }
-.alert.bg-orange { border-color: #FF851B; background-color: #ffb571; }
-.alert.bg-red { border-color: #FF4136; background-color: #ffa59f; }
-.alert.bg-fuchsia { border-color: #F012BE; background-color: #f561d5; }
-.alert.bg-purple { border-color: #B10DC9; background-color: #db39f2; }
-.alert.bg-maroon { border-color: #85144B; background-color: #cf1f73; }
-
-/* Gray Scale */
-/*
-.alert.bg-white { border-color: #fff; background-color: #; }
-.alert.bg-silver { border-color: #ddd; background-color: #; }
-.alert.bg-gray { border-color: #aaa; background-color: #; }
-.alert.bg-black { border-color: #111; background-color: #; }
-*/
-
-.hollow { background-color: transparent; }
+/* border radius */
+.chisel {
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+.curve {
+	-webkit-border-radius: .4em;
+	-moz-border-radius: .4em;
+	border-radius: .4em;
+}
+.round {
+	-webkit-border-radius: 2em;
+	-moz-border-radius: 2em;
+	border-radius: 2em;
+}
 
 /* Text positioning */
 .text-left { text-align: left; }
@@ -611,7 +490,8 @@ nav.vert ul ul {
 
 .no-wrap { white-space: nowrap; }
 
-/* Element position/spacing */
+/* Element positioning/spacing */
+.float-left { float: left; }
 .float-right { float: right; }
 
 .inline { display: inline; }
@@ -644,22 +524,22 @@ nav.vert ul ul {
 	-webkit-overflow-scrolling: touch;
 }
 
-/* border radius */
-.chisel {
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
-}
-.curve {
-	-webkit-border-radius: .4em;
-	-moz-border-radius: .4em;
-	border-radius: .4em;
-}
-.round {
-	-webkit-border-radius: 2em;
-	-moz-border-radius: 2em;
-	border-radius: 2em;
-}
+/* basic colors */
+.color-black { color: #000 !important; }
+.color-dark { color: #333 !important; }
+.color-dark-gray { color: #666 !important; }
+.color-gray { color: #999 !important; }
+.color-light-gray { color: #bbb !important; }
+.color-light { color: #eee !important; }
+.color-white { color: #fff !important; }
+
+.bg-black { background-color: #000 !important; }
+.bg-dark { background-color: #333 !important; }
+.bg-dark-gray { background-color: #666 !important; }
+.bg-gray { background-color: #999 !important; }
+.bg-light-gray { background-color: #bbb !important; }
+.bg-light { background-color: #eee !important; }
+.bg-white { background-color: #fff !important; }
 
 /* fun stuff */
 ::selection {
