@@ -18,12 +18,10 @@
  * add top stacked rules
  *
  * BUGS:
- * a.button showing visited colors
  * vertical scrollbar shows on overflowed pre code
  *
  * REFINE:
  * list style positioning
- * color theme rehaul (or remove alltogether)
  *
  */
 
@@ -31,28 +29,28 @@
 @import "print.css" print;
 
 *, *:before, *:after {
-	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
 html {
-	font: 100 16px/1.6 sans-serif;
 	color: #333;
+	font: 100 16px/1.6 sans-serif;
 	-webkit-text-size-adjust: none;
 	-moz-text-size-adjust: none;
 	-ms-text-size-adjust: none;
 }
 
 body {
-	font-size:100%;
 	margin: 0;
+	font-size:100%;
 }
 
-a { color: #0074D9; text-decoration: none; }
-a:visited { color: #B10DC9; }
+a { text-decoration: none; }
+a:visited {  }
 a:hover { text-decoration: underline; }
-a:active { color: #FF851B; }
+a:active {  }
 
 a img {
 	border: none; /* remove border on older browsers */
@@ -69,9 +67,9 @@ canvas { max-width: 100%; }
 .crop-stacked img { margin: auto; }
 
 h1, h2, h3, h4, h5, h6 {
-	line-height: 1.1;
 	margin-top: 1.5em;
 	margin-bottom: 0.5em;
+	line-height: 1.1;
 }
 
 /* reset so that h6 is equal in size to the body font-size - i may undo */
@@ -85,12 +83,13 @@ h6, .h6 { font-size:1em;		/* 16 * 1		=16 */ }
 h1 img, h2 img, h3 img, h4 img, h5 img, h6 img { margin: 0; }
 
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
-	font-weight: normal;
 	color: #bbb;
+	font-weight: normal;
 }
 
-.lrg { font-size: 3em;  /* 16 x 3	= 48 */ }
-.small { font-size: .8em; }
+.mega { font-size: 3em;	/* 16 x 3	= 48 */ }
+.lg { font-size: 2em;	/* 16 x 2	= 32 */ }
+.sm { font-size: .8em; }
 
 .heavy { font-weight: 900; }
 /*.normal { font-weight: 400; }*/ /* need better class name */
@@ -112,8 +111,8 @@ ol.long { padding-left: 2.4em; }
 menu.blank,
 ul.blank,
 ol.blank {
-	list-style-type: none;
 	padding-left: 0;
+	list-style-type: none;
 }
 
 menu.outside,
@@ -126,31 +125,31 @@ ul.disc { list-style-type: disc; }
 
 /* code */
 code, kbd, pre, samp, var {
-	font: normal monospace;
 	white-space: pre-wrap;
 	white-space: -moz-pre-wrap;
 	white-space: -pre-wrap;
 	white-space: -o-pre-wrap;
 	word-wrap: break-word;
+	font: normal monospace;
 }
 
 code {
 	padding: .1em .2em;
-	color: #666;
-	background-color: #eee;
 	border: solid 1px #ddd;
 	border-radius: 4px;
-	font-size: 90%;
+	background-color: #eee;
+	color: #666;
 	white-space: nowrap;
+	font-size: 90%;
 }
 
 pre code {
 
 	display: block;
+    overflow-y: scroll;
+    max-width: 100%;
 	white-space: pre;
 	word-wrap: initial;
-    max-width: 100%;
-    overflow-y: scroll;
 	-webkit-overflow-scrolling: touch;
 }
 
@@ -163,8 +162,8 @@ acronym[title] {
 blockquote {
 	margin-left: 0;
 	padding-left: 1em;
-	color: #999;
 	border-left: solid .2em #ddd;
+	color: #999;
 }
 
 blockquote.outside {
@@ -173,14 +172,13 @@ blockquote.outside {
 }
 
 .pullquote-left:after,
-.pullquote-right:after { /* not perfectly implemented yet */
-	content: attr(data-pullquote);
-    display: inline-block;
-    font-size: 150%;
+.pullquote-right:after {
     float: right;
     margin: .5em 0 .5em .5em;
     width: 50%;
 	color: #999;
+    font-size: 150%; /* not perfectly implemented yet */
+	content: attr(data-pullquote);
 }
 
 .pullquote-left:after {
@@ -189,17 +187,17 @@ blockquote.outside {
 }
 
 hr {
-	border: 0;
+	margin: .5em 0;
     height: 0;
+	border: 0;
     border-top: .1em solid rgba(0, 0, 0, 0.1);
     border-bottom: .1em solid rgba(255, 255, 255, 0.3);
-	margin: .5em 0;
 }
 
 /* tables */
 table {
-	min-width: 100%;
 	margin: 1em 0;
+	min-width: 100%;
 }
 
 th { text-align: left; }
@@ -222,9 +220,9 @@ table caption {
 }
 
 .default > caption {
+	color: #999;
 	text-align: center;
 	font-size: 1.25em;
-	color: #999;
 }
 
 .default td,
@@ -247,10 +245,29 @@ table caption {
 input {
 	max-width: 100%;
 }
-
+/*
+textarea,
+input[type='text'],
+input[type='search'],
+input[type='password'],
+input[type='email'],
+input[type='url'],
+input[type='tel'],
+input[type='number'],
+input[type='date'],
+input[type='tel'],
+input[type='month'],
+input[type='week'],
+input[type='time'],
+input[type='datetime'],
+input[type='datetime-local'],
+input[list] {
+	padding: .5em;
+}
+*/
 input[type='button'] {
-	-webkit-appearance: none;
 	-webkit-border-radius: 0;
+	-webkit-appearance: none;
 }
 
 select {
@@ -260,10 +277,11 @@ select {
 input[type="file"]::-webkit-file-upload-button {
 	border: 1px solid #a4a4a4; /* to force font size changes...for now */
 }
-
+/*
 input[required]:invalid {
 	border: 1px solid red;
 }
+*/
 
 ::-webkit-input-placeholder { text-overflow: ellipsis; }
 :-moz-placeholder { text-overflow: ellipsis; }
@@ -275,27 +293,27 @@ button,
 .button, /* for specificity. find a better way to do this? */
 input[type='button']  {
 	display: inline-block;
-    font-family: sans-serif;
-	border: none;
-    background-color: #ddd;
 	margin-bottom: 0.25em;
     padding: 0.5em 1em;
-    color: #333;
-    line-height: 1.2;
-    font-weight: normal;
-    text-decoration: none;
-    cursor: pointer;
-    text-align: center;
+    border: none;
+    background-color: #ddd;
+	color: #333;
     vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+    font-weight: normal;
+    font-family: sans-serif;
+    line-height: 1.2;
+    cursor: pointer;
+
+	-webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none;
-
-	-webkit-transition: background-color 0.3s ease;
-    -moz-transition: background-color 0.3s ease;
-    -o-transition: background-color 0.3s ease;
-    transition: background-color 0.3s ease;
 }
 
 .button:visited {
@@ -319,14 +337,14 @@ input[type='button']:not(.disabled):active {
 button.disabled,
 .button.disabled,
 input[type='button'].disabled {
-    cursor: not-allowed;
     background-color: #eee;
     color: #bbb;
     text-shadow: none;
+    cursor: not-allowed;
 }
 
 .button-group {
-    margin: 0em;
+    margin: 0;
     white-space: nowrap;
 }
 
@@ -344,22 +362,22 @@ input[type='button'].disabled {
 }
 
 .button-group > input[type="text"] {
-    background-color: #f5f5f5;
     margin: 0 -1px 0 0;
     padding: 0.5em 1em;
-    color: #333;
-    font-size: 1em;
-    line-height: normal;
-    font-weight: normal;
-    text-decoration: none;
     border: 0;
+    background-color: #f5f5f5;
+    color: #333;
 	/*border: solid 1px #ddd;*/
     vertical-align: middle;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 1em;
+    line-height: normal;
 }
 
-.button-large { font-size: 2em; }
-.button-medium { font-size: 1.5em; }
-.button-small { font-size: .75em; }
+.button-lg { font-size: 2em; }
+.button-md { font-size: 1.5em; }
+.button-sm { font-size: .75em; }
 
 .button-subtext {
     font-size: 75%;
@@ -370,51 +388,37 @@ input[type='button'].disabled {
     white-space: pre;
 }
 
-/* Textarea */
-/*
-textarea,
-input[type="text"] {
-    border: solid 1px #eee;
-    transition: border-color 0.5s ease,
-                box-shadow 0.5s ease;
-}
-
-textarea:focus,
-input[type="text"]:focus {
-    border-color: lightblue;
-    box-shadow: 0 0 10px rgba(0,0,0,0.25);
-}
-*/
+textarea { width: 100%; }
 
 fieldset {
-	padding: 1em 0 0 0;
 	margin-bottom: 0;
+	padding: 1em 0 0 0;
 	border: 0;
 }
 
 fieldset legend {
-	font-size: 1.25em;
-	font-weight: 100;
-	color: #999;
 	display: block;
 	width: 100%;
 	border-bottom: solid 1px #ddd;
+	color: #999;
+	font-weight: 100;
+	font-size: 1.25em;
 }
 
 figure { margin: 0; }
 
 /* nav list */
 nav ul {
-    list-style-type: none;
     margin: 0;
-	font-weight: normal;
     padding-left: 0;
+    list-style-type: none;
+	font-weight: normal;
 }
 
 nav a {
     display: block;
-	width: 100%;
     padding: .25em .75em;
+	width: 100%;
 }
 
 nav a:not([href]) {
@@ -431,8 +435,8 @@ nav.horiz li:first-child.flush a { padding-left: 0; }
 nav.horiz li:last-child.flush a { padding-right: 0; }
 
 nav.horiz li > ul {
-    display: none;
     position: absolute;
+    display: none;
 	background-color: rgba(255,255,255,0.8);
 }
 
@@ -442,8 +446,8 @@ nav.horiz li:hover > ul {
 }
 
 nav.horiz li > ul li {
-	white-space: nowrap;
     width: 100%;
+	white-space: nowrap;
 }
 
 nav.horiz ul ul > li > a {
@@ -485,8 +489,8 @@ nav.vert ul ul {
 
 .position-relative { position: relative; }
 
-.auto-width { width: auto; max-width: 100%; }
-.full-width { width: 100%; max-width: 100%; }
+.auto-width { max-width: 100%; width: auto; }
+.full-width { max-width: 100%; width: 100%; }
 
 .no-wrap { white-space: nowrap; }
 
@@ -500,18 +504,18 @@ nav.vert ul ul {
 
 .add-top { margin-top: 1em; }
 .add-top-sm { margin-top: 0.5em; }
-.add-top-lrg { margin-top: 2em; }
+.add-top-lg { margin-top: 2em; }
 
 .add-bot { margin-bottom: 1em; }
 .add-bot-sm { margin-bottom: 0.5em; }
-.add-bot-lrg { margin-bottom: 2em; }
+.add-bot-lg { margin-bottom: 2em; }
 
 .add-bot-stacked,
 .add-bot-sm-stacked,
-.add-bot-lrg-stacked { margin-bottom: 0; }
+.add-bot-lg-stacked { margin-bottom: 0; }
 
 .rem-top { margin-top: 0; }
-.rem-bot { margin-botton: 0; }
+.rem-bot { margin-bottom: 0; }
 
 .text-pad { padding: 4px 8px; }
 .text-pad-rel { padding: .4em .8em; }
@@ -543,45 +547,45 @@ nav.vert ul ul {
 
 /* fun stuff */
 ::selection {
+	background: black;
 	color: white;
 	text-shadow: none;
-	background: black;
 }
 
 ::-moz-selection {
+	background: black;
 	color: white;
 	text-shadow: none;
-	background: black;
 }
 
 /*== GRID SYSTEM ==*/
 .container {
-	max-width: 960px; /* your normal desktop width */
-	margin-left: auto;
 	margin-right: auto;
-	padding-left: 1.4em;
+	margin-left: auto;
 	padding-right: 1.4em;
+	padding-left: 1.4em;
+	max-width: 960px; /* your normal desktop width */
 }
 
 .row {
-	width: 100%;
 	clear: both;
+	width: 100%;
 }
 
 .row.spaced {
-	margin-left: -1em;
 	margin-right: -1em;
+	margin-left: -1em;
 	width: auto;
 }
 
 .col {
-	width: 100%;
 	float: left;
+	width: 100%;
 }
 
 .row.spaced > .col {
-	padding-left: 1em;
 	padding-right: 1em;
+	padding-left: 1em;
 }
 
 .row.reverse > .col { float: right; }
@@ -669,40 +673,40 @@ nav.vert ul ul {
 .col.skip-7-8	{ margin-left: 87.5%; }
 
 /* col skip */
-.row.reverse > .col.skip-1-2	{ margin-left: 0; margin-right: 50%; }
-.row.reverse > .col.skip-1-3	{ margin-left: 0; margin-right: 33.333%; }
-.row.reverse > .col.skip-1-4	{ margin-left: 0; margin-right: 25%; }
-.row.reverse > .col.skip-1-5	{ margin-left: 0; margin-right: 20%; }
-.row.reverse > .col.skip-1-6	{ margin-left: 0; margin-right: 16.666%; }
-.row.reverse > .col.skip-1-7	{ margin-left: 0; margin-right: 14.285%; }
-.row.reverse > .col.skip-1-8	{ margin-left: 0; margin-right: 12.5%; }
+.row.reverse > .col.skip-1-2	{ margin-right: 50%; margin-left: 0; }
+.row.reverse > .col.skip-1-3	{ margin-right: 33.333%; margin-left: 0; }
+.row.reverse > .col.skip-1-4	{ margin-right: 25%; margin-left: 0; }
+.row.reverse > .col.skip-1-5	{ margin-right: 20%; margin-left: 0; }
+.row.reverse > .col.skip-1-6	{ margin-right: 16.666%; margin-left: 0; }
+.row.reverse > .col.skip-1-7	{ margin-right: 14.285%; margin-left: 0; }
+.row.reverse > .col.skip-1-8	{ margin-right: 12.5%; margin-left: 0; }
 
-.row.reverse > .col.skip-2-3	{ margin-left: 0; margin-right: 66.666%; }
-.row.reverse > .col.skip-2-4	{ margin-left: 0; margin-right: 50%; } /* 1-2 */
-.row.reverse > .col.skip-2-5	{ margin-left: 0; margin-right: 40%; }
-.row.reverse > .col.skip-2-6	{ margin-left: 0; margin-right: 33.333%; } /* 1-3 */
-.row.reverse > .col.skip-2-7	{ margin-left: 0; margin-right: 28.571%; }
-.row.reverse > .col.skip-2-8	{ margin-left: 0; margin-right: 25%; } /* 1-4 */
+.row.reverse > .col.skip-2-3	{ margin-right: 66.666%; margin-left: 0; }
+.row.reverse > .col.skip-2-4	{ margin-right: 50%; margin-left: 0; } /* 1-2 */
+.row.reverse > .col.skip-2-5	{ margin-right: 40%; margin-left: 0; }
+.row.reverse > .col.skip-2-6	{ margin-right: 33.333%; margin-left: 0; } /* 1-3 */
+.row.reverse > .col.skip-2-7	{ margin-right: 28.571%; margin-left: 0; }
+.row.reverse > .col.skip-2-8	{ margin-right: 25%; margin-left: 0; } /* 1-4 */
 
-.row.reverse > .col.skip-3-4	{ margin-left: 0; margin-right: 75%; }
-.row.reverse > .col.skip-3-5	{ margin-left: 0; margin-right: 60%; }
-.row.reverse > .col.skip-3-6	{ margin-left: 0; margin-right: 50%; } /* 1-2 */
-.row.reverse > .col.skip-3-7	{ margin-left: 0; margin-right: 42.857%; }
-.row.reverse > .col.skip-3-8	{ margin-left: 0; margin-right: 37.5%; }
+.row.reverse > .col.skip-3-4	{ margin-right: 75%; margin-left: 0; }
+.row.reverse > .col.skip-3-5	{ margin-right: 60%; margin-left: 0; }
+.row.reverse > .col.skip-3-6	{ margin-right: 50%; margin-left: 0; } /* 1-2 */
+.row.reverse > .col.skip-3-7	{ margin-right: 42.857%; margin-left: 0; }
+.row.reverse > .col.skip-3-8	{ margin-right: 37.5%; margin-left: 0; }
 
-.row.reverse > .col.skip-4-5	{ margin-left: 0; margin-right: 80%; }
-.row.reverse > .col.skip-4-6	{ margin-left: 0; margin-right: 66.666%; } /* 2-3 */
-.row.reverse > .col.skip-4-7	{ margin-left: 0; margin-right: 57.142%; }
-.row.reverse > .col.skip-4-8	{ margin-left: 0; margin-right: 50%; } /* 1-2 */
+.row.reverse > .col.skip-4-5	{ margin-right: 80%; margin-left: 0; }
+.row.reverse > .col.skip-4-6	{ margin-right: 66.666%; margin-left: 0; } /* 2-3 */
+.row.reverse > .col.skip-4-7	{ margin-right: 57.142%; margin-left: 0; }
+.row.reverse > .col.skip-4-8	{ margin-right: 50%; margin-left: 0; } /* 1-2 */
 
-.row.reverse > .col.skip-5-6	{ margin-left: 0; margin-right: 83.333%; }
-.row.reverse > .col.skip-5-7	{ margin-left: 0; margin-right: 71.428%; }
-.row.reverse > .col.skip-5-8	{ margin-left: 0; margin-right: 62.5%; }
+.row.reverse > .col.skip-5-6	{ margin-right: 83.333%; margin-left: 0; }
+.row.reverse > .col.skip-5-7	{ margin-right: 71.428%; margin-left: 0; }
+.row.reverse > .col.skip-5-8	{ margin-right: 62.5%; margin-left: 0; }
 
-.row.reverse > .col.skip-6-7	{ margin-left: 0; margin-right: 85.714%; }
-.row.reverse > .col.skip-6-8	{ margin-left: 0; margin-right: 75%; } /* 3-4 */
+.row.reverse > .col.skip-6-7	{ margin-right: 85.714%; margin-left: 0; }
+.row.reverse > .col.skip-6-8	{ margin-right: 75%; margin-left: 0; } /* 3-4 */
 
-.row.reverse > .col.skip-7-8	{ margin-left: 0; margin-right: 87.5%; }
+.row.reverse > .col.skip-7-8	{ margin-right: 87.5%; margin-left: 0; }
 
 /*== HACKY TYPE THINGS ==*/
 /* clearfix for floated children */
@@ -712,8 +716,8 @@ nav ul:after,
 .cf:after,
 .row:before,
 .row:after {
-    content: " ";
     display: table;
+    content: " ";
 }
 
 nav ul:after,
@@ -750,16 +754,17 @@ nav ul,
 
 /* all but phone (stacked columns) */
 @media only screen and (min-width: 481px) {
-
+	.show-stacked { display: none; }
+	/*.hide-stacked { display: initial; }*/
 }
 
 /* phone (stacked columns) */
 @media only screen and (max-width: 480px) {
 	body { font-size: 90%; }
 
-	.row {}
+	.row { }
 
-	.col:not(.col-mobile) {
+	.row:not(.no-stack) > .col {
 		float: none;
 		width: 100%;
 	}
@@ -767,13 +772,13 @@ nav ul,
 	/* may revert to multiple selectors depending on compatibility */
 	.col[class*="skip-"],
 	.row.reverse > .col[class*="skip-"] /* for selectivity */ {
-		margin-left: 0;
 		margin-right: 0;
+		margin-left: 0;
 	}
 
 	.add-bot-stacked { margin-bottom: 1em; }
 	.add-bot-sm-stacked { margin-bottom: 0.5em; }
-	.add-bot-lrg-stacked { margin-bottom: 2em; }
+	.add-bot-lg-stacked { margin-bottom: 2em; }
 
 	.crop-stacked {	overflow: hidden; }
 	.crop-stacked img { margin: -25% 0; }
@@ -782,4 +787,7 @@ nav ul,
 	.flush-stacked img { width: 100%; }
 
 	.text-center-stacked { text-align: center; }
+
+	/*.show-stacked { display: initial; }*/
+	.hide-stacked { display: none; }
 }
