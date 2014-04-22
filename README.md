@@ -1,7 +1,7 @@
 #Framework v0.2&alpha;
 This is a personal framework. Things will be ugly and/or [broken](http://motherfuckingwebsite.com). The final scope isn't fully realized yet, but I have my ideas. I'll probably get distracted along the way. Because this is alpha there are notes to myself and you everywhere. It's kinda messy in there.
 
-jephrei.github.io/Framework/
+http://jephrei.github.io/Framework/
 
 ##Another framework?
 Yes. It's an unorganized pile of foo but it's mine and I'm enjoying myself. You should make one too.
