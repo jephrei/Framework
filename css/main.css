@@ -1,51 +1,36 @@
 /*
- *
  * Framework v0.2 alpha by jephrei
  *
- * TODO:
- * navigation styles (vert, expanded, etc.)
- * more form elements
  * details/summary element
- * test on darker/colored BGs
- * add roman, and colored options
- * toggle class (needs js)
+ * add roman, etc. list options
  * hex fallbacks for rgb/rgba
- * helper classes and explanations for
- *  - clearfix
- *  - etc
+ * helper classes and explanations
  * show/hide in specific views (stacked, small, normal, large, etc.)
- * grouped elements - probably wait til flexbox implementation)
- * add top stacked rules
- *
- * BUGS:
- * vertical scrollbar shows on overflowed pre code
- *
- * REFINE:
- * list style positioning
+ * add fluid container
  *
  */
 
 @import "normalize.css";
 @import "print.css" print;
 
-*, *:before, *:after {
+html {
+	font: 100 16px/1.5 sans-serif;
+	color: #333;
+	-webkit-text-size-adjust: none;
+	-moz-text-size-adjust: none;
+	-ms-text-size-adjust: none;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
-html {
-	color: #333;
-	font: 100 16px/1.6 sans-serif;
-	-webkit-text-size-adjust: none;
-	-moz-text-size-adjust: none;
-	-ms-text-size-adjust: none;
+*, *:before, *:after {
+	-webkit-box-sizing: inherit;
+	-moz-box-sizing: inherit;
+	box-sizing: inherit;
 }
 
-body {
-	margin: 0;
-	font-size:100%;
-}
+body { margin: 0; }
 
 a { text-decoration: none; }
 a:visited {  }
@@ -63,22 +48,19 @@ video,
 audio,
 canvas { max-width: 100%; }
 
-.crop-stacked { overflow: auto; }
-.crop-stacked img { margin: auto; }
-
 h1, h2, h3, h4, h5, h6 {
 	margin-top: 1.5em;
 	margin-bottom: 0.5em;
-	line-height: 1.1;
+	line-height: 1.125;
 }
 
 /* reset so that h6 is equal in size to the body font-size - i may undo */
-h1, .h1 { font-size:2.25em; 	/* 16 * 2.25	=36 */ }
-h2, .h2 { font-size:1.75em; 	/* 16 * 1.75	=28 */ }
-h3, .h3 { font-size:1.5em;  	/* 16 * 1.5		=24 */ }
-h4, .h4 { font-size:1.25em; 	/* 16 * 1.25	=20 */ }
-h5, .h5 { font-size:1.125em;	/* 16 * 1.125	=18 */ }
-h6, .h6 { font-size:1em;		/* 16 * 1		=16 */ }
+h1, .h1 { font-size:2.25em; }	/* 16 * 2.25	=36 */
+h2, .h2 { font-size:1.75em; }	/* 16 * 1.75	=28 */
+h3, .h3 { font-size:1.5em; } 	/* 16 * 1.5		=24 */
+h4, .h4 { font-size:1.25em; }	/* 16 * 1.25	=20 */
+h5, .h5 { font-size:1.125em; }	/* 16 * 1.125	=18 */
+h6, .h6 { font-size:1em; }		/* 16 * 1		=16 */
 
 h1 img, h2 img, h3 img, h4 img, h5 img, h6 img { margin: 0; }
 
@@ -87,15 +69,15 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
 	font-weight: normal;
 }
 
-.mega { font-size: 3em;	/* 16 x 3	= 48 */ }
-.lg { font-size: 2em;	/* 16 x 2	= 32 */ }
-.sm { font-size: .8em; }
+.mega { font-size: 3em;	}	/* 16 x 3	= 48 */
+.lg { font-size: 2em; } 	/* 16 x 2	= 32 */
+.sm { font-size: .75em; }	/* 16 x .8	= 12 */
 
 .heavy { font-weight: 900; }
-/*.normal { font-weight: 400; }*/ /* need better class name */
+/*.normal { font-weight: 400; }*/ /* i need a better class name */
 .light { font-weight: 100; }
 
-/*small { line-height: 1; }*/ /* dammit why did past jephrei put this here? note to self: document more */
+/*small { line-height: 1; }*/ /* damn it, why did past me put this here? note to self: document more */
 
 .sans-serif { font-family: sans-serif; }
 .serif { font-family: serif; }
@@ -139,12 +121,10 @@ code {
 	border-radius: 4px;
 	background-color: #eee;
 	color: #666;
-	white-space: nowrap;
 	font-size: 90%;
 }
 
 pre code {
-
 	display: block;
     overflow-y: scroll;
     max-width: 100%;
@@ -166,16 +146,13 @@ blockquote {
 	color: #999;
 }
 
-blockquote.outside {
-	margin-left: -1.2em;
-
-}
+blockquote.outside { margin-left: -1.2em; }
 
 .pullquote-left:after,
 .pullquote-right:after {
     float: right;
     margin: .5em 0 .5em .5em;
-    width: 50%;
+    max-width: 50%;
 	color: #999;
     font-size: 150%; /* not perfectly implemented yet */
 	content: attr(data-pullquote);
@@ -462,6 +439,9 @@ nav.vert ul ul {
     margin-left: 1em;
 }
 
+/* image helpers */
+.crop-stacked { overflow: auto; }
+.crop-stacked img { margin: auto; }
 
 /* border radius */
 .chisel {
@@ -510,9 +490,13 @@ nav.vert ul ul {
 .add-bot-sm { margin-bottom: 0.5em; }
 .add-bot-lg { margin-bottom: 2em; }
 
+.add-top-stacked,
+.add-top-sm-stacked,
+.add-top-lg-stacked { margin-top: initial; }
+
 .add-bot-stacked,
 .add-bot-sm-stacked,
-.add-bot-lg-stacked { margin-bottom: 0; }
+.add-bot-lg-stacked { margin-bottom: initial; }
 
 .rem-top { margin-top: 0; }
 .rem-bot { margin-bottom: 0; }
@@ -529,6 +513,7 @@ nav.vert ul ul {
 }
 
 /* basic colors */
+/* !important added for unknown specificities */
 .color-black { color: #000 !important; }
 .color-dark { color: #333 !important; }
 .color-dark-gray { color: #666 !important; }
@@ -546,6 +531,7 @@ nav.vert ul ul {
 .bg-white { background-color: #fff !important; }
 
 /* fun stuff */
+/* these two selectors can't be combined for some reason. bug? */
 ::selection {
 	background: black;
 	color: white;
@@ -562,9 +548,9 @@ nav.vert ul ul {
 .container {
 	margin-right: auto;
 	margin-left: auto;
-	padding-right: 1.4em;
-	padding-left: 1.4em;
-	max-width: 960px; /* your normal desktop width */
+	padding-right: 2em;
+	padding-left: 2em;
+	max-width: 60em;
 }
 
 .row {
@@ -736,15 +722,11 @@ nav ul,
 /* large screen */
 @media only screen and (min-width: 1700px) {
 	body { font-size: 160%; }
-
-	.container { max-width: 1600px; }
 }
 
 /* normal desktop */
 @media only screen and (max-width: 1699px) and (min-width: 1300px)  {
 	body { font-size: 120%; }
-
-	.container { max-width: 1200px; }
 }
 
 /* small / tablet */
@@ -755,26 +737,26 @@ nav ul,
 /* all but phone (stacked columns) */
 @media only screen and (min-width: 481px) {
 	.show-stacked { display: none; }
-	/*.hide-stacked { display: initial; }*/
 }
 
 /* phone (stacked columns) */
 @media only screen and (max-width: 480px) {
 	body { font-size: 90%; }
 
-	.row { }
-
 	.row:not(.no-stack) > .col {
 		float: none;
 		width: 100%;
 	}
 
-	/* may revert to multiple selectors depending on compatibility */
-	.col[class*="skip-"],
-	.row.reverse > .col[class*="skip-"] /* for selectivity */ {
+	.row:not(.no-stack) > .col[class*="skip-"],
+	.row:not(.no-stack).reverse > .col[class*="skip-"] /* for selectivity */ {
 		margin-right: 0;
 		margin-left: 0;
 	}
+
+	.add-top-stacked { margin-top: 1em; }
+	.add-top-sm-stacked { margin-top: 0.5em; }
+	.add-top-lg-stacked { margin-top: 2em; }
 
 	.add-bot-stacked { margin-bottom: 1em; }
 	.add-bot-sm-stacked { margin-bottom: 0.5em; }
@@ -783,7 +765,7 @@ nav ul,
 	.crop-stacked {	overflow: hidden; }
 	.crop-stacked img { margin: -25% 0; }
 
-	.flush-stacked { margin: 0 -1.4em; /* container margin * -1 */ }
+	.flush-stacked { margin: 0 -2em; /* container margin * -1 */ }
 	.flush-stacked img { width: 100%; }
 
 	.text-center-stacked { text-align: center; }

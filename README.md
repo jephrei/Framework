@@ -20,27 +20,29 @@ Yes. It's an unorganized pile of foo but it's mine and I'm enjoying myself. You 
 * Basic element styles
 
 ###To Do
-* More form styling
-* Split CSS to multiple files -
 * Flexbox - when something more stable is decided on
 * Cross-browser testing
 * Minified Version - after alpha most likely
+* Vertical rhythm tweaks
 
 ###Maybe
-* Basic Form validation
 * Grid increments (like 4 columns for desktop and 2 for mobile)
+* Split CSS to multiple files
+* Basic Form validation
 * Mobile reveal menu
-* Dynamic, inheritable color themes
-* Icons
 * Minimal animations
 * LESS version (when my LESS knowledge gets better)
+* toggle class (needs js)
 
 ##Compatibility
-I noticed that IE8 and below sucks but you probably knew that.
+I noticed that IE7 and below sucks but you probably knew that.
+
+There are some small bugs in IE8:
+* sub pixel widths aren't supported so the ends of columns may be a pixel off from each other
+* media queries aren't supported so the hide/show functionality won't trigger
 
 ##Credits
 * normalize.css http://necolas.github.io/normalize.css/
-* Colors http://clrs.cc/
 
 ##Author
 [Jephrei](http://github.com/jephrei)

@@ -20,41 +20,6 @@
 </head>
 
 <body>
-<header>
-	<div class="container">
-		<nav class="horiz add-top">
-			<ul>
-				<li class="flush"><a href="#grid">Grid</a></li>
-				<li><a href="#typography">Typography</a>
-					<ul>
-						<li><a href="#headers">Headers</a></li>
-						<li><a href="#weight">Weight</a></li>
-						<li><a href="#lists">Lists</a></li>
-						<li><a href="#quotes">Blockquotes & Pullquotes</a></li>
-						<li><a href="#misc">Misc</a></li>
-					</ul>
-				</li>
-				<li><a href="#elements">Elements</a>
-					<ul>
-						<li><a href="#images">Images</a></li>
-						<li><a href="#tables">Tables</a></li>
-						<li><a href="#navigation">Navigation</a></li>
-						<li><a href="#buttons">Buttons</a></li>
-						<li><a href="#forms">Form Elements</a></li>
-					</ul>
-				</li>
-				<li><a href="#extras">Extras</a>
-					<ul>
-						<li><a href="#show-hide">Show/Hide</a></li>
-						<li><a href="#positioning">Positioning</a></li>
-						<li><a href="#colors">Colors</a></li>
-					</ul>
-				</li>
-			</ul>
-		</nav>
-	</div>
-	<hr />
-</header>
 
 <div class="container">
 	<h1 class="text-center mega add-top-lg">framework<sup class="color-light-gray light serif"><em title="alpha! weeeeee!">&alpha;</em></sup><br/><small class="light">a minimal, modular css template.</small></h1>
@@ -64,81 +29,57 @@
 		<a href="https://github.com/jephrei/Framework/issues" class="button chisel">Issues</a>
 	</p>
 
-	<p>This is a minimal framework (not necessarily small but at the moment it's ~12k minified) that can be applied to multiple use cases. It isn't meant to assume the final product so this is for people to use as a foundation under their own code. This is a personal framework that is in the alpha stages of development so things will change and/or break. I would love this to get used, but I highly suggest you make your own. If you disagree with any methods, find something not working correctly, or see any inferior code, please <a href="https://github.com/jephrei/Framework/issues">submit an issue</a>. Thanks.</p>
-<!--  -->
-	<h2 id="grid">The Grid</h2>
-	<p>It can be nested, the columns used in any combination, reversed in mobile, with or without gutters. It's a damn fine grid.</p>
+	<div class="row add-bot-lg">
+		<div class="col span-1-2">
+			<ul class="square">
+				<li>Border box model</li>
+				<li>Responsive grid/elements</li>
+				<li><span class="mono">em</span> unit based</li>
+				<li>Includes normalize.css v3.0.0</li>
+				<li>Embracing defaults</li>
+			</ul>
+		</div>
+	</div>
 
-	<h3 id="columns" class="light color-gray">Columns</h3>
-	<p>The system is based on fractions. 1/2, 2/3, 5/8, etc so the total number of columns is irrelevant. There's no margin trickery here either; a column with the class <code>.span-1-2</code> is exactly 50% wide.</p>
+	<div class="row add-bot">
+		<div class="col bg-dark">&nbsp;</div>
+	</div>
+	<div class="row add-bot">
+		<div class="col span-1-2 bg-dark">&nbsp;</div>
+		<div class="col span-1-2 bg-light">&nbsp;</div>
+	</div>
+	<div class="row add-bot">
+		<div class="col span-1-3 bg-dark">&nbsp;</div>
+		<div class="col span-2-3 bg-light">&nbsp;</div>
+	</div>
+	<div class="row add-bot">
+		<div class="col span-1-4 bg-dark">&nbsp;</div>
+		<div class="col span-3-4 bg-light">&nbsp;</div>
+	</div>
+	<div class="row add-bot">
+		<div class="col span-1-5 bg-dark">&nbsp;</div>
+		<div class="col span-4-5 bg-light">&nbsp;</div>
+	</div>
+	<div class="row add-bot">
+		<div class="col span-1-6 bg-dark">&nbsp;</div>
+		<div class="col span-5-6 bg-light">&nbsp;</div>
+	</div>
+	<div class="row add-bot">
+		<div class="col span-1-7 bg-dark">&nbsp;</div>
+		<div class="col span-6-7 bg-light">&nbsp;</div>
+	</div>
+	<div class="row add-bot">
+		<div class="col span-1-8 bg-dark">&nbsp;</div>
+		<div class="col span-7-8 bg-light">&nbsp;</div>
+	</div>
 
-	<p><code>.row > .col.span-*</code></p>
-	<div class="row add-bot">
-		<div class="col bg-dark color-light mono text-pad">.col</div>
-	</div>
-	<div class="row add-bot">
-		<div class="col span-1-2 bg-dark color-light mono text-pad">.col.span-1-2</div>
-		<div class="col span-1-2 bg-light mono text-pad">1/2</div>
-	</div>
-	<div class="row add-bot">
-		<div class="col span-1-3 bg-dark color-light mono text-pad">1/3</div>
-		<div class="col span-2-3 bg-light mono text-pad">2/3</div>
-	</div>
-	<div class="row add-bot">
-		<div class="col span-1-4 bg-dark color-light mono text-pad">1/4</div>
-		<div class="col span-3-4 bg-light mono text-pad">3/4</div>
-	</div>
-	<div class="row add-bot">
-		<div class="col span-1-5 bg-dark color-light mono text-pad">1/5</div>
-		<div class="col span-4-5 bg-light mono text-pad">4/5</div>
-	</div>
-	<div class="row add-bot">
-		<div class="col span-1-6 bg-dark color-light mono text-pad">1/6</div>
-		<div class="col span-5-6 bg-light mono text-pad">5/6</div>
-	</div>
-	<div class="row add-bot">
-		<div class="col span-1-7 bg-dark color-light mono text-pad">1/7</div>
-		<div class="col span-6-7 bg-light mono text-pad">6/7</div>
-	</div>
-	<div class="row add-bot">
-		<div class="col span-1-8 bg-dark color-light mono text-pad">1/8</div>
-		<div class="col span-7-8 bg-light mono text-pad">7/8</div>
-	</div>
-	<p>Etc...</p>
-	<p>Of course, the columns stack on devices with smaller screens. Add <code>.no-stack</code> to a specific row to prevent this.</p>
 
-	<h3 id="offset" class="light color-gray">Offset</h3>
-	<p>Offset or "skip" columns by adding the <code>.skip-*</code> class. For every column width there is an equal offset. For example, because <code>.span-4-7</code> exists, so does <code>.skip-4-7</code>.</p>
-	<p><code>.row > .col.skip-*</code></p>
-	<div class="row bg-light add-bot">
-		<div class="col span-1-2 skip-1-8 bg-dark color-light mono text-pad">.col.span-1-2.skip-1-8</div>
-	</div>
-	<h3 id="gutters" class="light color-gray">Gutters</h3>
-	<p>The gutters are exactly <span class="mono">2em</span> for readability. They can be added by adding the <code>.spaced</code> class to a row. Pseudo classes or extra <span class="mono">.first</span> and <span class="mono">.last</span> type classes aren't required here as each column is perfectly equal.</p>
-	<p><code>.row.spaced > .col</code></p>
 	<div class="row spaced add-bot">
-		<div class="col span-1-3"><div class="bg-dark color-light mono text-pad">.col.span-1-3</div></div>
-		<div class="col span-1-3"><div class="bg-dark color-light mono text-pad">.col.span-1-3</div></div>
-		<div class="col span-1-3"><div class="bg-dark color-light mono text-pad">.col.span-1-3</div></div>
-	</div>
-	<h3 id="reverse" class="light color-gray">Reverse for Stacked View</h3>
-	<p>Using the <code>.reverse</code> class on a row will reverse the order of the columns in desktop, but stack in order on smaller devices.</p>
-
-	<p><code>.row.reverse > .col</code></p>
-	<div class="row reverse spaced add-bot">
-		<div class="col span-1-2"><div class="bg-dark color-light text-pad">2nd in desktop, 1st in mobile</div></div>
-		<div class="col span-1-2"><div class="bg-dark color-light text-pad">1st in desktop, 2nd in mobile</div></div>
+		<div class="col span-1-3"><div class="bg-dark">&nbsp;</div></div>
+		<div class="col span-1-3"><div class="bg-dark">&nbsp;</div></div>
+		<div class="col span-1-3"><div class="bg-dark">&nbsp;</div></div>
 	</div>
 
-	<h3 id="rows-and-containers" class="light color-gray">Rows & Containers</h3>
-	<p>Every column needs to be placed within a <code>.row</code>. Rows are always full width and are resitriced in width (if desired) by the <code>.container</code> class. This controls the overall width of the page.</p>
-	<p>The container can wrap the entire page, wrap sections, or can be within any full viewport width element like a typical header or footer.</p>
-
-<!--  -->
-	<h2 id="typography">Typography</h2>
-	<p>The font families chosen are serif, sans-serif, and monospace...that's it. Browsers and their environment decide on best looking font available if it's not specified. The font sizes are <code>em</code> based so they scale with the body <code>font-size</code> percentage which, in turn, changes with media queries.</p>
-	<h3 id="headers" class="light color-gray">Headers</h3>
-	<p>The header sizes have been reset so that <code>h6</code> is equal in size to the <code>body</code> font size. Dangerous? Possibly. It's an experiment so i may undo it depending on how it works in practice.</p>
 
 	<h1>h1 Lorem ipsum dolor <small>sit amet consectetur adipiscing elit</small></h1>
 	<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
@@ -153,18 +94,12 @@
 	<h6>h6 Lorem ipsum dolor <small>sit amet consectetur adipiscing elit</small></h6>
 	<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
 
-	<h3 id="weight" class="light color-gray">Weight</h3>
-	<p><code>.heavy</code> 900 weight</p>
 	<p class="heavy">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
 
-	<p><code>.light</code> 100 weight</p>
 	<p class="light">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-
-	<h3 id="lists" class="light color-gray">Lists</h3>
 
 	<div class="row spaced">
 		<div class="col span-1-3">
-			<p><code>ul</code></p>
 			<ul>
 				<li>Lorem ipsum</li>
 				<li>Dolor sit amet</li>
@@ -178,7 +113,6 @@
 			</ul>
 		</div>
 		<div class="col span-1-3">
-			<p><code>ol</code></p>
 			<ol>
 				<li>Lorem ipsum</li>
 				<li>Dolor sit amet</li>
@@ -192,7 +126,6 @@
 			</ol>
 		</div>
 		<div class="col span-1-3">
-			<p><code>ol.long</code></p>
 			<ol class="long" start="99">
 				<li>Lorem ipsum</li>
 				<li>Dolor sit amet</li>
@@ -209,7 +142,6 @@
 
 	<div class="row spaced">
 		<div class="col span-1-3">
-			<p><code>ol.outside</code></p>
 			<ol class="outside">
 				<li>Lorem ipsum</li>
 				<li>Dolor sit amet</li>
@@ -217,7 +149,6 @@
 			</ol>
 		</div>
 		<div class="col span-1-3">
-			<p><code>ul.blank</code></p>
 			<ul class="blank">
 				<li>Lorem ipsum</li>
 				<li>Dolor sit amet</li>
@@ -225,7 +156,6 @@
 			</ul>
 		</div>
 		<div class="col span-1-3">
-			<p><code>ul.square</code></p>
 			<ul class="square">
 				<li>Lorem ipsum</li>
 				<li>Dolor sit amet</li>
@@ -234,49 +164,13 @@
 		</div>
 	</div>
 
-	<h3 id="quotes" class="light color-gray">Blockquotes & Pull Quotes</h3>
-	<p><code>blockquote</code></p>
 	<blockquote>
 		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-	</blockquote>
-
-	<blockquote cite="http://example.com/">
-		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
 		<cite>&mdash; <a href="http://example.com/">someone latin</a></cite>
 	</blockquote>
 
-	<p><code>blockquote.outside</code></p>
-	<blockquote class="outside">
-		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-	</blockquote>
-
-	<p>Pullquote content isn't duplicated in terms of SEO. It is controlled by the <code>data-pullquote</code> attribute as shown below.</p>
-
-	<pre><code>&lt;span class="pullquote-left" data-pullquote="Donec eu libero...">Donec eu libero...&lt;/span></code></pre>
-
-	<p><code>.pullquote-left</code></p>
 	<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. <span class="pullquote-left" data-pullquote="Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est.">Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est.</span> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
 
-	<p><code>.pullquote-right</code></p>
-	<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. <span class="pullquote-right" data-pullquote="Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est.">Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est.</span> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
-
-	<!--
-	<h3 id="definitions" class="light color-gray">Definition Lists</h3>
-	<dl>
-		<dt>dt Definition List Title</dt>
-		<dd>dd This is a definition list division.</dd>
-	</dl>
-	-->
-	<h3 id="misc" class="light color-gray">Misc</h3>
-	<code>.sans-serif</code>
-	<p class="sans-serif">Lorem ipsum <code>code</code> dolor sit amet consectetur adipiscing elit.</p>
-	<code>.serif</code>
-	<p class="serif">Lorem ipsum <code>code</code> dolor sit amet consectetur adipiscing elit.</p>
-	<p>Italics: <em>em</em> / <i>i</i></p>
-	<p>Bold: <strong>strong</strong> / <b>b</b> (you can also use <code>.heavy</code>)</p>
-
-	<p><code>PRE > CODE</code></p>
-	<p>For those of us with code heavy content.</p>
 	<pre><code>&lt;ul>
 <!----->	&lt;li>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.&lt;/li>
 <!----->	&lt;li>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.&lt;/li>
@@ -284,34 +178,24 @@
 <!----->	&lt;li>Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.&lt;/li>
 <!----->&lt;/ul></code></pre>
 
-<!--  -->
-	<h2 id="elements">Elements</h2>
-	<h3 id="images" class="light color-gray">Images</h3>
-	<p>Here are a few helper classes for images in the stacked view. Throw these on a <span class="mono">DIV</span> with the image inside. <code>.crop-stacked</code> will crop off the top and bottom 25% leaving your image 50% tall on smaller devices. Good so large height images don't take up too much space on mobile devices. <code>.flush-stacked</code> will break your image out to full width in stacked view. Combine them for both effects.</p>
 	<div class="row spaced">
 		<div class="col span-1-3">
-			<p><code>.crop-stacked img</code></p>
 			<div class="crop-stacked add-bot">
 				<img src="http://www.placehold.it/420&text=image" />
 			</div>
 		</div>
 		<div class="col span-1-3">
-			<p><code>.flush-stacked img</code></p>
 			<div class="flush-stacked add-bot">
 				<img src="http://www.placehold.it/420&text=image" />
 			</div>
 		</div>
 		<div class="col span-1-3">
-			<p><code>.flush-stacked.crop-stacked img</code></p>
 			<div class="flush-stacked crop-stacked add-bot">
 				<img src="http://www.placehold.it/420&text=image" />
 			</div>
 		</div>
 	</div>
 
-	<h3 id="tables" class="light color-gray">Tables</h3>
-
-	<p><code>table</code></p>
 	<table>
 		<caption>Table caption</caption>
 		<thead>
@@ -345,7 +229,6 @@
 		</tbody>
 	</table>
 
-	<p><code>table.default</code></p>
 	<table class="default">
 		<caption>Table caption</caption>
 		<thead>
@@ -379,7 +262,6 @@
 		</tbody>
 	</table>
 
-	<p><code>table.default.striped</code></p>
 	<table class="default striped">
 		<caption>Table caption</caption>
 		<thead>
@@ -413,9 +295,6 @@
 		</tbody>
 	</table>
 
-	<h3 id="navigation" class="light color-gray">Navigation</h3>
-	<p>Your typical <span class="mono">NAV</span> with capabilities for multiple nested lists. The following is a horizontal menu that can be created by adding <code>.horiz</code> to the <span class="mono">NAV</span></p>
-	<p><code>nav.horiz > ul</code></p>
 	<nav class="horiz">
 		<ul>
 			<li><a href="#0">Lorem</a></li>
@@ -450,19 +329,6 @@
 		</ul>
 	</nav>
 
-	<p>Add <code>.flush</code> to the first or last <span class="mono">LI</span> to make it flushed to the left or right edge respectively.</p>
-
-	<p><code>NAV.horiz li:first-child.flush</code></p>
-	<nav class="horiz">
-		<ul>
-			<li class="flush"><a href="#0">Lorem</a></li>
-			<li><a href="#0">Aliquam</a></li>
-			<li>...</li>
-		</ul>
-	</nav>
-
-	<p>A vertical, non-collapsible <span class="mono">NAV</span> can be made by adding <code>.vert</code> to the <span class="mono">NAV</span>.</p>
-	<p><code>nav.vert > ul</code></p>
 	<nav class="vert">
 		<ul>
 			<li><a href="#0">Lorem</a></li>
@@ -484,8 +350,6 @@
 		</ul>
 	</nav>
 
-	<h3 id="buttons" class="light color-gray">Buttons</h3>
-	<p>The buttons were designed to have some basic styles but can be easily overridden. Buttons, links, inputs, and even <span class="mono">DIV</span>s can be styled. Be sure to add <code>tabindex="0"</code> to any elements that aren't natively clickable for accessability.</p>
 	<div class="add-bot">
 		<button>button</button>
 		<a href="#0" class="button">a.button</a>
@@ -493,7 +357,7 @@
 		<input type="button" value="input.button" />
 		<!--<input type="submit" value="input[type='submit']" />-->
 	</div>
-	<h4 class="light">Disabled</h4>
+
 	<div class="add-bot">
 		<button class="disabled">button</button>
 		<a href="#0" class="button disabled">a.button</a>
@@ -553,8 +417,6 @@
 	</div>
 	-->
 
-	<h3 id="forms" class="light color-gray">Other Form Elements</h3>
-
 	<form>
 		<fieldset>
 			<legend>Fieldset Legend</legend>
@@ -578,21 +440,6 @@
 		</fieldset>
 	</form>
 
-<!--  -->
-	<h2 id="extras">Extras</h2>
-
-	<h3 id="show-hide" class="light color-gray">Show/Hide</h3>
-	<p>Add <code>.show-stacked</code> to only show an element when in stacked view and hide it when not. Add <code>.hide-stacked</code> to hide in stacked view and show when on large screens.</p>
-	<div class="show-stacked bg-gray color-white text-pad"><code>.show-stacked</code> active</div>
-	<div class="hide-stacked bg-gray color-white text-pad"><code>.hide-stacked</code> active</div>
-	<!--
-	<div class="hide-stacked bg-gray color-white text-pad"><code>.show-stacked</code> not active</div>
-	<div class="show-stacked bg-gray color-white text-pad"><code>.hide-stacked</code> not active</div>
-	-->
-
-	<h3 id="positioning" class="light color-gray">Element Positioning</h3>
-
-	<p><code>.add-top</code></p>
 	<div class="row add-bot">
 		<div class="col span-1-3 bg-gray">
 			<div class="text-pad bg-light add-top-sm"><code>.add-top-sm</code></div>
@@ -605,7 +452,6 @@
 		</div>
 	</div>
 
-	<p><code>.add-bot</code></p>
 	<div class="row add-bot">
 		<div class="col span-1-3 bg-gray">
 			<div class="text-pad bg-light add-bot-sm"><code>.add-bot-sm</code></div>
@@ -617,7 +463,7 @@
 			<div class="text-pad bg-light add-bot-lg"><code>.add-bot-lg</code></div>
 		</div>
 	</div>
-	<p>They're relative too!</p>
+
 	<div class="row add-bot">
 		<div class="col span-1-3 bg-gray">
 			<div class="h1 text-pad code bg-light add-bot-sm">Lorem Ipsum</div>
@@ -629,11 +475,6 @@
 			<div class="h1 text-pad code bg-light add-bot-lg">&nbsp;</div>
 		</div>
 	</div>
-
-	<p>You can also remove the margin on any element by adding <code>.rem-top</code> or <code>.rem-bot</code> to it.</p>
-
-	<h3 id="colors" class="light color-gray">Colors</h3>
-	<p>Basic grayscale colors are included for background (<code>bg-*</code>) and font color (<code>color-*</code>).</p>
 
 	<div class="bg-white text-pad">White <span class="float-right"><code>.bg-white</code> #FFF</span></div>
 	<div class="bg-light text-pad">Light <span class="float-right"><code>.bg-light</code> #EEE</span></div>
